@@ -1,0 +1,26 @@
+columnSuffix: null
+handle: singleImage
+instructions: 'This single image component is limited to one image.'
+name: 'Single Image'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 482cb0dd-2361-49db-bb8c-232d0ee58caf # Image Entry
+  includeTableView: false
+  maxEntries: 1
+  minEntries: 1
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

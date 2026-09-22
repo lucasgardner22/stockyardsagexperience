@@ -1,0 +1,87 @@
+color: emerald
+description: null
+fieldLayouts:
+  028a1fb5-561e-4210-b296-feb0fd44ca72:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-12-23T16:34:09+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c879ba69-d0b7-4191-b3ea-463325628f50
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-02T15:34:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 94c492e6-2585-46cd-b5f7-277f35023321 # Single Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 918da077-9386-43b9-a5c8-78faa439806b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-02T15:34:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: fd66754a-765a-488d-b730-a66067c0921b # Rich Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4e051dc-1bc8-40cd-9613-6d26f2033687
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d06d8050-db1a-4c04-b915-0424c61c07f4
+        userCondition: null
+handle: blogEntry
+hasTitleField: true
+icon: pencil-mechanical
+name: 'Blog Entry'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

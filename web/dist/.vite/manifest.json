@@ -1,0 +1,114 @@
+{
+  "_alpine-DxNRRWKz.js": {
+    "file": "assets/alpine-DxNRRWKz.js",
+    "name": "alpine",
+    "isDynamicEntry": true
+  },
+  "_alpine-legacy-Zb3GOe8Y.js": {
+    "file": "assets/alpine-legacy-Zb3GOe8Y.js",
+    "name": "alpine",
+    "isDynamicEntry": true
+  },
+  "_lucide-BlabGkw8.js": {
+    "file": "assets/lucide-BlabGkw8.js",
+    "name": "lucide"
+  },
+  "_lucide-legacy-Chqr51YA.js": {
+    "file": "assets/lucide-legacy-Chqr51YA.js",
+    "name": "lucide"
+  },
+  "_swiper-CazUlmrG.css": {
+    "file": "assets/swiper-CazUlmrG.css",
+    "src": "_swiper-CazUlmrG.css"
+  },
+  "_swiper-DrygmDRn.js": {
+    "file": "assets/swiper-DrygmDRn.js",
+    "name": "swiper",
+    "isDynamicEntry": true,
+    "css": [
+      "assets/swiper-CazUlmrG.css"
+    ]
+  },
+  "_swiper-legacy-BRTm2Gf4.js": {
+    "file": "assets/swiper-legacy-BRTm2Gf4.js",
+    "name": "swiper",
+    "isDynamicEntry": true
+  },
+  "_tailwind-Bqxl9Ktz.js": {
+    "file": "assets/tailwind-Bqxl9Ktz.js",
+    "name": "tailwind"
+  },
+  "_tailwind-legacy-DxHQk3Fg.js": {
+    "file": "assets/tailwind-legacy-DxHQk3Fg.js",
+    "name": "tailwind"
+  },
+  "node_modules/vanilla-tilt/lib/vanilla-tilt.es2015-legacy.js": {
+    "file": "assets/vanilla-tilt-legacy-CFyiNo5_.js",
+    "name": "vanilla-tilt",
+    "src": "node_modules/vanilla-tilt/lib/vanilla-tilt.es2015-legacy.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/vanilla-tilt/lib/vanilla-tilt.es2015.js": {
+    "file": "assets/vanilla-tilt-CTO21bE4.js",
+    "name": "vanilla-tilt",
+    "src": "node_modules/vanilla-tilt/lib/vanilla-tilt.es2015.js",
+    "isDynamicEntry": true
+  },
+  "src/main-legacy.ts": {
+    "file": "assets/app-legacy-Ctw3Wlws.js",
+    "name": "app",
+    "src": "src/main-legacy.ts",
+    "isEntry": true,
+    "imports": [
+      "_tailwind-legacy-DxHQk3Fg.js",
+      "_lucide-legacy-Chqr51YA.js",
+      "_alpine-legacy-Zb3GOe8Y.js"
+    ],
+    "dynamicImports": [
+      "_swiper-legacy-BRTm2Gf4.js",
+      "_swiper-legacy-BRTm2Gf4.js",
+      "_alpine-legacy-Zb3GOe8Y.js",
+      "_alpine-legacy-Zb3GOe8Y.js",
+      "_alpine-legacy-Zb3GOe8Y.js",
+      "_alpine-legacy-Zb3GOe8Y.js",
+      "_alpine-legacy-Zb3GOe8Y.js",
+      "_alpine-legacy-Zb3GOe8Y.js",
+      "_alpine-legacy-Zb3GOe8Y.js",
+      "_alpine-legacy-Zb3GOe8Y.js",
+      "node_modules/vanilla-tilt/lib/vanilla-tilt.es2015-legacy.js"
+    ]
+  },
+  "src/main.ts": {
+    "file": "assets/app-BZxdvE2i.js",
+    "name": "app",
+    "src": "src/main.ts",
+    "isEntry": true,
+    "imports": [
+      "_tailwind-Bqxl9Ktz.js",
+      "_lucide-BlabGkw8.js",
+      "_alpine-DxNRRWKz.js"
+    ],
+    "dynamicImports": [
+      "_swiper-DrygmDRn.js",
+      "_swiper-DrygmDRn.js",
+      "_alpine-DxNRRWKz.js",
+      "_alpine-DxNRRWKz.js",
+      "_alpine-DxNRRWKz.js",
+      "_alpine-DxNRRWKz.js",
+      "_alpine-DxNRRWKz.js",
+      "_alpine-DxNRRWKz.js",
+      "_alpine-DxNRRWKz.js",
+      "_alpine-DxNRRWKz.js",
+      "node_modules/vanilla-tilt/lib/vanilla-tilt.es2015.js"
+    ],
+    "css": [
+      "assets/app-GAtlat9B.css"
+    ]
+  },
+  "vite/legacy-polyfills-legacy": {
+    "file": "assets/polyfills-legacy-VAWqw7if.js",
+    "name": "polyfills",
+    "src": "vite/legacy-polyfills-legacy",
+    "isEntry": true
+  }
+}

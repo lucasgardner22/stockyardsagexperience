@@ -1,0 +1,66 @@
+columnSuffix: null
+handle: alertType
+instructions: null
+name: 'Alert Type'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Info (blue)'
+        -
+          - value
+          - info
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Warning (red)'
+        -
+          - value
+          - warning
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Question (purple)'
+        -
+          - value
+          - question
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Caution (orange)'
+        -
+          - value
+          - caution
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'OK (green)'
+        -
+          - value
+          - ok
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

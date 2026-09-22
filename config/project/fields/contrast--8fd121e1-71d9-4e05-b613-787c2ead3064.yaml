@@ -1,0 +1,66 @@
+columnSuffix: null
+handle: contrast
+instructions: 'Alter the contrast of the image'
+name: Contrast
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 150%
+        -
+          - value
+          - '150'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 125%
+        -
+          - value
+          - '125'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 100%
+        -
+          - value
+          - '100'
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 75%
+        -
+          - value
+          - '75'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 50%
+        -
+          - value
+          - '50'
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

@@ -1,0 +1,17 @@
+<div class="w-full flex justify-center px-8 py-4 bg-surface-50">
+   {% set alignment = '' %}
+   {% switch block.alignmentLMR.value %}
+      {% case 'left' %}
+         {% set alignment = 'text-left' %}
+      {% case 'middle' %}
+         {% set alignment = 'text-center' %}
+      {% case 'right' %}
+         {% set alignment = 'text-right' %}
+   {% endswitch %}
+
+   <div class="w-full max-w-(--breakpoint-xl) overflow-x-clip prose-sm md:prose {{ alignment }}">
+      {% if block.title is not null %}<h1>{{ block.title }}</h1>{% endif %}
+      {% if block.subtitle is not null %}<h3>{{ block.subtitle }}</h3>{% endif %}
+      {% if block.richText is not null %}{{ block.richText }}{% endif %}
+   </div>
+</div>

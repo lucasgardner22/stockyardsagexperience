@@ -1,0 +1,7 @@
+{% import '_templates/components/alert.twig' as Alert %}
+{% extends '_layouts/blockWrapper.twig' %}
+{% block blockWrapper %}
+      <div class="max-w-(--breakpoint-lg) mx-auto block-container">
+            {{ Alert.Default(block) }}
+      </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{# _components/elements/badge.twig #}
+{% macro Default(data) %}
+
+   {# Define the class mappings for each variant #}
+   {% set badgeVariants = {
+      'info': 'border-blue-500 bg-blue-500 text-white',
+      'warning': 'border-red-500 bg-red-500 text-white',
+      'question': 'border-purple-500 bg-purple-500 text-white',
+      'caution': 'border-yellow-600 bg-yellow-600 text-white',
+      'ok': 'border-green-500 bg-green-500 text-white'
+   } %}
+
+   {# Set default data if not provided #}
+   {{ dump('No data was passed to the Badge element! Placeholder data will be used.') }}
+   {% if data is null %}
+      {% set data = {
+         variant: 'default',
+         text: 'Badge'
+      } %}
+   {% endif %}
+
+   {% set variant = badgeVariants[data.variant] is defined ? data.variant : 'default' %}
+
+   {# Start with base and light classes #}
+   {% set classes = badgeVariants[variant].base ~ ' ' ~ badgeVariants[variant].light %}
+
+   {# Append dark classes only if the variant is 'default' #}
+   {% if variant == 'default' and badgeVariants[variant].dark is defined %}
+      {% set classes = classes ~ ' ' ~ badgeVariants[variant].dark %}
+   {% endif %}
+
+   <span class="rounded-xl w-fit border px-2 py-1 text-xs font-medium {{ classes }}">{{ data.text }}</span>
+{% endmacro %}

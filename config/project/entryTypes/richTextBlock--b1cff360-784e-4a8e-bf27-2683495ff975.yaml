@@ -1,0 +1,70 @@
+color: yellow
+description: null
+fieldLayouts:
+  00b6224d-520c-4c93-9352-7a3dfb615335:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 68e67a32-7651-4cf9-88e7-a195721533c3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            fieldUid: fd66754a-765a-488d-b730-a66067c0921b # Rich Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7df7dff7-5e41-4110-81b1-fdcbac899084
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6ec8674e-7bc1-4e60-912b-bfb278cd5566
+        userCondition: null
+handle: richTextBlock
+hasTitleField: false
+icon: text
+name: 'Rich Text Block'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

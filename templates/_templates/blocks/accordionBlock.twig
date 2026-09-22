@@ -1,0 +1,7 @@
+{% import '_templates/components/accordion.twig' as Accordion %}
+{% extends '_layouts/blockWrapper.twig' %}
+{% block blockWrapper %}
+      <div class="max-w-xl mx-auto block-container">
+            {{ Accordion.pines(block.accordionFields.all()) }}
+      </div>
+{% endblock %}

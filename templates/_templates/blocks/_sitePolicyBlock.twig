@@ -1,0 +1,13 @@
+{% extends '_layouts/blockWrapper.twig' %}
+
+{% block blockWrapper %}
+      <div id="terms-and-conditions" class="prose mx-auto mb-8">
+         <h2>Terms and Conditions</h2>
+         {{ siteSettings.termsAndConditions }}
+      </div>
+
+      <div id="privacy-policy" class="prose mx-auto">
+         <h2>Privacy Policy</h2>
+         {{ siteSettings.privacyPolicy }}
+      </div>
+{% endblock %}

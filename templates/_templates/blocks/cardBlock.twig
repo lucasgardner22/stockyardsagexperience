@@ -1,0 +1,56 @@
+{#
+a block of one or more basic card components.
+the block has two possible layouts (grid and carousel), and will dynamically display a default card or an image card based on the presence of an image in the data.
+#}
+
+{% import '_templates/components/card.twig' as Card %}
+{% extends '_layouts/blockWrapper.twig' %}
+{% set cardFields = block.cardFields.all() %}
+
+{% block blockWrapper %}
+   {% if block.toggle is empty %}
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 block-container">
+         {% for card in cardFields %}
+            {{ Card.default(card) }}
+         {% endfor %}
+      </div>
+   {% elseif block.toggle is not empty %}
+      <div x-data="{
+		init() {
+		   new window.Swiper(this.$refs.swiper, {
+			  autoplay: {
+				 delay: 3000
+			  },
+			  direction: 'horizontal',
+			  slidesPerView: 3,
+			  spaceBetween: 30,
+			  loop: true,
+			  pagination: {
+				 el: '.swiper-pagination'
+			  },
+			  navigation: {
+				 nextEl: '.swiper-button-next',
+				 prevEl: '.swiper-button-prev'
+			  },
+			  scrollbar: {
+				 el: '.swiper-scrollbar'
+			  }
+		   })
+		}
+	 }" class="w-full h-full block-container">
+         <section x-ref="swiper" class="swiper w-full h-full px-20">
+            <div class="swiper-wrapper">
+               {% for card in cardFields %}
+                  <div class="swiper-slide flex flex-col items-center justify-center pb-8">
+                     {{ Card.default(card) }}
+                  </div>
+               {% endfor %}
+            </div>
+            {# <div class="swiper-pagination"></div> #}
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+         </section>
+      </div>
+   {% endif %}
+{% endblock %}

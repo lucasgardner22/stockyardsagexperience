@@ -1,0 +1,25 @@
+{% extends 'index.twig' %}
+
+{% block body %}
+
+    {# Eager load content blocks with nested relations to prevent N+1 queries #}
+    {% set blocks = entry.contentBlocks
+        .with([
+            'singleImage',
+            'singleVideo',
+            'images',
+            'imageGalleryMatrix',
+            'testimonialMatrix',
+            'cardFields',
+            'button'
+        ])
+        .all() %}
+    {# while adding a 'space-y-* here might seem like a good idea, I would rather the blocks themselves handle seperation from other blocks (some might need to bump into each other)' #}
+
+    {% for block in blocks %}
+        {% set camel = block.type.handle %}
+        {% include("_components/blocks/#{camel}.twig") with {'block': block} only %}
+    {% endfor %}
+
+
+{% endblock body %}

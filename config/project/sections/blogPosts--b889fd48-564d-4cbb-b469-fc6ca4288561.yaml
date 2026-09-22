@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 3b85870f-0a03-45bb-ba0a-6a86c2eacd5d # Blog Entry
+handle: blogPosts
+maxAuthors: 1
+name: 'Blog Posts'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  465e8e05-dfe1-48d5-b118-10cbe924facb: # craft-five-bp
+    enabledByDefault: true
+    hasUrls: true
+    template: blog/_entry.twig
+    uriFormat: 'blog-posts/{slug}'
+type: channel

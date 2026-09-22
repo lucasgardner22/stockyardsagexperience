@@ -1,0 +1,57 @@
+<div x-data="{
+    title: 'Toast Notification Example',
+    description: 'This is a sample toast notification.',
+    type: 'success',
+    position: 'top-center',
+    popToast(customHtml) {
+        let html = customHtml || '';
+        // Trigger the toast with the defined properties
+        toast(this.title, { description: this.description, type: this.type, position: this.position, html: html });
+    }
+}" class="relative">
+
+   <!-- Button to trigger the toast notification -->
+   <button @click="popToast()"
+           class="px-4 py-2 bg-blue-500 text-white rounded-md">Show Toast
+   </button>
+
+   <!-- Template for displaying the toast (only one toast shown for simplicity) -->
+   <template x-teleport="body">
+      <ul x-data="{
+            toasts: [],
+            position: 'top-center',
+            popToast(message, options) {
+                this.toasts.push({ id: Date.now(), message, ...options });
+            },
+            removeToast(id) {
+                this.toasts = this.toasts.filter(toast => toast.id !== id);
+            }
+        }" @toast-show.window="popToast(event.detail.message, event.detail)">
+         <template x-for="toast in toasts" :key="toast.id">
+            <li x-show="toasts.length" class="fixed transition-all bg-gray-800 text-white p-4 rounded-md shadow-md"
+                :class="{
+                        'top-0 left-1/2 transform -translate-x-1/2': position === 'top-center',
+                        'top-0 right-0': position === 'top-right',
+                        'bottom-0 left-1/2 transform -translate-x-1/2': position === 'bottom-center',
+                        'bottom-0 right-0': position === 'bottom-right'
+                    }">
+               <div class="flex justify-between">
+                  <p x-text="toast.message" class="font-medium"></p>
+                  <button @click="removeToast(toast.id)" class="text-sm text-gray-400 hover:text-gray-600">×</button>
+               </div>
+               <p x-show="toast.description" x-text="toast.description" class="text-sm opacity-70"></p>
+            </li>
+         </template>
+      </ul>
+   </template>
+</div>
+
+<script>
+    // Global toast function to show a toast notification
+    window.toast = function (message, options = {}) {
+        let event = new CustomEvent('toast-show', {
+            detail: {message, ...options}
+        });
+        window.dispatchEvent(event);
+    };
+</script>

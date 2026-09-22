@@ -1,0 +1,137 @@
+columnSuffix: null
+handle: squareImageTransform
+instructions: null
+name: 'Square Image Transform'
+searchable: false
+settings:
+  displayDominantColorPalette: true
+  displayLazyLoadPlaceholderImages: true
+  displayOptimizedImageVariants: true
+  ignoreFilesOfType:
+    - image/svg
+    - image/gif
+    - application/pdf
+  variants:
+    -
+      __assoc__:
+        -
+          - width
+          - '640'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '1'
+        -
+          - aspectRatioY
+          - '1'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '768'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '1'
+        -
+          - aspectRatioY
+          - '1'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '1024'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '1'
+        -
+          - aspectRatioY
+          - '1'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '1280'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '1'
+        -
+          - aspectRatioY
+          - '1'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '1536'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '1'
+        -
+          - aspectRatioY
+          - '1'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

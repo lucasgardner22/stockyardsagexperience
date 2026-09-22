@@ -1,0 +1,53 @@
+color: yellow
+description: null
+fieldLayouts:
+  8ead07c4-4d68-4d40-a411-b790fc7bb984:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-11-01T13:30:48+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 25b4d74a-e3e9-4c9f-8465-817c0cdf818a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 477297db-eba7-4589-b196-ce866f63891c
+        userCondition: null
+handle: blogPreviewBlock
+hasTitleField: true
+icon: dinosaur
+name: 'Blog Preview Block'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

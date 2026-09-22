@@ -1,0 +1,159 @@
+color: cyan
+description: null
+fieldLayouts:
+  7492910c-6651-4e67-93b3-27bbfa4070fc:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:5cebcfa5-d468-40af-8c48-17c03405aede'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-10-03T19:59:45+00:00'
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: "Be sure to set the image's alt tag in the image's independent settings!"
+            type: craft\fieldlayoutelements\Tip
+            uid: 0c744bd5-3686-483f-98f1-364975efa3e9
+            userCondition: null
+          -
+            dateAdded: '2024-10-03T19:08:57+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: de86b9f0-bfb1-4249-8189-805912c70c62 # Image
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5cebcfa5-d468-40af-8c48-17c03405aede
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-30T21:24:16+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 887390ca-8489-475a-9886-66512edb064d # Image Aspect Ratio
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 31316369-6d26-4abc-8cfd-b95c67c60644
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-03T19:59:45+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 749f7160-6822-4173-a24f-05da77c1e381 # Image Fit
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 80d15525-673f-4b07-aa6f-26937e7aaef1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ea73036a-9919-42a2-8f7c-033a24a42279
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-10-03T19:59:45+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: be2ee2ea-08b5-49a7-83bb-c0d31f85f128 # Blur
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1bf17979-6060-4b91-8eab-5e8770d76b40
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2024-10-03T19:59:45+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 4e7d732a-b78a-4cc6-a6ad-287966e4addd # Brightness
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6ad5e522-b005-4e3f-8bde-b37463270257
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2024-10-03T19:59:45+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 8fd121e1-71d9-4e05-b613-787c2ead3064 # Contrast
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2d52b801-5652-473f-91bc-23bf24d4ae26
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2024-10-03T19:59:45+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b2611308-ab3e-47ec-baf2-e7b34a1d1981 # Saturation
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6a60bb1d-0f10-4787-b912-b6c0d5fbd548
+            userCondition: null
+            warning: null
+            width: 25
+        name: Filters
+        uid: 2ffe1cfc-3a9e-401b-9ee7-67d41a53cdf9
+        userCondition: null
+handle: imageEntry
+hasTitleField: false
+icon: scanner-image
+name: 'Image Entry'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

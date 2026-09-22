@@ -1,0 +1,130 @@
+fieldLayouts:
+  79284b86-7ff7-4240-873a-82837baf57af:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-12-23T16:54:58+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 090ed5cb-45e7-4ccb-bdad-3c90def43aa4 # Site Logo
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: effd7769-0b74-4be3-a216-8e286ab77f60
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-23T16:54:58+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 28928894-6de4-49d8-aeee-e17415cc03f8 # Address
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5280737a-f708-4c5e-81cf-7f258f0678f3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-23T16:54:58+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 757d9c50-bfe4-428a-868c-fe52209cea11 # Phone Number
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4dd76cea-272f-461f-8916-62241a50ca23
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-23T16:54:58+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e13810b4-ac5b-4ba5-9edd-7a1c5b61486b # Social Media Links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: afc45224-3bb2-437d-acc9-da6979503467
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Global Settings'
+        uid: e80ad89b-cd73-49a4-abf0-9a6bc1c56424
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-12-23T17:24:42+00:00'
+            dismissible: true
+            elementCondition: null
+            style: tip
+            tip: 'Text in these sections is displayed on the site-policy page (accessible via footer links)'
+            type: craft\fieldlayoutelements\Tip
+            uid: 753ee317-a21c-4f0f-866d-366707072f20
+            userCondition: null
+          -
+            dateAdded: '2024-12-23T17:24:42+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: fd66754a-765a-488d-b730-a66067c0921b # Rich Text
+            handle: termsAndConditions
+            includeInCards: false
+            instructions: 'Enter text that will show up in the Terms and Conditions section of the site.'
+            label: 'Terms and Conditions'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c8fad9b8-2b84-4e04-a7ff-4c8d87c4fd4f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-23T17:24:42+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: fd66754a-765a-488d-b730-a66067c0921b # Rich Text
+            handle: privacyPolicy
+            includeInCards: false
+            instructions: null
+            label: 'Privacy Policy'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a500729d-a72c-4820-838d-a202d9a1c32d
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Site Policy'
+        uid: ff7cad81-1ff1-4aed-9d69-8c0fc69d8dc8
+        userCondition: null
+handle: siteSettings
+name: 'Site Settings'
+sortOrder: 1

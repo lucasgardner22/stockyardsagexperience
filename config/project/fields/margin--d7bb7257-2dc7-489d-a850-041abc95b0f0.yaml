@@ -1,0 +1,19 @@
+columnSuffix: null
+handle: margin
+instructions: null
+name: Margin
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: 0
+  max: 500
+  min: -500
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  step: null
+  suffix: pixels
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

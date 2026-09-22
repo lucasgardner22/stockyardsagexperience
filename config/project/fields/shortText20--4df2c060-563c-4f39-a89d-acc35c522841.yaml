@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: shortText20
+instructions: null
+name: 'Short Text (20 word limit)'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 20
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

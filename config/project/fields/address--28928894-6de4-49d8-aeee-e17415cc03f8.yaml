@@ -1,0 +1,88 @@
+columnSuffix: null
+handle: address
+instructions: null
+name: Address
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Address
+            -
+              - handle
+              - line
+            -
+              - width
+              - ''
+            -
+              - type
+              - heading
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - ''
+            -
+              - handle
+              - value
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - Street
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - City
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - State
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - Zip
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - Country
+        -
+          - col2
+          - ''
+  maxRows: null
+  minRows: null
+  staticRows: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

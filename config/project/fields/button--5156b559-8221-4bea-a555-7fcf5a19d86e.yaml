@@ -1,0 +1,199 @@
+columnSuffix: null
+handle: button
+instructions: null
+name: Button
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Text
+            -
+              - handle
+              - text
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col3
+        -
+          __assoc__:
+            -
+              - heading
+              - LInk
+            -
+              - handle
+              - link
+            -
+              - width
+              - ''
+            -
+              - type
+              - url
+      -
+        - col4
+        -
+          __assoc__:
+            -
+              - heading
+              - Type
+            -
+              - handle
+              - type
+            -
+              - width
+              - ''
+            -
+              - type
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Default
+                    -
+                      - value
+                      - default
+                    -
+                      - default
+                      - true
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Info (blue)'
+                    -
+                      - value
+                      - info
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Warning (red)'
+                    -
+                      - value
+                      - warning
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Question (purple)'
+                    -
+                      - value
+                      - question
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'Caution (yellow)'
+                    -
+                      - value
+                      - caution
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - 'OK (green)'
+                    -
+                      - value
+                      - ok
+                    -
+                      - default
+                      - false
+      -
+        - col6
+        -
+          __assoc__:
+            -
+              - heading
+              - Style
+            -
+              - handle
+              - style
+            -
+              - width
+              - ''
+            -
+              - type
+              - select
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Filled
+                    -
+                      - value
+                      - filled
+                    -
+                      - default
+                      - true
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Outline
+                    -
+                      - value
+                      - outline
+                    -
+                      - default
+                      - false
+                -
+                  __assoc__:
+                    -
+                      - label
+                      - Ghost
+                    -
+                      - value
+                      - ghost
+                    -
+                      - default
+                      - false
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - Text
+        -
+          - col3
+          - /
+        -
+          - col4
+          - default
+        -
+          - col6
+          - filled
+  maxRows: null
+  minRows: null
+  staticRows: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

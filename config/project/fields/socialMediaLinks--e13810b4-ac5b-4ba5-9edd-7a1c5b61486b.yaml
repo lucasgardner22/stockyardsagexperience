@@ -1,0 +1,88 @@
+columnSuffix: null
+handle: socialMediaLinks
+instructions: 'Leave a link blank to disable that social media icon/link sitewide.'
+name: 'Social Media Links'
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Social Media Org'
+            -
+              - handle
+              - socialMediaOrg
+            -
+              - width
+              - ''
+            -
+              - type
+              - heading
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Link
+            -
+              - handle
+              - link
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - Facebook
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - Instagram
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - X
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - Youtube
+        -
+          - col2
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - Linkedin
+        -
+          - col2
+          - ''
+  maxRows: null
+  minRows: null
+  staticRows: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

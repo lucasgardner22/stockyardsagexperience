@@ -1,0 +1,19 @@
+columnSuffix: null
+handle: padding
+instructions: null
+name: Padding
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: 0
+  max: 500
+  min: -500
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  step: null
+  suffix: Pixels
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

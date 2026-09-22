@@ -1,0 +1,26 @@
+columnSuffix: null
+handle: richText50
+instructions: null
+name: 'Rich Text (50 word limit)'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  characterLimit: null
+  ckeConfig: 1bf42d60-5878-4e12-a991-921c36209957 # Simple
+  createButtonLabel: null
+  defaultTransform: null
+  expandEntryButtons: false
+  fullGraphqlData: false
+  parseEmbeds: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: true
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: 50
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

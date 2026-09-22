@@ -1,0 +1,112 @@
+{% macro Default(imageData) %}
+   {% set blurClasses = {
+      'none': '',
+      'small': 'blur-xs',
+      'medium': 'blur-lg',
+      'large': 'blur-2xl',
+   } %}
+
+   {% set brightnessClasses = {
+      '150': 'brightness-150',
+      '125': 'brightness-125',
+      '110': 'brightness-110',
+      '100': '',
+      '105': 'brightness-105',
+      '75': 'brightness-75',
+      '50': 'brightness-50',
+   } %}
+
+   {% set contrastClasses = {
+      '150': 'contrast-150',
+      '125': 'contrast-125',
+      '100': '',
+      '75': 'contrast-75',
+      '50': 'contrast-50',
+   } %}
+
+   {% set saturationClasses = {
+      '150': 'saturate-150',
+      '125': 'saturate-125',
+      '100': '',
+      '75': 'saturate-75',
+      '50': 'saturate-50',
+      '0': 'saturate-0',
+   } %}
+
+   {% set fitClasses = {
+      'cover': 'object-cover',
+      'contain': 'object-contain',
+      'fill': 'object-fill',
+      'scaleDown': 'object-scale-down',
+      'none': 'object-none',
+   } %}
+
+   {# Handle both matrix entries (with .image field) and direct Assets #}
+   {% if imageData.image is defined %}
+      {# imageData is a matrix entry with an image field #}
+      {% set image = imageData.image.one() %}
+      {% set aspectRatio = imageData.aspectRatio.value ?? 'original' %}
+      {% set blur = imageData.blur.value ?? 'none' %}
+      {% set brightness = imageData.brightness.value ?? '100' %}
+      {% set contrast = imageData.contrast.value ?? '100' %}
+      {% set saturation = imageData.saturation.value ?? '100' %}
+      {% set imageFit = imageData.imageFit.value ?? 'cover' %}
+   {% else %}
+      {# imageData is a direct Asset #}
+      {% set image = imageData %}
+      {% set aspectRatio = 'original' %}
+      {% set blur = 'none' %}
+      {% set brightness = '100' %}
+      {% set contrast = '100' %}
+      {% set saturation = '100' %}
+      {% set imageFit = 'cover' %}
+   {% endif %}
+
+   {% if image %}
+      {% set focalPointX = image.focalPoint ? (image.focalPoint.x * 100 ~ '%') : 'center' %}
+      {% set focalPointY = image.focalPoint ? (image.focalPoint.y * 100 ~ '%') : 'center' %}
+
+      {% set srcSet = null %}
+      {% set placeholder = null %}
+      {% set srcSetWebp = null %}
+      
+      {# Try to use ImageOptimize transforms if available #}
+      {% if aspectRatio is same as "original" and image.originalImageTransform is defined %}
+         {% set srcSet = image.originalImageTransform.srcset() %}
+         {% set placeholder = image.originalImageTransform.placeholderImage() %}
+         {% set srcSetWebp = image.originalImageTransform.srcsetWebP() %}
+      {% elseif aspectRatio is same as "landscape" and image.widescreenImageTransform is defined %}
+         {% set srcSet = image.widescreenImageTransform.srcset() %}
+         {% set placeholder = image.widescreenImageTransform.placeholderImage() %}
+         {% set srcSetWebp = image.widescreenImageTransform.srcsetWebP() %}
+      {% elseif aspectRatio is same as "square" and image.squareImageTransform is defined %}
+         {% set srcSet = image.squareImageTransform.srcset() %}
+         {% set placeholder = image.squareImageTransform.placeholderImage() %}
+         {% set srcSetWebp = image.squareImageTransform.srcsetWebP() %}
+      {% endif %}
+      
+      {# Fallback to direct URL if transforms not available #}
+      {% set srcSet = srcSet ?? image.url %}
+      {% set placeholder = placeholder ?? image.url %}
+      <div class="w-full h-full overflow-hidden">
+         <picture>
+            <source srcset="{{ srcSet }}"
+                    sizes="100vw"
+                    type="image/webp"/>
+            <img loading="lazy"
+                 src="{{ placeholder }}"
+                 srcset="{{ srcSetWebp }}"
+                 sizes="100vw"
+                 width="{{ image.width }}"
+                 height="{{ image.height }}"
+                 alt="{{ image.alt ?? '' }}"
+                 class="w-full h-full overflow-hidden max-h-[calc(100vh-80px)] {{ fitClasses[imageFit] ?? 'object-cover' }} {{ blurClasses[blur] ?? '' }} {{ brightnessClasses[brightness] ?? '' }} {{ contrastClasses[contrast] ?? '' }} {{ saturationClasses[saturation] ?? '' }}"
+                 style="{% if imageFit == 'cover' %}object-position:{{ focalPointX }} {{ focalPointY }};{% if image.originalImageTransform is defined and image.originalImageTransform.colorPalette is defined %} background-color: {{ image.originalImageTransform.colorPalette[1] }};{% endif %}{% endif %}"/>
+         </picture>
+      </div>
+   {% endif %}
+   {# listing the primary colors for the image #}
+   {# {% for color in image.originalImageTransform.colorPalette %}#}
+   {# <p>{{ color }}</p>#}
+   {# {% endfor %}#}
+{% endmacro %}

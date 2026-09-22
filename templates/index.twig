@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US" data-theme="light">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Fresh Template Time</title>
+    <link rel="icon" type="image/x-icon" href="dist/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    {# Preconnect to font CDN for faster font loading #}
+    <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.bunny.net" />
+    {% set expiry = now|date_modify('+30 minutes') %}
+    {% header "Cache-Control: max-age=" ~ (expiry.timestamp - now.timestamp) %}
+    {{ craft.vite.script("./src/main.ts", false) }}
+</head>
+
+<body
+   x-data="{ loading: true }"
+   x-init="
+     window.addEventListener('load', () => {
+       const content = document.querySelector('#content');
+       content.style.overflow = 'auto';
+       content.style.visibility = 'visible';
+       loading = false;
+
+       const lazyDom = document.querySelectorAll('.lazyload');
+       lazyDom.forEach(el => {
+         // If the el is already loaded (when load event may have already fired)
+         if (el.complete || el.naturalWidth > 0) {
+           el.style.backgroundColor = 'transparent';
+           el.style.backgroundImage = 'none';
+           el.classList.remove('blur-md')
+         } else {
+               // Otherwise, add an event listener for when the el loads
+               el.addEventListener('load', function() {
+                 el.style.backgroundColor = 'transparent';
+                 el.style.backgroundImage = 'none';
+                 el.classList.remove('blur-md')
+               });
+            }
+          });
+        });
+   ">
+<div x-show="loading" class="loading-screen"
+     x-transition:leave="transition-opacity ease-out duration-700"
+     x-transition:leave-start="opacity-100"
+     x-transition:leave-end="opacity-0"
+     x-transition:enter="transition-opacity ease-out duration-700"
+     x-transition:enter-start="opacity-0"
+     x-transition:enter-end="opacity-100">
+    <div class="loading-spinner"></div>
+</div>
+
+<div id="content">
+    {% include '_templates/blocks/_navigation.twig' %}
+    {#{% include '_templates/blocks/_megaNavigation.twig' %}#}
+{#{% include '_templates/blocks/_breadcrumbs.twig' %}#}
+    {% block body %}
+    {% endblock body %}
+    {% include '_templates/blocks/_footer.twig' %}
+</div>
+
+<script>0</script>
+</body>
+</html>

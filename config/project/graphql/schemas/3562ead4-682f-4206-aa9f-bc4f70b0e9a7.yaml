@@ -1,0 +1,5 @@
+isPublic: true
+name: 'Public Schema'
+scope:
+  - 'sites.465e8e05-dfe1-48d5-b118-10cbe924facb:read' # craft-five-bp
+  - 'sections.c0ecf01e-6e64-4464-af70-7236f1c1f0f7:read' # Pages

@@ -1,0 +1,25 @@
+{% import '_templates/elements/button.twig' as Button %}
+{% import '_templates/elements/image.twig' as Image  %}
+
+<div class="w-full h-[75vh] bg-surface-800 flex justify-center items-center">
+   <div class="w-full sm:w-4/5 h-full sm:h-4/5 relative overflow-visible">
+      <div class="absolute w-3/4 md:min-h-max md:h-auto lg:w-auto right-1/2 lg:right-0 top-1/2 translate-x-1/2 lg:translate-x-0 -translate-y-1/2 z-50 p-4 md:p-8 rounded prose-sm md:prose bg-surface-50 font-roboto">
+         <h1>{{ block.title }}</h1>
+         {# TODO: limit the characters on this rich text - and on all component, for that matter #}
+         <p>{{ block.richText }}</p>
+         {% set buttonEntry = block.button.one() ?? null %}
+         {% if buttonEntry %}
+         <div class="flex justify-end">
+            {{ Button.default(buttonEntry) }}
+         </div>
+         {% endif %}
+      </div>
+{#      if statement for the image #}
+      {% set heroImage = block.singleImage.one() ?? null %}
+      <div class="bg-surface-50 h-full w-full lg:w-4/5 bg-cover bg-center rounded-md overflow-clip">
+         {% if heroImage %}
+            {{ Image.default(heroImage) }}
+         {% endif %}
+      </div>
+   </div>
+</div>

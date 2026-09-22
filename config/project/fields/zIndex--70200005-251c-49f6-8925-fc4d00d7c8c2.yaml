@@ -1,0 +1,19 @@
+columnSuffix: null
+handle: zIndex
+instructions: null
+name: z-index
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: 0
+  max: 1000
+  min: 0
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  step: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

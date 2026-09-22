@@ -1,0 +1,10 @@
+{# dynamic classes: pt-sm pt-md pt-lg #}
+{% set anchorTag = block.anchorTag|length ? block.anchorTag : null %}
+
+<div class="{{ block.spacing == 'small' ? 'md:pt-[50px] pt-[25px]' :
+block.spacing == 'medium' ? 'md:pt-[75px] pt-[50px]' :
+block.spacing == 'large' ? 'md:pt-[100px] pt-[75px]' :
+'md:pt-[50px] pt-[25px]' }}
+{# bg-black bg-white #}
+ clear-both print:hidden bg-{{ block.backgroundColor }}"></div>
+{% if anchorTag %}<a name="{{ anchorTag }}"></a>{% endif %}

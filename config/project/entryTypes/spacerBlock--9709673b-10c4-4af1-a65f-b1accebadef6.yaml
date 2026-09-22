@@ -1,0 +1,104 @@
+color: teal
+description: null
+fieldLayouts:
+  8ad825f2-8209-4f78-91c7-1a5933253c5f:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-10-30T19:13:19+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3443b21e-6f8e-4533-ade1-acb783a10900
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-30T19:22:48+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6b516ae6-9087-4a38-b07a-5ab673960f51 # Spacing
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 404779ba-f459-4270-890a-23c4631bea2d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-30T19:22:48+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: fa5f2f7a-3e0b-43b3-97d0-d3c076f28d06 # Background Color
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 949304ef-4dcf-431d-ac86-6c329b89b9ed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-30T19:22:48+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 3a006abe-2582-4ef2-8d3b-719b24835644 # Anchor Tag
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ac737e93-df33-4bc8-b15c-c8b9ccb6dbd8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1ae48045-b0d0-40dc-926b-64dd4493c12c
+        userCondition: null
+handle: spacerBlock
+hasTitleField: false
+icon: shuttle-space
+name: Spacer
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,47 @@
+{# The block wrapper makes it easy to set block-level attributes like max-width, padding, etc. for all standard blocks. If a block needs to break these rules, you can either make a new kind of wrapper, or forego using the wrapper at all.  #}
+{% extends '_layouts/blockWrapper.twig' %}
+{% import '_templates/elements/image.twig' as Image %}
+{% import '_templates/elements/video.twig' as Video %}
+{% import '_templates/elements/text.twig' as Text %}
+
+{% set image = block.singleImage.one() ?? null %}
+{% set video = block.singleVideo.one() ?? null %}
+
+{% set textAlignment = {
+   'left': 'order-first',
+   'right': 'order-last'
+} %}
+
+{% block blockWrapper %}
+{% if image or video %}
+   <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-4 md:gap-12 my-block">
+      <div class="w-full prose flex flex-col justify-center py-8 {{ textAlignment[block.textAlignmentLR.value] }}">
+         {{ Text.Title(block.title) }}
+         {{ Text.Subtitle(block.subtitle) }}
+         {{ Text.RichText(block.richText) }}
+      </div>
+      <div class="expand {% if not block.mediaToggle %}md:min-h-[600px]{% endif %} overflow-clip rounded-md object-center">
+         {# handle an image or a video - if neighter are uploaded we're going to render a normal text block #}
+         {% if not block.mediaToggle %}
+
+               {{ Image.Default(image) }}
+         {% elseif block.mediaToggle %}
+            <div class="expand flex-center">
+               <div class="aspect-video w-full">
+                  {{ Video.Default(video) }}
+               </div>
+            </div>
+         {% else %}
+            {{ dump('error loading media') }}
+         {% endif %}
+      </div>
+   </div>
+{% else %}
+   {# if there isn't an image or video, we fall back to a simple center-justified text block #}
+   <div class="content-center">
+      {{ Text.Title(block.title) }}
+      {{ Text.Subtitle(block.subtitle) }}
+      {{ Text.RichText(block.richText) }}
+   </div>
+{% endif %}
+{% endblock %}

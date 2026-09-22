@@ -1,0 +1,25 @@
+{% extends 'index.twig' %}
+
+{% block body %}
+
+   {# Eager load content blocks with nested relations to prevent N+1 queries #}
+   {% set blocks = entry.contentBlocks
+       .with([
+           'singleImage',
+           'singleVideo',
+           'images',
+           'imageGalleryMatrix',
+           'testimonialMatrix',
+           'cardFields',
+           'button'
+       ])
+       .all() %}
+
+   {% for block in blocks %}
+      {% set camel = block.type.handle %}
+      <p>{{ camel }}:</p>
+      {% include("_templates/blocks/#{camel}.twig") with {'block': block} only %}
+   {% endfor %}
+
+
+{% endblock body %}

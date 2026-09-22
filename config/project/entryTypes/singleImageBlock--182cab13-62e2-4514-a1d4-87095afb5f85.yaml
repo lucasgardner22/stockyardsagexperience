@@ -1,0 +1,40 @@
+color: yellow
+description: null
+fieldLayouts:
+  def6b37f-a349-48ea-8eab-8f3d5ea694e7:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-12-17T22:26:50+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 94c492e6-2585-46cd-b5f7-277f35023321 # Single Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a59bd447-327d-42a6-844d-d32963918ff3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bed3869b-9d07-4b52-8153-ca5e5baaef40
+        userCondition: null
+handle: singleImageBlock
+hasTitleField: false
+icon: camera
+name: 'Single Image Block'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

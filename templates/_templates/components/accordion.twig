@@ -1,0 +1,38 @@
+{% macro pines(nodes) %}
+   {% if nodes is null %}
+      {{ dump('WARNING: No data was passed to the Accordion element! Placeholder data will be used.') }}
+      {% set nodes = [
+         { title: 'Title 1', text: 'Placeholder Title 1', richText: 'Placeholder content for the first item. This is some example text for the accordion item.' },
+         { title: 'Title 2', text: 'Placeholder Title 2', richText: 'Placeholder content for the second item. This is some more example text for the accordion item.' },
+         { title: 'Title 3', text: 'Placeholder Title 3', richText: 'Placeholder content for the third item. This is yet another example text for the accordion item.' }
+      ] %}
+   {% endif %}
+
+   <script>
+       const accordionComponent = () => {
+           // we return all the variables and methods that we want to use in the component in an object
+           return {
+               activeAccordion: null,
+               setActiveAccordion(id) {
+                   this.activeAccordion = this.activeAccordion === id ? null : id;
+               }
+           }
+       }
+   </script>
+
+   <div x-data="accordionComponent()" class="relative w-full overflow-hidden text-sm font-normal bg-white border border-gray-200 divide-y divide-gray-200 rounded">
+      {% for node in nodes %}
+         <div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
+            <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left select-none group-hover:underline">
+               <span>{{ node.title }}</span>
+               <svg class="w-4 h-4 duration-200 ease-out" :class="{ 'rotate-180': activeAccordion===id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div x-show="activeAccordion===id" x-collapse x-cloak>
+               <div class="p-4 pt-0 opacity-70 max-w-full">
+                  {{ node.richText }}
+               </div>
+            </div>
+         </div>
+      {% endfor %}
+   </div>
+{% endmacro %}
