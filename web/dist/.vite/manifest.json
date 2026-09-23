@@ -4,8 +4,8 @@
     "name": "alpine",
     "isDynamicEntry": true
   },
-  "_alpine-legacy-Zb3GOe8Y.js": {
-    "file": "assets/alpine-legacy-Zb3GOe8Y.js",
+  "_alpine-legacy-Cc03mQWk.js": {
+    "file": "assets/alpine-legacy-Cc03mQWk.js",
     "name": "alpine",
     "isDynamicEntry": true
   },
@@ -13,8 +13,8 @@
     "file": "assets/lucide-BlabGkw8.js",
     "name": "lucide"
   },
-  "_lucide-legacy-Chqr51YA.js": {
-    "file": "assets/lucide-legacy-Chqr51YA.js",
+  "_lucide-legacy-yZTBaIsM.js": {
+    "file": "assets/lucide-legacy-yZTBaIsM.js",
     "name": "lucide"
   },
   "_swiper-CazUlmrG.css": {
@@ -29,8 +29,8 @@
       "assets/swiper-CazUlmrG.css"
     ]
   },
-  "_swiper-legacy-BRTm2Gf4.js": {
-    "file": "assets/swiper-legacy-BRTm2Gf4.js",
+  "_swiper-legacy-DI-mRb7g.js": {
+    "file": "assets/swiper-legacy-DI-mRb7g.js",
     "name": "swiper",
     "isDynamicEntry": true
   },
@@ -38,12 +38,12 @@
     "file": "assets/tailwind-Bqxl9Ktz.js",
     "name": "tailwind"
   },
-  "_tailwind-legacy-DxHQk3Fg.js": {
-    "file": "assets/tailwind-legacy-DxHQk3Fg.js",
+  "_tailwind-legacy-CdoLhb2e.js": {
+    "file": "assets/tailwind-legacy-CdoLhb2e.js",
     "name": "tailwind"
   },
   "node_modules/vanilla-tilt/lib/vanilla-tilt.es2015-legacy.js": {
-    "file": "assets/vanilla-tilt-legacy-CFyiNo5_.js",
+    "file": "assets/vanilla-tilt-legacy-C4Ke5Y3W.js",
     "name": "vanilla-tilt",
     "src": "node_modules/vanilla-tilt/lib/vanilla-tilt.es2015-legacy.js",
     "isDynamicEntry": true
@@ -55,26 +55,26 @@
     "isDynamicEntry": true
   },
   "src/main-legacy.ts": {
-    "file": "assets/app-legacy-Ctw3Wlws.js",
+    "file": "assets/app-legacy-CDLEYqiX.js",
     "name": "app",
     "src": "src/main-legacy.ts",
     "isEntry": true,
     "imports": [
-      "_tailwind-legacy-DxHQk3Fg.js",
-      "_lucide-legacy-Chqr51YA.js",
-      "_alpine-legacy-Zb3GOe8Y.js"
+      "_tailwind-legacy-CdoLhb2e.js",
+      "_lucide-legacy-yZTBaIsM.js",
+      "_alpine-legacy-Cc03mQWk.js"
     ],
     "dynamicImports": [
-      "_swiper-legacy-BRTm2Gf4.js",
-      "_swiper-legacy-BRTm2Gf4.js",
-      "_alpine-legacy-Zb3GOe8Y.js",
-      "_alpine-legacy-Zb3GOe8Y.js",
-      "_alpine-legacy-Zb3GOe8Y.js",
-      "_alpine-legacy-Zb3GOe8Y.js",
-      "_alpine-legacy-Zb3GOe8Y.js",
-      "_alpine-legacy-Zb3GOe8Y.js",
-      "_alpine-legacy-Zb3GOe8Y.js",
-      "_alpine-legacy-Zb3GOe8Y.js",
+      "_swiper-legacy-DI-mRb7g.js",
+      "_swiper-legacy-DI-mRb7g.js",
+      "_alpine-legacy-Cc03mQWk.js",
+      "_alpine-legacy-Cc03mQWk.js",
+      "_alpine-legacy-Cc03mQWk.js",
+      "_alpine-legacy-Cc03mQWk.js",
+      "_alpine-legacy-Cc03mQWk.js",
+      "_alpine-legacy-Cc03mQWk.js",
+      "_alpine-legacy-Cc03mQWk.js",
+      "_alpine-legacy-Cc03mQWk.js",
       "node_modules/vanilla-tilt/lib/vanilla-tilt.es2015-legacy.js"
     ]
   },
@@ -106,7 +106,7 @@
     ]
   },
   "vite/legacy-polyfills-legacy": {
-    "file": "assets/polyfills-legacy-VAWqw7if.js",
+    "file": "assets/polyfills-legacy-Cub4dKb4.js",
     "name": "polyfills",
     "src": "vite/legacy-polyfills-legacy",
     "isEntry": true

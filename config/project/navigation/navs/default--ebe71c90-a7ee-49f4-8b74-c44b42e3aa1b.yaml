@@ -193,7 +193,7 @@ permissions:
     enabled: '1'
 propagationMethod: all
 siteSettings:
-  465e8e05-dfe1-48d5-b118-10cbe924facb: # craft-five-bp
+  465e8e05-dfe1-48d5-b118-10cbe924facb: # stockyards_ag_experience
     enabled: true
 sortOrder: 1
 structure:

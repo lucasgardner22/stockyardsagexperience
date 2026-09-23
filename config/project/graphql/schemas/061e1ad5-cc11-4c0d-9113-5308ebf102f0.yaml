@@ -1,7 +1,7 @@
 isPublic: false
 name: 'General - Svelte'
 scope:
-  - 'sites.465e8e05-dfe1-48d5-b118-10cbe924facb:read' # craft-five-bp
+  - 'sites.465e8e05-dfe1-48d5-b118-10cbe924facb:read' # stockyards_ag_experience
   - 'sections.34c2d3a9-93f5-4d47-9ca6-152a36cfcd2f:read' # Blog
   - 'sections.b889fd48-564d-4cbb-b469-fc6ca4288561:read' # Blog Posts
   - 'sections.c0ecf01e-6e64-4464-af70-7236f1c1f0f7:read' # Pages

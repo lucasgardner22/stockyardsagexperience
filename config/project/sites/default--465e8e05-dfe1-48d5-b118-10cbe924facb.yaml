@@ -1,9 +1,9 @@
-baseUrl: $PRIMARY_SITE_URL
+baseUrl: 'http://stockyardsagexperience.org/'
 enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: craft-five-bp
+name: stockyards_ag_experience
 primary: true
 siteGroup: aeff5466-2f20-4b7d-8e4a-04dce57c9959 # craft-five-bp
 sortOrder: 1
