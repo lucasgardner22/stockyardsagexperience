@@ -1,0 +1,13 @@
+{
+    "name": "lucas/stockyard-ag",
+    "type": "project",
+    "require": {
+        "craftcms/cms": "^5.11"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    }
+}
