@@ -1,8 +1,0 @@
-{% import '_templates/elements/image.twig' as Image  %}
-
-   <div class="w-full h-[800px]">
-      {% set image = block.singleImage.one() ?? null %}
-      {% if image %}
-         {{ Image.Default(image) }}
-      {% endif %}
-   </div>
