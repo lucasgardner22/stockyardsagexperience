@@ -6,3 +6,8 @@ define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH . '/vendor');
 
 // Load Composer's autoloader
 require_once CRAFT_VENDOR_PATH . '/autoload.php';
+
+// Load environment variables from .env
+if(class_exists(Dotenv\Dotenv::class)) {
+    Dotenv\Dotenv::createUnsafeImmutable(CRAFT_BASE_PATH)->safeLoad();
+}

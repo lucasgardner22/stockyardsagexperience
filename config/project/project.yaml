@@ -1,0 +1,27 @@
+dateModified: 1790200119
+email:
+  fromEmail: lucas.gardner@paulsenmarketing.com
+  fromName: stockyardsremake
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    54a86639-27bb-482c-9e0b-ed20b40500a5: stockyardsremake # stockyardsremake
+    479aa5c6-bab7-4e62-887f-20b1cf1884d9: stockyardsremake # stockyardsremake
+plugins:
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: stockyardsremake
+  schemaVersion: 5.11.0.2
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

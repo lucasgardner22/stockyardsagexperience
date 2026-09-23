@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en
+name: stockyardsremake
+primary: true
+siteGroup: 479aa5c6-bab7-4e62-887f-20b1cf1884d9 # stockyardsremake
+sortOrder: 1

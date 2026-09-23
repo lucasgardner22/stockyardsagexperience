@@ -2,7 +2,9 @@
     "name": "lucas/stockyard-ag",
     "type": "project",
     "require": {
-        "craftcms/cms": "^5.11"
+        "craftcms/cms": "^5.11",
+        "vlucas/phpdotenv": "^5.7",
+        "nystudio107/craft-vite": "^5.0"
     },
     "config": {
         "allow-plugins": {
