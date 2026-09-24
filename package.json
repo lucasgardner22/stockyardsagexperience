@@ -1,0 +1,25 @@
+{
+  "name": "stockyardsagexperience",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasgardner22/stockyardsagexperience.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasgardner22/stockyardsagexperience/issues"
+  },
+  "homepage": "https://github.com/lucasgardner22/stockyardsagexperience#readme",
+  "devDependencies": {
+    "vite": "^8.3.1"
+  },
+  "type": "module"
+}

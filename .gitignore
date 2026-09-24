@@ -2,3 +2,5 @@
 /vendor
 web/cpresources/
 storage/
+node_modules/
+web/dist
