@@ -1,1 +1,1 @@
-import 'src/css/app.css'
+import '../css/app.css'
