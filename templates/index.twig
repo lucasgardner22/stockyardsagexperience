@@ -11,9 +11,9 @@
         {{ craft.vite.script('src/js/app.js', false) }}
     </head>
     <body>
-        <h1>Stockyards AG Experience</h1>
+        <h1 class="bg-brandGreen text-4xl font-extrabold p-15">Stockyards AG Experience</h1>
 
-        <ul id="navigation">
+        <ul>
             {% for item in navigation %}
             <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
             {% endfor %}

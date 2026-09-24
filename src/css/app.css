@@ -1,3 +1,6 @@
-body {
-    color: green;
+@import "tailwindcss";
+
+@theme {
+    --color-brandGreen: #B5B515;
+    --color-brandBlack: #0F0F0F;
 }
