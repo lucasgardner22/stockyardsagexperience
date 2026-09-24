@@ -1,13 +1,22 @@
 <!DOCTYPE html>
+{% set navigation %}
+    <nav>...</nav>
+{% endset %}
 
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ sitename }}</title>
+        <title>{{ siteName }}</title>
         {{ craft.vite.script('src/js/app.js', false) }}
     </head>
     <body>
-        Stockyards AG Experience
+        <h1>Stockyards AG Experience</h1>
+
+        <ul id="navigation">
+            {% for item in navigation %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+            {% endfor %}
+        </ul>
     </body>
 </html>

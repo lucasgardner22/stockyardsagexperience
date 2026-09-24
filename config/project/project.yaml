@@ -1,10 +1,11 @@
-dateModified: 1790200119
+dateModified: 1790282568
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    4d67aa73-39ea-403e-b947-c557855f2fe2: 'Public Schema' # Public Schema
     54a86639-27bb-482c-9e0b-ed20b40500a5: stockyardsremake # stockyardsremake
     479aa5c6-bab7-4e62-887f-20b1cf1884d9: stockyardsremake # stockyardsremake
 plugins:
