@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% set navigation = [
+    { href: '/', caption: 'Home' },
+    { href: '/about', caption: 'About' }
+] %}
+
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ siteName }}</title>
+        {{ craft.vite.script('src/js/app.js', false) }}
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

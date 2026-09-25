@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-{% set navigation = [
-    { href: '/', caption: 'Home' },
-    { href: '/about', caption: 'About' }
-] %}
+{% extends '_layout/base' %}
+{% block content %}
+    <h1 class="bg-brandGreen text-4xl font-extrabold p-15">{{ entry.heroHeading }}</h1>
 
-<html lang="en-us">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ siteName }}</title>
-        {{ craft.vite.script('src/js/app.js', false) }}
-    </head>
-    <body>
-        {{ dump(entry) }}
+    <div>
+        {{ entry.intro|nl2br }}
+    </div>
 
-        <h1 class="bg-brandGreen text-4xl font-extrabold p-15">{{ entry.heroHeading }}</h1>
-
-        <div>
-            {{ entry.intro|nl2br }}
-        </div>
-
-        <ul>
-            {% for item in navigation %}
-                <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+    <ul>
+        {% for item in navigation %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
