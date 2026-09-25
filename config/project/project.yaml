@@ -1,4 +1,4 @@
-dateModified: 1790282568
+dateModified: 1790348058
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
@@ -6,8 +6,12 @@ email:
 meta:
   __names__:
     4d67aa73-39ea-403e-b947-c557855f2fe2: 'Public Schema' # Public Schema
+    9ba4c1d5-32c4-4a20-a6bb-b66cd12d9026: 'Hero Heading' # Hero Heading
     54a86639-27bb-482c-9e0b-ed20b40500a5: stockyardsremake # stockyardsremake
+    476d09be-e7d2-4df5-b86a-67fa4a81a967: Homepage # Homepage
     479aa5c6-bab7-4e62-887f-20b1cf1884d9: stockyardsremake # stockyardsremake
+    43618e1d-ad0f-4068-a382-933be9499cc2: Intro # Intro
+    f501a50b-fa6c-4bfa-9c2a-3c884416082a: Homepage # Homepage
 plugins:
   vite:
     edition: standard

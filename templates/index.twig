@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-{% set navigation %}
-    <nav>...</nav>
-{% endset %}
+{% set navigation = [
+    { href: '/', caption: 'Home' },
+    { href: '/about', caption: 'About' }
+] %}
 
 <html lang="en-us">
     <head>
@@ -11,11 +12,17 @@
         {{ craft.vite.script('src/js/app.js', false) }}
     </head>
     <body>
-        <h1 class="bg-brandGreen text-4xl font-extrabold p-15">Stockyards AG Experience</h1>
+        {{ dump(entry) }}
+
+        <h1 class="bg-brandGreen text-4xl font-extrabold p-15">{{ entry.heroHeading }}</h1>
+
+        <div>
+            {{ entry.intro|nl2br }}
+        </div>
 
         <ul>
             {% for item in navigation %}
-            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+                <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
             {% endfor %}
         </ul>
     </body>
