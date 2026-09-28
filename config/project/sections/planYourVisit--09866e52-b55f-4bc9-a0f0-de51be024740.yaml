@@ -17,6 +17,6 @@ siteSettings:
   54a86639-27bb-482c-9e0b-ed20b40500a5: # stockyardsremake
     enabledByDefault: true
     hasUrls: true
-    template: pages/plan-your-visit.twig
+    template: pages/visit/plan-your-visit.twig
     uriFormat: plan-your-visit
 type: single
