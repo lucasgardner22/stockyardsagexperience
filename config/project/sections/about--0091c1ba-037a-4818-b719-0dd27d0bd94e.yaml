@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 476d09be-e7d2-4df5-b86a-67fa4a81a967 # Homepage
+handle: about
+maxAuthors: 1
+minAuthors: 1
+name: About
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  54a86639-27bb-482c-9e0b-ed20b40500a5: # stockyardsremake
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/about
+    uriFormat: about
+type: single

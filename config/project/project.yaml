@@ -1,4 +1,4 @@
-dateModified: 1790348058
+dateModified: 1790608893
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
@@ -6,13 +6,28 @@ email:
 meta:
   __names__:
     4d67aa73-39ea-403e-b947-c557855f2fe2: 'Public Schema' # Public Schema
+    6c882737-071b-4937-9d61-d8a4c25cc1ff: News # News
     9ba4c1d5-32c4-4a20-a6bb-b66cd12d9026: 'Hero Heading' # Hero Heading
+    48f10c0c-2832-43b4-899f-26e242a18496: 'Main Navigation' # Main Navigation
     54a86639-27bb-482c-9e0b-ed20b40500a5: stockyardsremake # stockyardsremake
+    0091c1ba-037a-4818-b719-0dd27d0bd94e: About # About
     476d09be-e7d2-4df5-b86a-67fa4a81a967: Homepage # Homepage
     479aa5c6-bab7-4e62-887f-20b1cf1884d9: stockyardsremake # stockyardsremake
+    09866e52-b55f-4bc9-a0f0-de51be024740: 'Plan Your Visit' # Plan Your Visit
     43618e1d-ad0f-4068-a382-933be9499cc2: Intro # Intro
+    a1088304-2354-4895-8634-7db7341adf67: Pages # Pages
+    ad637d60-6543-4e17-9e9a-8be1e717b466: Experience # Experience
+    b4e4080c-9b0a-43bf-a037-2c90339ea172: 'Group Tours' # Group Tours
+    b522dd4f-5b63-459f-8d45-c4c8b7e617b1: 'Site Settings' # Site Settings
+    d074a7de-e72c-49a0-8e0b-3ee10be4ffc4: 'Contact Us' # Contact Us
     f501a50b-fa6c-4bfa-9c2a-3c884416082a: Homepage # Homepage
+    fb6e5a70-9abd-4c56-bc89-a020e01464be: Events # Events
 plugins:
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: U1271A8LEMXE0RD4CJK9TA3T
+    schemaVersion: 4.0.9
   vite:
     edition: standard
     enabled: true

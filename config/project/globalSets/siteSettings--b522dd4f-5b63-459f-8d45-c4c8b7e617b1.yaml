@@ -1,0 +1,31 @@
+fieldLayouts:
+  39cc4117-3110-4ef9-bed7-4380c689b635:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-09-25T20:09:10+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9ba4c1d5-32c4-4a20-a6bb-b66cd12d9026 # Hero Heading
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0d17ad67-a56c-4d8f-b81d-943b515ee488
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a15b1b78-5115-4596-bff9-5102427117cc
+        userCondition: null
+    thumbFieldKey: null
+handle: siteSettings
+name: 'Site Settings'
+sortOrder: 1

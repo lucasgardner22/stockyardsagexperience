@@ -1,0 +1,8 @@
+{% extends '_layout/base' %}
+{% block content %}
+    //Fix the logo image not appearing on subsequent pages past the main screen
+    <p>Welcome to the about page!</p>
+    <div>
+        {{ entry.intro|nl2br }}
+    </div>
+{% endblock %}

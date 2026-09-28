@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-{% set navigation = [
-    { href: '/', caption: 'Home' },
-    { href: '/about', caption: 'About' }
-] %}
 
 <html lang="en-us">
     <head>
@@ -12,6 +8,14 @@
         {{ craft.vite.script('src/js/app.js', false) }}
     </head>
     <body>
+        // Add logo image from original stockyards site
+        <div class="flex bg-brandGreen items-baseline g-15">
+            <h1 class="text-4xl font-extrabold p-10 pl-15 pr-15">{{ siteSettings.heroHeading }}</h1>
+
+            <nav aria-label="Main">
+                {{ craft.navigation.render('mainNavigation') }}
+            </nav>
+        </div>
         {% block content %}
         {% endblock %}
     </body>

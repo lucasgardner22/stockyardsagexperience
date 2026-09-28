@@ -4,12 +4,20 @@
     "require": {
         "craftcms/cms": "^5.11",
         "vlucas/phpdotenv": "^5.7",
-        "nystudio107/craft-vite": "^5.0"
+        "nystudio107/craft-vite": "^5.0",
+        "verbb/navigation": "^4.0.1"
     },
     "config": {
         "allow-plugins": {
             "yiisoft/yii2-composer": true,
             "craftcms/plugin-installer": true
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.craftcms.com",
+            "canonical": false
+        }
+    ]
 }
