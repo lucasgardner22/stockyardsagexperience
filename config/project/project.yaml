@@ -1,4 +1,4 @@
-dateModified: 1790611220
+dateModified: 1790613133
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
@@ -7,11 +7,11 @@ meta:
   __names__:
     1ba2b2f3-b966-46c8-83d0-53799a19f670: 'The People Who Feed Us' # The People Who Feed Us
     4d67aa73-39ea-403e-b947-c557855f2fe2: 'Public Schema' # Public Schema
-    6c882737-071b-4937-9d61-d8a4c25cc1ff: News # News
     9ba4c1d5-32c4-4a20-a6bb-b66cd12d9026: 'Hero Heading' # Hero Heading
     48f10c0c-2832-43b4-899f-26e242a18496: 'Main Navigation' # Main Navigation
     54a86639-27bb-482c-9e0b-ed20b40500a5: stockyardsremake # stockyardsremake
-    0091c1ba-037a-4818-b719-0dd27d0bd94e: About # About
+    71cbc8e8-f855-4b87-98f0-d0db76df2b1e: 'Stockyards Ag Experience in the News' # Stockyards Ag Experience in the News
+    89db3d66-72dd-46a4-8b1a-3e9a2cafc7ab: '2025 Ag Experience Insiders' # 2025 Ag Experience Insiders
     476d09be-e7d2-4df5-b86a-67fa4a81a967: Homepage # Homepage
     479aa5c6-bab7-4e62-887f-20b1cf1884d9: stockyardsremake # stockyardsremake
     09866e52-b55f-4bc9-a0f0-de51be024740: 'Plan Your Visit' # Plan Your Visit
@@ -21,7 +21,9 @@ meta:
     a1088304-2354-4895-8634-7db7341adf67: Pages # Pages
     b4e4080c-9b0a-43bf-a037-2c90339ea172: 'Group Tours' # Group Tours
     b522dd4f-5b63-459f-8d45-c4c8b7e617b1: 'Site Settings' # Site Settings
+    d040a6c6-ad02-467b-9ee2-e6912a41398f: Donate # Donate
     d074a7de-e72c-49a0-8e0b-3ee10be4ffc4: 'Contact Us' # Contact Us
+    e2c3a689-f3ba-447d-b600-cd3f0a8b46bf: "What's Happening" # What's Happening
     f501a50b-fa6c-4bfa-9c2a-3c884416082a: Homepage # Homepage
     f8943414-da18-4050-b204-287de9607640: Farm-to-Table # Farm-to-Table
     fb6e5a70-9abd-4c56-bc89-a020e01464be: Events # Events

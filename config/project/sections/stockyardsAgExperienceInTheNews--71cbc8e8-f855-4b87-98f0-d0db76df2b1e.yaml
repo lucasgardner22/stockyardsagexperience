@@ -3,10 +3,10 @@ enableVersioning: true
 entryTypes:
   -
     uid: 476d09be-e7d2-4df5-b86a-67fa4a81a967 # Homepage
-handle: news
+handle: stockyardsAgExperienceInTheNews
 maxAuthors: 1
 minAuthors: 1
-name: News
+name: 'Stockyards Ag Experience in the News'
 previewTargets:
   -
     label: 'Primary entry page'
@@ -17,6 +17,6 @@ siteSettings:
   54a86639-27bb-482c-9e0b-ed20b40500a5: # stockyardsremake
     enabledByDefault: true
     hasUrls: true
-    template: pages/news.twig
-    uriFormat: news
+    template: pages/news/stockyards-ag-experience-in-the-news.twig
+    uriFormat: stockyards-ag-experience-in-the-news
 type: single
