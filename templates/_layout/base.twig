@@ -8,9 +8,12 @@
         {{ craft.vite.script('src/js/app.js', false) }}
     </head>
     <body>
-        // Add logo image from original stockyards site
-        <div class="flex bg-brandGreen items-baseline g-15">
-            <h1 class="text-4xl font-extrabold p-10 pl-15 pr-15">{{ siteSettings.heroHeading }}</h1>
+        <div class="flex bg-brandGreen items-baseline gap-15">
+            {% set logoImage = siteSettings.stockyardsLogo.one() %}
+                
+            {% if logoImage %}
+                <a href="{{ siteUrl }}"><img src="{{ logoImage.url }}" alt="{{ logoImage.title }}"></a>
+            {% endif %}
 
             <nav aria-label="Main">
                 {{ craft.navigation.render('mainNavigation') }}

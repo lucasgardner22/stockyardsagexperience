@@ -6,11 +6,11 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2026-09-25T20:09:10+00:00'
+            dateAdded: '2026-09-29T14:09:06+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 9ba4c1d5-32c4-4a20-a6bb-b66cd12d9026 # Hero Heading
+            fieldUid: 05a4db89-cb3f-4d2c-b5fc-2b9217f52f32 # Stockyards Logo
             handle: null
             instructions: null
             label: null
@@ -18,7 +18,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0d17ad67-a56c-4d8f-b81d-943b515ee488
+            uid: 3be63ce0-cd93-43f7-b826-d7297350359e
             userCondition: null
             warning: null
             width: 100
