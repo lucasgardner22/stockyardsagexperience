@@ -1,6 +1,16 @@
 @import "tailwindcss";
+@import '@fontsource-variable/lora';
 
 @theme {
-    --color-brandGreen: #B5B515;
-    --color-brandBlack: #0F0F0F;
+    --font-*: initial;
+    --color-brandLightGreen: #a3a030;
+    --color-brandBrownGreen: #8a7c59;
+    --color-brandBlack: #141617;
+    --color-brandRed: #87272a;
+    --color-brandRedHover: #691e21;
+    --color-brandTan: #e4dacd;
+    --color-brandTanHover: #c7bdb1;
+    --color-brandBrown: #523932;
+
+    --font-display: "Lora", serif;
 }

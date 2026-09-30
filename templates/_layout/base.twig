@@ -8,18 +8,35 @@
         {{ craft.vite.script('src/js/app.js', false) }}
     </head>
     <body>
-        <div class="flex bg-brandGreen items-baseline gap-15">
-            {% set logoImage = siteSettings.stockyardsLogo.one() %}
-                
-            {% if logoImage %}
-                <a href="{{ siteUrl }}"><img src="{{ logoImage.url }}" alt="{{ logoImage.title }}"></a>
-            {% endif %}
+        {% set navNodes = craft.navigation.nodes('mainNavigation').level(1).all() %}
+        {% set half = (navNodes|length / 2)|round(0, 'ceil') %}
+        {% set leftNodes = navNodes|slice(0, half) %}
+        {% set rightNodes = navNodes|slice(half) %}
 
-            <nav aria-label="Main">
-                {{ craft.navigation.render('mainNavigation') }}
+        <header class="font-display bg-brandRed shadow-lg/25 px-15 py-5">
+            <nav aria-label="Main" class="grid grid-cols-[1fr_auto_1fr] items-center gap-15">
+                <ul class="flex justify-end gap-10">
+                    {% for node in leftNodes %}
+                        {{ include('_partials/navItem', { node: node, alignRight: true }) }}
+                    {% endfor %}
+                </ul>
+                
+                {% set logoImage = siteSettings.stockyardsLogo.one() %}
+                {% if logoImage %}
+                    <a href="{{ siteUrl }}"><img class="-mb-22" src="{{ logoImage.url }}" alt="{{ logoImage.title }}"></a>
+                {% endif %}
+
+                <ul class="flex justify-start gap-10">
+                    {% for node in rightNodes %}
+                        {{ include('_partials/navItem', { node: node }) }}
+                    {% endfor %}
+                </ul>
             </nav>
+        </header>
+
+        <div class="pt-30 p-15">
+            {% block content %}
+            {% endblock %}
         </div>
-        {% block content %}
-        {% endblock %}
     </body>
 </html>

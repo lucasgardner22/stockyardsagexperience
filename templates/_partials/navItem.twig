@@ -1,0 +1,17 @@
+{% set children = node.children.all() %}
+
+<li class="relative group hover:text-brandTanHover text-brandTan text-2xl">
+    {% if node.url %}
+        <a href="{{ node.url }}">{{ node.title }}</a>
+    {% else %}
+        <button type="button">{{ node.title }}</button>
+    {% endif %}
+
+    {% if children|length %}
+        <ul class="{{ alignRight ?? false ? 'right-0' : 'left-0' }} text-lg font-normal absolute top-full hidden group-hover:block bg-brandRedHover min-w-max whitespace-nowrap z-10 group-focus-within:block p-5 rounded-md space-y-1.5">
+            {% for child in children %}
+                <li><a class="hover:text-brandTanHover text-brandTan" href="{{ child.url }}">{{ child.title }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>
