@@ -1,5 +1,7 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @import '@fontsource-variable/lora';
+@import '@fontsource-variable/outfit';
 
 @theme {
     --font-*: initial;
@@ -11,6 +13,9 @@
     --color-brandTan: #e4dacd;
     --color-brandTanHover: #c7bdb1;
     --color-brandBrown: #523932;
+    --color-brandBrownHover: #5c3f36;
+    --color-brandOffWhite: #fcf8f0;
 
-    --font-display: "Lora", serif;
+    --font-display: "Lora", sans-serif;
+    --font-body: "Outfit Variable", sans-serif;
 }

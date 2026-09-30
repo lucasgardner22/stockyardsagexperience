@@ -1,0 +1,9 @@
+{% set image = block.image.one() %}
+{% if image %}
+    <figure class="my-10">
+        <img src="{{ image.url }}" alt="{{ image.alt }}">
+        {% if block.caption %}
+            <figcaption>{{ block.caption }}</figcaption>
+        {% endif %}
+    </figure>
+{% endif %}

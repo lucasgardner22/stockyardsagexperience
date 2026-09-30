@@ -1,0 +1,3 @@
+{% for block in blocks %}
+    {{ include('_blocks/' ~ block.type.handle, { block: block }, with_context = false) }}
+{% endfor %}

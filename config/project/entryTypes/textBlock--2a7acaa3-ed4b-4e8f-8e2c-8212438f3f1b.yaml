@@ -2,18 +2,18 @@ allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
-  5e3e4532-bdac-491c-b05c-4b6f492ec3f3:
+  9ed052ed-84ed-42a8-96ba-200415997bda:
     cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2026-09-30T19:25:38+00:00'
+            dateAdded: '2026-09-30T19:11:59+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: ce2d43f4-970b-42da-816a-e0d563596152 # Content Builder
+            fieldUid: c47ba1f4-ccf8-4e41-a199-81ba3c03d041 # Body
             handle: null
             instructions: null
             label: null
@@ -21,18 +21,18 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c457407a-b389-4f97-acac-a8952a9016ad
+            uid: 10cbd807-931f-4292-9d67-6ac0af19da9f
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 66e378ef-2d0b-404a-be64-06c313e84c71
+        uid: 5a392f87-1041-4788-bf15-bb719aa22d96
         userCondition: null
     thumbFieldKey: null
-handle: homepage
+handle: textBlock
 hasTitleField: false
 icon: null
-name: Homepage
+name: 'Text Block'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

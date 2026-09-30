@@ -5,7 +5,8 @@
         "craftcms/cms": "^5.11",
         "vlucas/phpdotenv": "^5.7",
         "nystudio107/craft-vite": "^5.0",
-        "verbb/navigation": "^4.0.1"
+        "verbb/navigation": "^4.0.1",
+        "craftcms/ckeditor": "^5.8"
     },
     "config": {
         "allow-plugins": {

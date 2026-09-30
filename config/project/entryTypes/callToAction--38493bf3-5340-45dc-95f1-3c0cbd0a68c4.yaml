@@ -1,0 +1,77 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  4fee5618-7e51-4bc8-9ee5-83b104cf3cda:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-09-30T19:13:37+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c47ba1f4-ccf8-4e41-a199-81ba3c03d041 # Body
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c140a2fa-94aa-4598-87f0-12554ecbff11
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-09-30T19:13:37+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 5e0575e8-61bc-49fc-b2e4-284d4b9a65b5 # Button Text
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 852dd2a1-b0c0-4535-8b72-b4e4cebb7254
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-09-30T19:13:37+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f39dc199-3b6a-49b7-a5a9-c30a927763f4 # Button Link
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dd357955-05d7-46df-bdf6-1a441702dd22
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 98394b24-0497-4055-a902-3eeac7bbc553
+        userCondition: null
+    thumbFieldKey: null
+handle: callToAction
+hasTitleField: false
+icon: null
+name: 'Call to Action'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'
