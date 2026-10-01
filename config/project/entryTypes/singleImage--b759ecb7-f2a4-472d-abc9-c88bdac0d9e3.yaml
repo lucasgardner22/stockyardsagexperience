@@ -2,14 +2,14 @@ allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
-  8a597505-f08a-4863-97fa-0ca2ddd693bc:
+  512bd0f5-f49d-4367-b801-c433562191d2:
     cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2026-09-30T19:13:00+00:00'
+            dateAdded: '2026-10-01T15:16:28+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -21,12 +21,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 611e098e-70d6-4b6a-9abe-bd8468357253
+            uid: 492b3827-aab6-4590-a0fd-a6217270ed60
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2026-10-01T14:18:41+00:00'
+            dateAdded: '2026-10-01T15:16:28+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -38,12 +38,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6fd4736b-b179-464a-a19c-0db3787c8b0e
+            uid: 635343c1-373e-441a-a87f-21a97ecbcca6
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2026-09-30T19:13:00+00:00'
+            dateAdded: '2026-10-01T15:16:28+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -55,18 +55,18 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 58544048-05df-456d-bc40-22f9289d6ec5
+            uid: fe482ab9-65e0-4159-868f-01905f8fc261
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 5b14ca22-ac5f-452a-9c81-065a26ea9415
+        uid: d22da375-aa9f-45bf-bdba-90c91a0b2f9a
         userCondition: null
     thumbFieldKey: null
-handle: imageBlock
+handle: singleImage
 hasTitleField: false
 icon: null
-name: 'Image Block'
+name: 'Single Image'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

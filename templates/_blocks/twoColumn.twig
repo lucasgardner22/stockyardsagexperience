@@ -1,0 +1,7 @@
+<div class="grid md:grid-cols-2 gap-10 items-center my-10">
+    {% for column in block.columns.all() %}
+        <div>
+            {{ include('_blocks/' ~ column.type.handle, { block: column }, with_context = false) }}
+        </div>
+    {% endfor %}
+</div>

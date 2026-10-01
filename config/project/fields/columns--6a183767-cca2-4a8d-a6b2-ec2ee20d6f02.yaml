@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: contentBuilder
+handle: columns
 instructions: null
-name: 'Content Builder'
+name: Columns
 searchable: false
 settings:
   createButtonLabel: null
@@ -20,37 +20,13 @@ settings:
       __assoc__:
         -
           - uid
-          - 57484c33-f05e-4669-9687-d8a29768eab3 # Image Block
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
-          - 38493bf3-5340-45dc-95f1-3c0cbd0a68c4 # Call to Action
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
           - b759ecb7-f2a4-472d-abc9-c88bdac0d9e3 # Single Image
         -
           - group
           - General
-    -
-      __assoc__:
-        -
-          - uid
-          - e4db7f7e-3a47-4b3b-a270-718b341bb4b1 # Two Column
-        -
-          - group
-          - General
   includeTableView: false
-  maxEntries: null
-  minEntries: null
+  maxEntries: 2
+  minEntries: 2
   pageSize: null
   propagationKeyFormat: null
   propagationMethod: all

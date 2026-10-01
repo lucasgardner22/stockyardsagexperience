@@ -1,4 +1,13 @@
 {% extends '_layout/base' %}
+
+
 {% block content %}
+
+    {% set blocks = entry.contentBuilder.all() %}
+
+    {% for block in blocks %}
+        {% set camel = block.type.handle %}
+        {% include("/_blocks/#{camel}.twig") with {'block': block} only %}
+    {% endfor %}
 
 {% endblock %}

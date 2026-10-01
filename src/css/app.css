@@ -2,6 +2,7 @@
 @plugin "@tailwindcss/typography";
 @import '@fontsource-variable/lora';
 @import '@fontsource-variable/outfit';
+@import '@fontsource/kanit';
 
 @theme {
     --font-*: initial;
@@ -15,7 +16,9 @@
     --color-brandBrown: #523932;
     --color-brandBrownHover: #5c3f36;
     --color-brandOffWhite: #fcf8f0;
+    --color-brandGray: #8c8c8c;
 
     --font-display: "Lora", sans-serif;
     --font-body: "Outfit Variable", sans-serif;
+    --font-header: "Kanit", sans-serif;
 }

@@ -2,13 +2,13 @@
 
 {% if image %}
     <figure>
-        <img class="w-full h-100 object-cover relative z-0" src="{{ image.url }}" alt="{{ image.alt }}">
+        <img class="mx-auto my-15 max-h-175" src="{{ image.url }}" alt="{{ image.title }}">
         {% if block.caption %}
             <figcaption class="text-center italic text-brandGray">
                 {% if block.captionArrow %}
-                    {{ svg('@appicons/' ~ block.captionArrow.name ~ '.svg', class = 'inline w-3 h-3 fill-current') }}
+                    {{ svg('@appicons/' ~ block.captionArrow.name ~ '.svg', class = "inline w-3 h-3 fill-current") }}
                 {% endif %}
-                    
+
                 {{ block.caption }}
             </figcaption>
         {% endif %}

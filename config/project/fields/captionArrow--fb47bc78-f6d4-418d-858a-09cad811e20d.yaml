@@ -1,0 +1,11 @@
+columnSuffix: null
+handle: captionArrow
+instructions: null
+name: 'Caption Arrow'
+searchable: false
+settings:
+  fullGraphqlData: true
+  includeProIcons: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Icon
