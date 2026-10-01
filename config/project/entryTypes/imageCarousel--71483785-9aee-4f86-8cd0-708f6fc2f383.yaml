@@ -1,0 +1,60 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  908373ed-d738-45fd-b176-863c0d0330bb:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-10-01T21:49:01+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: dc78a212-aa47-4383-baf9-fd9307098d76 # Images
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d1919626-f533-4b28-b2c8-eb2dbc9f7b12
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-01T21:49:01+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: e0206047-ceb9-43d6-a1bc-f4349a823096 # Autoplay
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 817ef9c3-f35b-42dd-9291-d618726325bc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bef0c891-6a94-4713-bb2b-3df8e6ecfb1b
+        userCondition: null
+    thumbFieldKey: null
+handle: imageCarousel
+hasTitleField: false
+icon: null
+name: 'Image Carousel'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

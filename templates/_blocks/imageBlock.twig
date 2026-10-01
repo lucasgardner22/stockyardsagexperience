@@ -2,13 +2,25 @@
 
 {% if image %}
     <figure>
-        <img class="w-full h-100 object-cover relative z-0" src="{{ image.url }}" alt="{{ image.alt }}">
+        <div class="relative">
+            <img class="w-full h-100 object-cover relative z-0" src="{{ image.url }}" alt="{{ image.alt }}">
+
+            {% if block.overlayText %}
+                <div class="absolute inset-0 bg-brandBlack/30"></div>
+                <div class="absolute inset-0 flex items-center justify-center px-15">
+                    <h2 class="text-7xl text-brandTan font-header text-center drop-shadow-lg/75 drop-shadow-brandRed">
+                        {{ block.overlayText }}
+                    </h2>
+                </div>
+            {% endif %}
+        </div>
+        
         {% if block.caption %}
-            <figcaption class="text-center italic text-brandGray">
+            <figcaption class="flex items-center justify-center gap-2 italic text-brandGray">
                 {% if block.captionArrow %}
                     {{ svg('@appicons/' ~ block.captionArrow.name ~ '.svg', class = 'inline w-3 h-3 fill-current') }}
                 {% endif %}
-                    
+
                 {{ block.caption }}
             </figcaption>
         {% endif %}

@@ -1,4 +1,4 @@
-dateModified: 1790871584
+dateModified: 1790891355
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
@@ -35,6 +35,7 @@ meta:
     69381dff-a472-4f0c-b61c-9b3db6d82ab9: Careers # Careers
     0911572d-f1d3-4d77-9715-d3a87e7fcec2: 'Stockyards Images' # Stockyards Images
     42240983-a008-42eb-a185-360a19ee466b: 'Woster Plaza' # Woster Plaza
+    71483785-9aee-4f86-8cd0-708f6fc2f383: 'Image Carousel' # Image Carousel
     a29274b8-3fbe-480b-8b59-89876117b33c: 'About Us' # About Us
     a1088304-2354-4895-8634-7db7341adf67: Pages # Pages
     b4e4080c-9b0a-43bf-a037-2c90339ea172: 'Group Tours' # Group Tours
@@ -45,6 +46,9 @@ meta:
     ce2d43f4-970b-42da-816a-e0d563596152: 'Content Builder' # Content Builder
     d040a6c6-ad02-467b-9ee2-e6912a41398f: Donate # Donate
     d074a7de-e72c-49a0-8e0b-3ee10be4ffc4: 'Contact Us' # Contact Us
+    dc78a212-aa47-4383-baf9-fd9307098d76: Images # Images
+    e0a2a811-0125-40c3-8235-9918ea898a47: 'Overlay Text' # Overlay Text
+    e0206047-ceb9-43d6-a1bc-f4349a823096: Autoplay # Autoplay
     e2c3a689-f3ba-447d-b600-cd3f0a8b46bf: "What's Happening" # What's Happening
     e4db7f7e-3a47-4b3b-a270-718b341bb4b1: 'Two Column' # Two Column
     f0b7c753-cd82-46b4-a198-69bd91ad1b26: Caption # Caption

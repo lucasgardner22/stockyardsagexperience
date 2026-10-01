@@ -21,4 +21,6 @@
     --font-display: "Lora", sans-serif;
     --font-body: "Outfit Variable", sans-serif;
     --font-header: "Kanit", sans-serif;
+
+    --spacing-gutter: 6.0rem;
 }

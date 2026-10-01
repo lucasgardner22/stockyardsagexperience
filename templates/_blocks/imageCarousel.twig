@@ -1,0 +1,11 @@
+{% set images = block.images.all() %}
+
+{% if images|length %}
+    <div class="swiper [--swiper-theme-color:var(--color-brandTan)]" data-carousel {% if block.autoplay %}data-autoplay="true"{% endif %}>
+        <div class="swiper-wrapper">
+            {% for image in images %}
+                
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

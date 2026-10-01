@@ -48,6 +48,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 71483785-9aee-4f86-8cd0-708f6fc2f383 # Image Carousel
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

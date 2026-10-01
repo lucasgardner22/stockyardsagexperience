@@ -26,6 +26,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-10-01T18:47:53+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: e0a2a811-0125-40c3-8235-9918ea898a47 # Overlay Text
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5f6b468c-5c81-4050-a923-c061e2c169b0
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-10-01T14:18:41+00:00'
             editCondition: null
             elementCondition: null
