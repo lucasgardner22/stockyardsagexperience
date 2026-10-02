@@ -4,8 +4,20 @@
     <div class="swiper [--swiper-theme-color:var(--color-brandTan)]" data-carousel {% if block.autoplay %}data-autoplay="true"{% endif %}>
         <div class="swiper-wrapper">
             {% for image in images %}
-                
+                <div class="swiper-slide">
+                    <img
+                        src="{{ image.url({ width: 1600, height: 700, mode: 'crop' }) }}"
+                        alt="{{ image.alt }}"
+                        loading="{{ loop.first ? 'eager' : 'lazy' }}"
+                        class="w-full h-100 md:h-150 object-cover"
+                        </div
+                    >
+                </div>
             {% endfor %}
         </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
     </div>
 {% endif %}
