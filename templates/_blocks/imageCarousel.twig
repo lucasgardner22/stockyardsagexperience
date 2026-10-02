@@ -1,15 +1,24 @@
 {% set images = block.images.all() %}
 
 {% if images|length %}
+    {% set ratios = images|filter(image => image.width and image.height)|map(image => image.width / image.height) %}
+
+    {% set ratio = ratios|length ? max(ratios) : 16 / 9 %}
+
+    {% set slideWidth = 1600 %}
+    {% set slideHeight = (slideWidth / ratio)|round %}
+
     <div class="swiper [--swiper-theme-color:var(--color-brandTan)]" data-carousel {% if block.autoplay %}data-autoplay="true"{% endif %}>
         <div class="swiper-wrapper">
             {% for image in images %}
                 <div class="swiper-slide">
                     <img
-                        src="{{ image.url({ width: 1600, height: 700, mode: 'crop' }) }}"
+                        src="{{ image.url({ width: slideWidth, height: slideHeight, mode: 'crop' }) }}"
+                        width="{{ slideWidth }}"
+                        height="{{ slideHeight }}"
                         alt="{{ image.alt }}"
                         loading="{{ loop.first ? 'eager' : 'lazy' }}"
-                        class="w-full h-100 md:h-150 object-cover"
+                        class="w-full h-auto"
                     >
                 </div>
             {% endfor %}
