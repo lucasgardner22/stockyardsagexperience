@@ -1,8 +1,8 @@
-<div class="grid md:grid-cols-2 items-center my-10">
+<div class="grid md:grid-cols-2 items-center">
     {% for column in block.columns.all() %}
         {% set isText = column.type.handle == 'textBlock' %}
 
-        <div class="{{ isText ? 'px-gutter py-10' : '' }}">
+        <div class="{{ isText ? 'px-gutter pt-10' : '' }}">
             {{ include('_blocks/' ~ column.type.handle, { block: column, inColumn: true, fillHeight: true }, with_context = false) }}
         </div>
     {% endfor %}
