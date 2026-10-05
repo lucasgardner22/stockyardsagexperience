@@ -8,30 +8,32 @@
     {% endif %}
 
     {% if images|length %}
-        <div class="swiper [--swiper-theme-color:var(--color-brandTan)]" data-carousel {% if block.autoplay %}data-autoplay="true"{% endif %}>
+        <div class="swiper bg-brandBrownGreen [--swiper-theme-color:var(--color-brandTan)]" data-carousel {% if block.autoplay %}data-autoplay="true"{% endif %}>
             <div class="swiper-wrapper">
                 {% for image in images %}
-                    <div class="swiper-slide">
-                        <div class="bg-brandBrownGreen">
-                            <div class="flex gap-25 ml-30 mr-30 items-center justify-center h-180 md:h-180 py-8">
-                                <div class="relative h-full shrink-0">
-                                    <img
-                                        src="{{ image.url({ width: 1200, height: 800, mode: 'crop' }) }}"
-                                        alt="{{ image.alt }}"
-                                        loading="lazy"
-                                        class="block w-auto h-full aspect-3/2 shrink-0 object-cover"
-                                    >
+                    <div class="swiper-slide w-auto! group">
+                        <div
+                            class="mb-2.5 relative h-90 transition duration-250
+                            scale-65 opacity-50
+                            group-[.swiper-slide-active]:scale-85 group-[.swiper-slide-active]:opacity-100
+                            group-[.swiper-slide-prev]:translate-x-[20%]
+                            group-[.swiper-slide-next]:-translate-x-[20%]"
+                        >
+                            <img
+                                src="{{ image.url({ width: 720, height: 480, mode: 'crop' }) }}"
+                                alt="{{ image.alt }}"
+                                loading="lazy"
+                                class="block h-full w-auto aspect-3/2 object-cover"
+                            >
 
-                                    {% if block.showTitles %}
-                                        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/80 via-black/30 to-transparent"></div>
-
-                                        <div
-                                            class="absolute bottom-20 left-20 text-shadow-lg text-shadow-black/90 font-body text-brandTan text-4xl"
-                                        >{{ image.title }}</div>
-                                    {% endif %}
+                            {% if block.showTitles %}
+                                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/80 via-black/30 to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6 text-shadow-lg text-shadow-black/90 font-body text-brandTan text-2xl">
+                                    {{ image.title }}
                                 </div>
-                            </div>
+                            {% endif %}
                         </div>
+
                     </div>
                 {% endfor %}
             </div>
