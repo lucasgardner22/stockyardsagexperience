@@ -7,8 +7,9 @@
 
             {% if block.overlayText %}
                 <div class="absolute inset-0 bg-brandBlack/30"></div>
-                <div class="absolute inset-0 flex items-center justify-center px-15">
-                    <h2 class="text-7xl text-brandTan font-header text-center drop-shadow-lg/75 drop-shadow-brandRed">
+
+                <div class="absolute inset-0 flex flex-col justify-center pl-15">
+                    <h2 class="text-7xl text-brandTan font-header drop-shadow-lg/75 drop-shadow-brandBlack">
                         {{ block.overlayText }}
                     </h2>
                 </div>

@@ -1,4 +1,4 @@
-dateModified: 1791216573
+dateModified: 1791313315
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
@@ -13,41 +13,29 @@ fs:
     url: '@web/uploads'
 meta:
   __names__:
-    1ba2b2f3-b966-46c8-83d0-53799a19f670: 'The People Who Feed Us' # The People Who Feed Us
     2a7acaa3-ed4b-4e8f-8e2c-8212438f3f1b: 'Text Block' # Text Block
     4d67aa73-39ea-403e-b947-c557855f2fe2: 'Public Schema' # Public Schema
     05a4db89-cb3f-4d2c-b5fc-2b9217f52f32: 'Stockyards Logo' # Stockyards Logo
-    5d3f8b16-f51b-4b17-bfe9-28f83b1f8237: 'Our Donors' # Our Donors
     5e0575e8-61bc-49fc-b2e4-284d4b9a65b5: 'Button Text' # Button Text
     6a183767-cca2-4a8d-a6b2-ec2ee20d6f02: Columns # Columns
     9ba4c1d5-32c4-4a20-a6bb-b66cd12d9026: 'Hero Heading' # Hero Heading
     13c9d98c-b2f6-4e30-9a32-64d6a42527a0: 'Show Titles' # Show Titles
-    32d9d372-1b5c-451e-871a-1043b6f10557: 'Board of Directors' # Board of Directors
     48f10c0c-2832-43b4-899f-26e242a18496: 'Main Navigation' # Main Navigation
     53eeaac8-a97d-4c64-85b7-9f763ec37293: 'Image Text' # Image Text
     54a86639-27bb-482c-9e0b-ed20b40500a5: stockyardsremake # stockyardsremake
-    71cbc8e8-f855-4b87-98f0-d0db76df2b1e: 'Stockyards Ag Experience in the News' # Stockyards Ag Experience in the News
-    89db3d66-72dd-46a4-8b1a-3e9a2cafc7ab: '2025 Ag Experience Insiders' # 2025 Ag Experience Insiders
     476d09be-e7d2-4df5-b86a-67fa4a81a967: Homepage # Homepage
     479aa5c6-bab7-4e62-887f-20b1cf1884d9: stockyardsremake # stockyardsremake
-    09866e52-b55f-4bc9-a0f0-de51be024740: 'Plan Your Visit' # Plan Your Visit
     38493bf3-5340-45dc-95f1-3c0cbd0a68c4: 'Call to Action' # Call to Action
     43618e1d-ad0f-4068-a382-933be9499cc2: Intro # Intro
     57484c33-f05e-4669-9687-d8a29768eab3: 'Image Block' # Image Block
-    69381dff-a472-4f0c-b61c-9b3db6d82ab9: Careers # Careers
     0911572d-f1d3-4d77-9715-d3a87e7fcec2: 'Stockyards Images' # Stockyards Images
-    42240983-a008-42eb-a185-360a19ee466b: 'Woster Plaza' # Woster Plaza
     71483785-9aee-4f86-8cd0-708f6fc2f383: 'Image Carousel' # Image Carousel
-    a29274b8-3fbe-480b-8b59-89876117b33c: 'About Us' # About Us
     a1088304-2354-4895-8634-7db7341adf67: Pages # Pages
-    b4e4080c-9b0a-43bf-a037-2c90339ea172: 'Group Tours' # Group Tours
     b522dd4f-5b63-459f-8d45-c4c8b7e617b1: 'Site Settings' # Site Settings
     b759ecb7-f2a4-472d-abc9-c88bdac0d9e3: 'Single Image' # Single Image
     b9620c99-e318-422f-b903-3dd5c3cab804: Image # Image
     c47ba1f4-ccf8-4e41-a199-81ba3c03d041: Body # Body
     ce2d43f4-970b-42da-816a-e0d563596152: 'Content Builder' # Content Builder
-    d040a6c6-ad02-467b-9ee2-e6912a41398f: Donate # Donate
-    d074a7de-e72c-49a0-8e0b-3ee10be4ffc4: 'Contact Us' # Contact Us
     dc78a212-aa47-4383-baf9-fd9307098d76: Images # Images
     e0a2a811-0125-40c3-8235-9918ea898a47: 'Overlay Text' # Overlay Text
     e0206047-ceb9-43d6-a1bc-f4349a823096: Autoplay # Autoplay
@@ -56,7 +44,6 @@ meta:
     f0b7c753-cd82-46b4-a198-69bd91ad1b26: Caption # Caption
     f39dc199-3b6a-49b7-a5a9-c30a927763f4: 'Button Link' # Button Link
     f501a50b-fa6c-4bfa-9c2a-3c884416082a: Homepage # Homepage
-    f8943414-da18-4050-b204-287de9607640: Farm-to-Table # Farm-to-Table
     fb6e5a70-9abd-4c56-bc89-a020e01464be: Events # Events
     fb47bc78-f6d4-418d-858a-09cad811e20d: 'Caption Arrow' # Caption Arrow
     fdd3a105-7362-4784-8b9c-8bbf9e133508: Pages # Pages

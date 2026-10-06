@@ -37,15 +37,64 @@
         {% block content %}
         {% endblock %}
     </body>
-    <footer class="font-display bg-brandBrown mt-15 flex text-brandTan justify-evenly py-5">
-        <div>
-            Current Hours
+    <footer class="font-display bg-brandBrown mt-15 text-brandTanHover py-10 font-normal grid grid-cols-3 gap-8">
+        <div class="w-fit mx-auto">
+            <div class="h-16 text-2xl">
+                <h3>Current Hours</h3>
+            </div>
+            
+            <div class="flex flex-col max-w-125 text-base text-white">
+                <p>Monday: 10 am - 5 pm</p>
+                <p>Tuesday: Closed</p>
+                <p>Wednesday: Closed</p>
+                <p>Thursday: 10 am - 5 pm</p>
+                <p>Friday: 10 am - 5 pm</p>
+                <p>Saturday: 10 am - 5 pm</p>
+                <p>Sunday: Noon - 5 pm</p>
+            </div>
         </div>
-        <div>
-            Contact Us
+
+        <div class="flex flex-col items-center justify-between">
+            {% set logoImage = siteSettings.stockyardsLogo.one() %}
+            {% if logoImage %}
+                <a href="{{ siteUrl }}"><img class="h-25" src="{{ logoImage.url }}" alt="{{ logoImage.title }}"></a>
+            {% endif %}
+
+            <div class="flex flex-col items-center">
+                <div class="flex text-lg gap-5 text-white w-fit py-4">
+                    <a href="https://www.facebook.com/StockyardsAgExperience"><img class="h-8" src="/uploads/NicePng_facebook-icon-png-black_9402277.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/agexperiencesd/"><img class="h-8" src="/uploads/NicePng_instagram-png-logo_41867.png" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/@stockyardsagexperience"><img class="h-8" src="/uploads/NicePng_youtube-icon-png-transparent_8035629.png" alt="YouTube"></a>
+                </div>
+
+                <span class="text-sm">
+                    © 2026 Stockyards Ag Experience
+                </span>
+            </div>
         </div>
-        <div>
-            Logo
+
+        <div class="px-30 flex flex-col gap-4">
+            <div class="flex max-w-125 gap-5 text-white">
+                <p>Group tours and private appointments are available during the week with at least one week notice (pending availability). Contact us for details!</p>
+            </div>
+
+            <div class="flex flex-col text-white">
+              
+                <div class="grid grid-cols-3 justify-start pb-4">
+                    <label for="By mail address" class="text-brandTanHover">By Mail:</label>
+                    <address name="By mail address" class="col-span-2 italic">
+                        Stockyards Ag Experience<br>
+                        PO Box 2042<br> Sioux Falls, SD 57101
+                    </address>
+                </div>
+
+                <div class="grid grid-cols-3 justify-start">
+                    <label for="In person address" class="text-brandTanHover">In Person:</label>
+                    <address name="In person address" class="col-span-2">
+                        301 E Falls Park Drive<br>Sioux Falls, SD 57104
+                    </address>
+                </div>
+            </div>
         </div>
     </footer>
 </html>
