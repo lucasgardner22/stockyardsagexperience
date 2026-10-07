@@ -24,3 +24,11 @@
 
     --spacing-gutter: 6.0rem;
 }
+
+[class*="prose"] a {
+    color: #8a7c59;
+}
+
+[class*="prose"] a:hover {
+    text-decoration: underline;
+}

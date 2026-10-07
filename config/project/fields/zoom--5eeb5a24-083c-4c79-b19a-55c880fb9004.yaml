@@ -1,0 +1,19 @@
+columnSuffix: null
+handle: zoom
+instructions: null
+name: Zoom
+searchable: false
+settings:
+  decimals: 2
+  defaultValue: 1
+  max: 2
+  min: 1
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  step: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

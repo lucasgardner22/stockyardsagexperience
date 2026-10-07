@@ -1,4 +1,4 @@
-dateModified: 1791313315
+dateModified: 1791390176
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
@@ -17,7 +17,9 @@ meta:
     4d67aa73-39ea-403e-b947-c557855f2fe2: 'Public Schema' # Public Schema
     05a4db89-cb3f-4d2c-b5fc-2b9217f52f32: 'Stockyards Logo' # Stockyards Logo
     5e0575e8-61bc-49fc-b2e4-284d4b9a65b5: 'Button Text' # Button Text
+    5eeb5a24-083c-4c79-b19a-55c880fb9004: Zoom # Zoom
     6a183767-cca2-4a8d-a6b2-ec2ee20d6f02: Columns # Columns
+    6e9c1b06-fb8c-49c3-bdfc-a3bf1d070aec: 'Interactable Card' # Interactable Card
     9ba4c1d5-32c4-4a20-a6bb-b66cd12d9026: 'Hero Heading' # Hero Heading
     13c9d98c-b2f6-4e30-9a32-64d6a42527a0: 'Show Titles' # Show Titles
     48f10c0c-2832-43b4-899f-26e242a18496: 'Main Navigation' # Main Navigation
@@ -43,6 +45,7 @@ meta:
     e4db7f7e-3a47-4b3b-a270-718b341bb4b1: 'Two Column' # Two Column
     f0b7c753-cd82-46b4-a198-69bd91ad1b26: Caption # Caption
     f39dc199-3b6a-49b7-a5a9-c30a927763f4: 'Button Link' # Button Link
+    f90ae485-5d95-4c51-bc72-c60df0d3b2c7: 'Prose Margins' # Prose Margins
     f501a50b-fa6c-4bfa-9c2a-3c884416082a: Homepage # Homepage
     fb6e5a70-9abd-4c56-bc89-a020e01464be: Events # Events
     fb47bc78-f6d4-418d-858a-09cad811e20d: 'Caption Arrow' # Caption Arrow

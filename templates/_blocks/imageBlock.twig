@@ -1,14 +1,18 @@
 {% set image = block.image.one() %}
 
 {% if image %}
-    <figure>
+    {% set focalPoint = image.getFocalPoint(true) %}
+    {% set zoom = block.zoom ?: 1 %}
+    
+    <figure class="pb-5">
         <div class="relative">
-            <img class="w-full h-100 object-cover relative z-0" src="{{ image.url }}" alt="{{ image.alt }}">
+            <img class="w-full h-100 overflow-hidden object-cover block" style="object-position: {{ focalPoint }}; transform-origin: {{ focalPoint }}; scale: {{ zoom }};" src="{{ image.getUrl({ width: 2400, mode: 'fit' }) }}" alt="{{ image.alt }}">
 
             {% if block.overlayText %}
                 <div class="absolute inset-0 bg-brandBlack/30"></div>
+                <div class="absolute inset-0 bg-linear-to-r {#to-t instead of to-r#} from-brandRed/75 to-transparent"></div>
 
-                <div class="absolute inset-0 flex flex-col justify-center pl-15">
+                <div class="absolute inset-0 flex {#items-center instead of flex-col#} flex-col justify-center pl-25 {#or no pl-25#}">
                     <h2 class="text-7xl text-brandTan font-header drop-shadow-lg/75 drop-shadow-brandBlack">
                         {{ block.overlayText }}
                     </h2>

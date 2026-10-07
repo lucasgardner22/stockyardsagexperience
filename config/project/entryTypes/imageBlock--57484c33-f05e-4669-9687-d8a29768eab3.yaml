@@ -26,6 +26,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-10-06T21:50:38+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 5eeb5a24-083c-4c79-b19a-55c880fb9004 # Zoom
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e071886c-2c43-4dfd-9502-e02bb9ace9e2
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-10-01T18:47:53+00:00'
             editCondition: null
             elementCondition: null

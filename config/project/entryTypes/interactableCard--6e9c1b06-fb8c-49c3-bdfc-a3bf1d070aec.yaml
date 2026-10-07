@@ -2,35 +2,46 @@ allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
-  9ed052ed-84ed-42a8-96ba-200415997bda:
+  828eb413-fb37-4711-bec6-3971a4390afe:
     cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2026-09-30T19:11:59+00:00'
-            editCondition: null
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-10-07T14:05:51+00:00'
+            disabled: false
             elementCondition: null
-            elementEditCondition: null
-            fieldUid: c47ba1f4-ccf8-4e41-a199-81ba3c03d041 # Body
-            handle: null
+            id: null
+            inputType: null
             instructions: null
             label: null
-            oldFieldUid: null
-            required: false
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
             tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 10cbd807-931f-4292-9d67-6ac0af19da9f
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8ada6878-cae9-4662-b0fa-15b36d4400e1
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2026-10-07T15:46:23+00:00'
+            dateAdded: '2026-10-07T14:10:45+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: f90ae485-5d95-4c51-bc72-c60df0d3b2c7 # Prose Margins
+            fieldUid: b9620c99-e318-422f-b903-3dd5c3cab804 # Image
             handle: null
             instructions: null
             label: null
@@ -38,18 +49,18 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fab6179c-8247-4117-a3f3-534d553f7a7e
+            uid: 03cb9b7a-032e-4e48-bc8c-c08862f7b01e
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 5a392f87-1041-4788-bf15-bb719aa22d96
+        uid: d4afcc22-0b71-4bd1-ba19-51ec931d23cb
         userCondition: null
     thumbFieldKey: null
-handle: textBlock
-hasTitleField: false
+handle: interactableCard
+hasTitleField: true
 icon: null
-name: 'Text Block'
+name: 'Interactable Card'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

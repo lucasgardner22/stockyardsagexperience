@@ -1,0 +1,14 @@
+columnSuffix: null
+handle: proseMargins
+instructions: 'Slider to adjust the width of the text (only applicable for text blocks not in two-column layouts).'
+name: 'Prose Margins'
+searchable: false
+settings:
+  defaultValue: 0
+  max: 150
+  min: 0
+  step: 10
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Range
