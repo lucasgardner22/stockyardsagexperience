@@ -1,4 +1,4 @@
-dateModified: 1791390176
+dateModified: 1791468029
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
@@ -15,11 +15,12 @@ meta:
   __names__:
     2a7acaa3-ed4b-4e8f-8e2c-8212438f3f1b: 'Text Block' # Text Block
     4d67aa73-39ea-403e-b947-c557855f2fe2: 'Public Schema' # Public Schema
+    4f74e384-08d4-4018-ac62-30f76a0e665c: 'Overlay Color' # Overlay Color
     05a4db89-cb3f-4d2c-b5fc-2b9217f52f32: 'Stockyards Logo' # Stockyards Logo
     5e0575e8-61bc-49fc-b2e4-284d4b9a65b5: 'Button Text' # Button Text
     5eeb5a24-083c-4c79-b19a-55c880fb9004: Zoom # Zoom
     6a183767-cca2-4a8d-a6b2-ec2ee20d6f02: Columns # Columns
-    6e9c1b06-fb8c-49c3-bdfc-a3bf1d070aec: 'Interactable Card' # Interactable Card
+    6e9c1b06-fb8c-49c3-bdfc-a3bf1d070aec: Card # Card
     9ba4c1d5-32c4-4a20-a6bb-b66cd12d9026: 'Hero Heading' # Hero Heading
     13c9d98c-b2f6-4e30-9a32-64d6a42527a0: 'Show Titles' # Show Titles
     48f10c0c-2832-43b4-899f-26e242a18496: 'Main Navigation' # Main Navigation
@@ -27,6 +28,7 @@ meta:
     54a86639-27bb-482c-9e0b-ed20b40500a5: stockyardsremake # stockyardsremake
     476d09be-e7d2-4df5-b86a-67fa4a81a967: Homepage # Homepage
     479aa5c6-bab7-4e62-887f-20b1cf1884d9: stockyardsremake # stockyardsremake
+    3922cabe-555c-4373-bba5-42d0ac8040d9: 'Image Url' # Image Url
     38493bf3-5340-45dc-95f1-3c0cbd0a68c4: 'Call to Action' # Call to Action
     43618e1d-ad0f-4068-a382-933be9499cc2: Intro # Intro
     57484c33-f05e-4669-9687-d8a29768eab3: 'Image Block' # Image Block
@@ -50,6 +52,7 @@ meta:
     fb6e5a70-9abd-4c56-bc89-a020e01464be: Events # Events
     fb47bc78-f6d4-418d-858a-09cad811e20d: 'Caption Arrow' # Caption Arrow
     fdd3a105-7362-4784-8b9c-8bbf9e133508: Pages # Pages
+    ffd033b4-8b90-46ca-ad47-f985ff5d6bb3: Reviews # Reviews
 plugins:
   ckeditor:
     edition: standard

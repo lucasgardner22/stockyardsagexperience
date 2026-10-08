@@ -1,8 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@import '@fontsource-variable/merriweather';
 @import '@fontsource-variable/lora';
 @import '@fontsource-variable/outfit';
-@import '@fontsource/kanit';
 
 @theme {
     --font-*: initial;
@@ -20,7 +20,7 @@
 
     --font-display: "Lora", sans-serif;
     --font-body: "Outfit Variable", sans-serif;
-    --font-header: "Kanit", sans-serif;
+    --font-header: "Merriweather Variable", serif;
 
     --spacing-gutter: 6.0rem;
 }

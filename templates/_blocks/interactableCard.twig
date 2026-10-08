@@ -1,2 +1,11 @@
 {% set image = block.image.one() %}
 
+{% if image %}
+    <div class="flex justify-center my-10 px-5">
+        {% if block.imageUrl %}
+            <a href="{{ block.imageUrl }}"><img class="w-170 object-cover rounded-lg shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl" src="{{ image.getUrl }}" alt="{{ image.title }}"></a>
+        {% else %}
+            <img class="w-170 object-cover rounded-lg shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl" src="{{ image.getUrl }}" alt="{{ image.title }}">
+        {% endif %}
+    </div>
+{% endif %}

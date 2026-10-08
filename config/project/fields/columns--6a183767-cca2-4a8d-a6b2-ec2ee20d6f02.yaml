@@ -24,6 +24,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 6e9c1b06-fb8c-49c3-bdfc-a3bf1d070aec # Card
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: 2
   minEntries: 2

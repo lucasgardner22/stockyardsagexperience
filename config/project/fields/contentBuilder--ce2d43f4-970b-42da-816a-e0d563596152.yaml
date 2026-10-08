@@ -60,7 +60,15 @@ settings:
       __assoc__:
         -
           - uid
-          - 6e9c1b06-fb8c-49c3-bdfc-a3bf1d070aec # Interactable Card
+          - 6e9c1b06-fb8c-49c3-bdfc-a3bf1d070aec # Card
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - ffd033b4-8b90-46ca-ad47-f985ff5d6bb3 # Reviews
         -
           - group
           - General

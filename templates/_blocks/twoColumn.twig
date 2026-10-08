@@ -1,5 +1,8 @@
-<div class="grid md:grid-cols-2 items-center">
-    {% for column in block.columns.all() %}
+{% set columns = block.columns.all() %}
+{% set doubleCard = (columns|first).type.handle == 'interactableCard' and (columns|last).type.handle == 'interactableCard' %}
+
+<div class="{{ doubleCard ? 'px-25' : 'px-0' }} grid md:grid-cols-2 items-center pt-10">
+    {% for column in columns %}
         {% set isText = column.type.handle == 'textBlock' %}
 
         <div class="{{ isText ? 'px-gutter pt-10' : '' }}">

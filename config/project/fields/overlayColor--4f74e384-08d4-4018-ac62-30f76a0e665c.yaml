@@ -1,0 +1,155 @@
+columnSuffix: null
+handle: overlayColor
+instructions: 'Set a color to overlay the image with a semi-transparent filter of that color.'
+name: 'Overlay Color'
+searchable: false
+settings:
+  allowCustomColors: true
+  palette:
+    __assoc__:
+      -
+        - 0
+        -
+          __assoc__:
+            -
+              - color
+              - '#a3a030'
+            -
+              - label
+              - 'Light Green'
+            -
+              - default
+              - ''
+      -
+        - 1
+        -
+          __assoc__:
+            -
+              - color
+              - '#8a7c59'
+            -
+              - label
+              - 'Brown Green'
+            -
+              - default
+              - ''
+      -
+        - 2
+        -
+          __assoc__:
+            -
+              - color
+              - '#141617'
+            -
+              - label
+              - Black
+            -
+              - default
+              - ''
+      -
+        - 3
+        -
+          __assoc__:
+            -
+              - color
+              - '#87272a'
+            -
+              - label
+              - Red
+            -
+              - default
+              - ''
+      -
+        - 4
+        -
+          __assoc__:
+            -
+              - color
+              - '#691e21'
+            -
+              - label
+              - 'Dark Red'
+            -
+              - default
+              - ''
+      -
+        - 5
+        -
+          __assoc__:
+            -
+              - color
+              - '#e4dacd'
+            -
+              - label
+              - Tan
+            -
+              - default
+              - ''
+      -
+        - 6
+        -
+          __assoc__:
+            -
+              - color
+              - '#c7bdb1'
+            -
+              - label
+              - 'Dark Tan'
+            -
+              - default
+              - ''
+      -
+        - 8
+        -
+          __assoc__:
+            -
+              - color
+              - '#5c3f36'
+            -
+              - label
+              - 'Light Brown'
+            -
+              - default
+              - ''
+      -
+        - 7
+        -
+          __assoc__:
+            -
+              - color
+              - '#523932'
+            -
+              - label
+              - Brown
+            -
+              - default
+              - ''
+      -
+        - 10
+        -
+          __assoc__:
+            -
+              - color
+              - '#8c8c8c'
+            -
+              - label
+              - Grey
+            -
+              - default
+              - ''
+      -
+        - 9
+        -
+          __assoc__:
+            -
+              - color
+              - '#fcf8f0'
+            -
+              - label
+              - Off-white
+            -
+              - default
+              - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Color
