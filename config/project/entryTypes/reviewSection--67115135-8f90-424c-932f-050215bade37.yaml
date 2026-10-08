@@ -1,0 +1,43 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  72f4c879-7839-4774-91c4-40fd7c599ffc:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-10-08T14:59:37+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 72c8efb2-3aee-4b32-94c9-75882986fae0 # Review Array
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ec981b99-dc88-487e-b16b-dcc5d2b927f8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b875ac01-99c1-447e-b1e7-1198ac1bfb58
+        userCondition: null
+    thumbFieldKey: null
+handle: reviewSection
+hasTitleField: false
+icon: null
+name: 'Review Section'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

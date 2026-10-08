@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: reviewArray
+instructions: null
+name: 'Review Array'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - ffd033b4-8b90-46ca-ad47-f985ff5d6bb3 # Review
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: 3
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

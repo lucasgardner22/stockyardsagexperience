@@ -1,0 +1,94 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  6bb5c75e-49bc-464a-b605-e0d9db102109:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-10-08T14:54:22+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c47ba1f4-ccf8-4e41-a199-81ba3c03d041 # Body
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a264c1fd-f8f0-4eda-9263-752fdbeebbac
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-08T14:54:22+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f90ae485-5d95-4c51-bc72-c60df0d3b2c7 # Prose Margins
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aa2ae482-9947-4a92-9ffb-81fedc222972
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-08T14:58:35+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: b9620c99-e318-422f-b903-3dd5c3cab804 # Image
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: effdf14d-65c5-443f-a614-938932aca808
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-08T15:02:05+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 1d955b9b-1178-4537-8e17-57faa9ae702f # Username
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5e46fed-d317-4707-87be-8204d9538eb9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 559a359c-a4a3-470c-b4f9-e92a39d13223
+        userCondition: null
+    thumbFieldKey: null
+handle: review
+hasTitleField: false
+icon: null
+name: Review
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

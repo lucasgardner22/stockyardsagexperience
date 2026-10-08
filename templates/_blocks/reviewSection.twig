@@ -1,0 +1,16 @@
+{% set reviewBlock = block.reviewArray.all() %}
+
+<div class="grid grid-cols-3 gap-5">
+    {% for review in reviewBlock %}
+        {% set image = review.image.one() %}
+
+        <div class="flex flex-col pt-15">
+            <p class="prose">{{ review.body }}</p>
+        
+            <p class="flex font-bold items-center pt-5">
+                <img class="h-7.5 pr-5" src="{{ image.url }}" alt="{{ review.title }}">
+                {{ review.username }}
+            </p>
+        </div>
+    {% endfor %}
+</div>
