@@ -32,6 +32,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - e4db7f7e-3a47-4b3b-a270-718b341bb4b1 # Two Column
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: 2
   minEntries: 2

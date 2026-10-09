@@ -1,5 +1,6 @@
 {% set columns = block.columns.all() %}
 {% set doubleCard = (columns|first).type.handle == 'interactableCard' and (columns|last).type.handle == 'interactableCard' %}
+{% set doubleList = (columns|first).type.handle == 'textBlock' and (columns|last).type.handle == 'textBlock' %}
 
 <div class="{{ doubleCard ? 'px-25' : 'px-0' }} grid md:grid-cols-2 items-center pt-10">
     {% for column in columns %}

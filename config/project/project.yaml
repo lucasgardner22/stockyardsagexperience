@@ -1,4 +1,4 @@
-dateModified: 1791492158
+dateModified: 1791557225
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
@@ -44,6 +44,7 @@ meta:
     c47ba1f4-ccf8-4e41-a199-81ba3c03d041: Body # Body
     ce2d43f4-970b-42da-816a-e0d563596152: 'Content Builder' # Content Builder
     dc78a212-aa47-4383-baf9-fd9307098d76: Images # Images
+    dc290bf2-04cb-4e87-ab8f-7da321b63c10: 'List Columns' # List Columns
     e0a2a811-0125-40c3-8235-9918ea898a47: 'Overlay Text' # Overlay Text
     e0206047-ceb9-43d6-a1bc-f4349a823096: Autoplay # Autoplay
     e2c3a689-f3ba-447d-b600-cd3f0a8b46bf: "What's Happening" # What's Happening

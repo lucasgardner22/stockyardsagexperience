@@ -41,6 +41,8 @@ settings:
     - bold
     - italic
     - link
+    - bulletedList
+    - createEntry
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none
