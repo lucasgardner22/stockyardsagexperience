@@ -1,13 +1,19 @@
+{% import '_macros/section.twig' as section %}
+
 {% set columns = block.columns.all() %}
 {% set doubleCard = (columns|first).type.handle == 'interactableCard' and (columns|last).type.handle == 'interactableCard' %}
-{% set doubleList = (columns|first).type.handle == 'textBlock' and (columns|last).type.handle == 'textBlock' %}
+{% set doubleText = (columns|first).type.handle == 'textBlock' and (columns|last).type.handle == 'textBlock' %}
+{% set background = block.sectionBackground.value %}
+{% set onDark = section.isDark(background)|trim is not empty %}
 
-<div class="{{ doubleCard ? 'px-25' : 'px-0' }} grid md:grid-cols-2 items-center pt-10">
-    {% for column in columns %}
-        {% set isText = column.type.handle == 'textBlock' %}
+<section class="{{ section.bg(background) }}">
+    <div class="{{ doubleCard ? 'px-25' : doubleText ? 'px-gutter md:gap-x-15 items-start' : 'px-0 items-center' }} grid md:grid-cols-2 items-center py-10">
+        {% for column in columns %}
+            {% set isText = column.type.handle == 'textBlock' %}
 
-        <div class="{{ isText ? 'px-gutter pt-10' : '' }}">
-            {{ include('_blocks/' ~ column.type.handle, { block: column, inColumn: true, fillHeight: true }, with_context = false) }}
-        </div>
-    {% endfor %}
-</div>
+            <div class="{{ isText and not doubleText ? 'px-gutter' : '' }}">
+                {{ include('_blocks/' ~ column.type.handle, { block: column, inColumn: true, fillHeight: true, onDark: onDark }, with_context = false) }}
+            </div>
+        {% endfor %}
+    </div>
+</section>

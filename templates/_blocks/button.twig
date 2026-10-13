@@ -1,0 +1,12 @@
+{% set inColumn = inColumn ?? false %}
+
+{% if block.buttonLink.url %}
+    <div class="flex justify-center {{ inColumn ? 'md:justify-start mt-6 px-gutter' : 'mt-10 px-5' }}">
+        {{ include('_partials/button', {
+            text: block.buttonText ?: block.buttonLink.label,
+            url: block.buttonLink.url,
+            target: block.buttonLink.target,
+            variant: block.buttonStyle.value
+        }, with_context = false) }}
+    </div>
+{% endif %}

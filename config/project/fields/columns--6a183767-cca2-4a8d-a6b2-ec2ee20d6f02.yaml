@@ -40,6 +40,30 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - f564bf9c-6b63-4436-9e21-97d021fffd2c # Button
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 71483785-9aee-4f86-8cd0-708f6fc2f383 # Image Carousel
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - df1f6de1-857d-4d4f-b072-dafac8d65604 # Video
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: 2
   minEntries: 2

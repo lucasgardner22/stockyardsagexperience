@@ -1,9 +1,13 @@
 {% set reviewBlock = block.reviewArray.all() %}
 
 <section class="mt-10 bg-brandBrownGreen" data-review-cycle data-interval="6000">
-    <div class="pt-10 text-center text-4xl font-header text-white ">
+    <h2
+        class="flex items-center gap-6 px-35 pt-10 text-4xl font-header text-white
+    before:flex-1 before:h-px before:bg-white/60
+    after:flex-1 after:h-px after:bg-white/60"
+    >
         {{ block.title }}
-    </div>
+    </h2>
     <div class="grid px-35 pb-15 pt-10">
         {% for group in reviewBlock|batch(3) %}
             <div

@@ -1,4 +1,4 @@
-dateModified: 1791557225
+dateModified: 1791910867
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
@@ -24,13 +24,18 @@ meta:
     6e9c1b06-fb8c-49c3-bdfc-a3bf1d070aec: Card # Card
     9ba4c1d5-32c4-4a20-a6bb-b66cd12d9026: 'Hero Heading' # Hero Heading
     13c9d98c-b2f6-4e30-9a32-64d6a42527a0: 'Show Titles' # Show Titles
+    37dfec00-c78d-4059-9075-5701faad4b3a: 'Show Previews' # Show Previews
     48f10c0c-2832-43b4-899f-26e242a18496: 'Main Navigation' # Main Navigation
     53eeaac8-a97d-4c64-85b7-9f763ec37293: 'Image Text' # Image Text
     54a86639-27bb-482c-9e0b-ed20b40500a5: stockyardsremake # stockyardsremake
     72c8efb2-3aee-4b32-94c9-75882986fae0: 'Review Array' # Review Array
+    0105b6d2-3ef6-4998-b210-4cf6db9de4d7: Logos # Logos
+    0465ea9c-3ad2-48c8-9e57-12d592e2a5e0: Website # Website
     476d09be-e7d2-4df5-b86a-67fa4a81a967: Homepage # Homepage
     479aa5c6-bab7-4e62-887f-20b1cf1884d9: stockyardsremake # stockyardsremake
     3922cabe-555c-4373-bba5-42d0ac8040d9: 'Image Url' # Image Url
+    5510bf90-90b2-4b9a-b101-fd6eb46c8264: 'Section Background' # Section Background
+    7408e40a-a569-489e-a94e-801568414fc1: 'Button Style' # Button Style
     38493bf3-5340-45dc-95f1-3c0cbd0a68c4: 'Call to Action' # Call to Action
     43618e1d-ad0f-4068-a382-933be9499cc2: Intro # Intro
     57484c33-f05e-4669-9687-d8a29768eab3: 'Image Block' # Image Block
@@ -41,10 +46,13 @@ meta:
     b522dd4f-5b63-459f-8d45-c4c8b7e617b1: 'Site Settings' # Site Settings
     b759ecb7-f2a4-472d-abc9-c88bdac0d9e3: 'Single Image' # Single Image
     b9620c99-e318-422f-b903-3dd5c3cab804: Image # Image
+    ba253be7-c63c-4881-acdd-6f92d3374815: 'Logo Row' # Logo Row
+    baf86928-267d-433c-b5f7-9e5a08bd0b28: 'Center Header' # Center Header
     c47ba1f4-ccf8-4e41-a199-81ba3c03d041: Body # Body
     ce2d43f4-970b-42da-816a-e0d563596152: 'Content Builder' # Content Builder
     dc78a212-aa47-4383-baf9-fd9307098d76: Images # Images
     dc290bf2-04cb-4e87-ab8f-7da321b63c10: 'List Columns' # List Columns
+    df1f6de1-857d-4d4f-b072-dafac8d65604: Video # Video
     e0a2a811-0125-40c3-8235-9918ea898a47: 'Overlay Text' # Overlay Text
     e0206047-ceb9-43d6-a1bc-f4349a823096: Autoplay # Autoplay
     e2c3a689-f3ba-447d-b600-cd3f0a8b46bf: "What's Happening" # What's Happening
@@ -53,6 +61,8 @@ meta:
     f39dc199-3b6a-49b7-a5a9-c30a927763f4: 'Button Link' # Button Link
     f90ae485-5d95-4c51-bc72-c60df0d3b2c7: 'Prose Margins' # Prose Margins
     f501a50b-fa6c-4bfa-9c2a-3c884416082a: Homepage # Homepage
+    f564bf9c-6b63-4436-9e21-97d021fffd2c: Button # Button
+    f2907d1e-9690-45ca-86e5-43b9f58807a8: 'Video URL' # Video URL
     fb6e5a70-9abd-4c56-bc89-a020e01464be: Events # Events
     fb47bc78-f6d4-418d-858a-09cad811e20d: 'Caption Arrow' # Caption Arrow
     fdd3a105-7362-4784-8b9c-8bbf9e133508: Pages # Pages

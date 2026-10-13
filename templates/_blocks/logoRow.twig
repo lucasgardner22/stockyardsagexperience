@@ -1,0 +1,40 @@
+{% set logos = block.logos.all() %}
+
+{% if logos|length %}
+    <section class="px-gutter pb-12 {{ inColumn ?? false ? '' : 'mt-10' }}">
+        {% if block.title %}
+            <h2 class="font-header text-2xl text-center mb-10">{{ block.title }}</h2>
+        {% endif %}
+
+        <ul class="flex flex-wrap items-center justify-center gap-x-16 gap-y-10">
+            {% for logo in logos %}
+                {% set url = logo.website.url ?? null %}
+
+                {% set img %}
+                    <img
+                        src="{{ logo.url({ height: 240, mode: 'fit' }) }}"
+                        alt="{{ logo.alt ?: logo.title }}"
+                        class="h-20 md:h-24 w-auto max-w-60 object-contain"
+                        loading="lazy"
+                    >
+                {% endset %}
+
+                <li>
+                    {% if url %}
+                        <a
+                            href="{{ url }}"
+                            target="_blank"
+                            rel="noopener"
+                            class="block transition duration-200 hover:scale-105"
+                        >
+                            {{ img }}
+                            <span class="sr-only">(opens in a new tab)</span>
+                        </a>
+                    {% else %}
+                        {{ img }}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endif %}

@@ -26,7 +26,7 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            required: true
+            required: false
             size: null
             step: null
             tip: null
@@ -67,6 +67,23 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 2cd9845e-c8f6-47d2-82a5-fdfe5625a6ea
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-12T19:05:43+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 37dfec00-c78d-4059-9075-5701faad4b3a # Show Previews
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 50ecd8f7-0c7c-4687-a831-040fc90c9eb7
             userCondition: null
             warning: null
             width: 100

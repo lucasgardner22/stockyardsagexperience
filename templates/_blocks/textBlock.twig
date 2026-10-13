@@ -1,3 +1,14 @@
-<div class="font-body mt-15 prose prose-lg {{ inColumn ?? false ? 'max-w-none' : 'mx-auto' }}" style="padding-inline: calc(var(--spacing) * {{ block.proseMargins }})">
+{% set listColumnClasses = {
+    '2': 'md:[&_ul]:columns-2',
+    '3': 'md:[&_ul]:columns-3'
+} %}
+
+{% set centeredHeaderClass = block.centerHeader ? '[&>:first-child:is(h1,h2,h3,h4,h5,h6)]:text-center' : '' %}
+
+<div
+    class="font-body mt-10 prose prose-lg prose-headings:font-header prose-h1:text-balance {{ centeredHeaderClass }} {{ onDark ?? false ? 'prose-invert' : '' }} {{ listColumnClasses[block.listColumns.value] ?? '' }} 
+    md:[&_ul]:gap-x-12 [&_li]:break-inside-avoid {{ inColumn ?? false ? 'max-w-none' : 'max-w-6xl mx-auto [&>:not(h1)]:max-w-2xl [&>:not(h1)]:mx-auto' }} {{ block.centerHeader ? 'prose-h1:mx-[calc(var(--prose-pad)*-1)]' : 'prose-h1:mr-[calc(var(--prose-pad)*-1)]' }}"
+    style="--prose-pad: calc(var(--spacing) * {{ block.proseMargins }}); padding-inline: var(--prose-pad)"
+>
     {{ block.body }}
 </div>

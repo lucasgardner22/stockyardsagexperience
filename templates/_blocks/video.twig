@@ -1,0 +1,19 @@
+{% set url = block.videoUrl.url ?? '' %}
+{% set pattern = '/^.*(?:youtu\\.be\\/|v=|\\/embed\\/|\\/shorts\\/)([\\w-]{11}).*$/' %}
+{% set videoId = url|replace(pattern, '$1') %}
+
+{% if url and videoId != url %}
+    <figure class="{{ inProse ?? false ? 'not-prose my-8' : (inColumn ?? false ? '' : 'max-w-4xl mx-auto px-5 mt-15') }}">
+        <iframe
+            class="block w-full aspect-video shadow-md"
+            src="https://www.youtube-nocookie.com/embed/{{ videoId }}?rel=0"
+            title="{{ block.title ?: 'Youtube Video' }}"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+        ></iframe>
+
+        {{ include('_partials/caption', { caption: block.caption, arrow: block.captionArrow }, with_context = false) }}
+    </figure>
+{% endif %}

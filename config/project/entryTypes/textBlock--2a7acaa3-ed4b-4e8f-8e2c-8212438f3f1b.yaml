@@ -43,6 +43,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-10-12T13:10:33+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: baf86928-267d-433c-b5f7-9e5a08bd0b28 # Center Header
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cf673366-bceb-47b8-a93f-d7a00d1d3eee
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-10-09T14:47:05+00:00'
             editCondition: null
             elementCondition: null

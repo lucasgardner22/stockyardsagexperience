@@ -72,6 +72,30 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - f564bf9c-6b63-4436-9e21-97d021fffd2c # Button
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - df1f6de1-857d-4d4f-b072-dafac8d65604 # Video
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - ba253be7-c63c-4881-acdd-6f92d3374815 # Logo Row
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

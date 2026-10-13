@@ -5,9 +5,9 @@ name: 'Prose Margins'
 searchable: false
 settings:
   defaultValue: 0
-  max: 150
+  max: 50
   min: 0
-  step: 10
+  step: 5
   suffix: null
 translationKeyFormat: null
 translationMethod: none

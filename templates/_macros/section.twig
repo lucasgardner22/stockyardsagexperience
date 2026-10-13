@@ -1,0 +1,12 @@
+{% macro bg(value) %}
+    {%- set backgrounds = {
+        red: 'bg-brandRed my-15 pb-10',
+        green: 'bg-brandBrownGreen my-15 pb-10',
+        tan: 'bg-brandTan my-15 pb-10'
+    } -%}
+    {{- backgrounds[value] ?? '' -}}
+{% endmacro %}
+
+{% macro isDark(value) %}
+    {{- value in ['red', 'green'] ? 'true' -}}
+{% endmacro %}

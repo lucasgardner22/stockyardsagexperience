@@ -25,6 +25,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-10-09T19:04:43+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 5510bf90-90b2-4b9a-b101-fd6eb46c8264 # Section Background
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a8ccadb8-fadf-44dc-8825-35960d68a088
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: fee4564e-e8c8-4df5-aa6c-01948211a6ad
         userCondition: null

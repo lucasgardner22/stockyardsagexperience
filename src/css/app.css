@@ -8,6 +8,7 @@
     --font-*: initial;
     --color-brandLightGreen: #a3a030;
     --color-brandBrownGreen: #8a7c59;
+    --color-brandBrownGreenHover: #706548;
     --color-brandBlack: #141617;
     --color-brandRed: #87272a;
     --color-brandRedHover: #691e21;
@@ -27,6 +28,7 @@
 
 [class*="prose"] a {
     color: #8a7c59;
+    text-decoration: none;
 }
 
 [class*="prose"] a:hover {

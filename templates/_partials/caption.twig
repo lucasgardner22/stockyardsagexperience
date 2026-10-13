@@ -1,0 +1,9 @@
+{% if caption %}
+    <figcaption class="text-center italic text-brandGray">
+        {% if arrow %}
+            {{ svg('@appicons/' ~ arrow.name ~ '.svg', class = "inline w-3 h-3 fill-current") }}
+        {% endif %}
+
+        {{ caption }}
+    </figcaption>
+{% endif %}

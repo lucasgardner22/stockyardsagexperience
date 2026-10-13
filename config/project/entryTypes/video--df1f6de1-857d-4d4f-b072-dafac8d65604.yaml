@@ -1,0 +1,105 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  573d278a-e8ee-4fa2-9d1b-8621dbf10989:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-10-13T13:32:06+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f2907d1e-9690-45ca-86e5-43b9f58807a8 # Video URL
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8ff02990-516e-4ce4-92fb-035913a4bce7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T13:32:06+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f0b7c753-cd82-46b4-a198-69bd91ad1b26 # Caption
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5557caa0-ca29-4c17-b8ae-12b246389912
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T13:32:06+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: fb47bc78-f6d4-418d-858a-09cad811e20d # Caption Arrow
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 27e9e6f4-f402-4574-bd51-9578b0160592
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-10-13T13:32:06+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: 'Video Description'
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8cf7da87-ca47-4336-bf1d-eb8d9a6492b3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ed0a648c-9a8e-4b14-b4de-99456b15b9eb
+        userCondition: null
+    thumbFieldKey: null
+handle: video
+hasTitleField: true
+icon: null
+name: Video
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

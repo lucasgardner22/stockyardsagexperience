@@ -1,0 +1,21 @@
+{% set variants = {
+    red: 'bg-brandRed hover:bg-brandRedHover text-white',
+    green: 'bg-brandBrownGreen hover:bg-brandBrownGreenHover text-white',
+    brown: 'bg-brandBrown hover:bg-brandBrownHover text-white'
+} %}
+
+{% set aligns = { left: 'justify-start', center: 'justify-center', right: 'justify-end' } %}
+
+<div class="flex {{ aligns[align ?? 'center'] }} {{ class ?? '' }}">
+    <a
+        href="{{ url }}"
+        {% if target %}
+        target="{{ target }}"
+        rel="noopener"
+        {% endif %}
+        class="inline-block font-body text-lg px-8 py-3 rounded-lg shadow-md transition duration-300 
+    ease-in-out hover:shadow-xl w-full text-center sm:w-auto {{ variants[variant] ?? 'red' }}"
+    >
+        {{ text }}
+    </a>
+</div>

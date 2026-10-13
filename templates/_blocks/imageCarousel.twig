@@ -1,29 +1,74 @@
 {% set images = block.images.all() %}
+{% set inColumn = inColumn ?? false %}
+{% set showPreviews = block.showPreviews and not inColumn %}
 
-<div class="mt-15">
-    {% if block.title %}
-        <div class="flex font-header text-white bg-brandBrownGreen pt-8 text-4xl justify-center">
-            {{ block.title }}
-        </div>
-    {% endif %}
+{% if images|length %}
+    <div class="mt-15">
+        {% if block.title and not inColumn %}
+            <div class="flex font-header text-white bg-brandBrownGreen pt-8 text-4xl justify-center">
+                {{ block.title }}
+            </div>
+        {% endif %}
 
-    {% if images|length %}
-        <div class="swiper bg-brandBrownGreen [--swiper-theme-color:var(--color-brandTan)]" data-carousel {% if block.autoplay %}data-autoplay="true"{% endif %}>
-            <div class="swiper-wrapper">
-                {% for image in images %}
-                    <div class="swiper-slide w-auto! group">
-                        <div
-                            class="mb-2.5 relative h-90 transition duration-250
+        {% if showPreviews %}
+            {# ── KEPT: your current full-width showcase, copied as-is ── #}
+            <div class="swiper bg-brandBrownGreen [--swiper-theme-color:var(--color-brandTan)]" data-carousel {% if block.autoplay %}data-autoplay="true"{% endif %}>
+                <div class="swiper-wrapper">
+                    {% for image in images %}
+                        <div class="swiper-slide w-auto! group">
+                            <div
+                                class="mb-2.5 relative h-90 transition duration-250
                             scale-65 opacity-50
                             group-[.swiper-slide-active]:scale-85 group-[.swiper-slide-active]:opacity-100
                             group-[.swiper-slide-prev]:translate-x-[20%]
                             group-[.swiper-slide-next]:-translate-x-[20%]"
-                        >
+                            >
+                                <img
+                                    src="{{ image.url({ width: 720, height: 480, mode: 'crop' }) }}"
+                                    alt="{{ image.alt }}"
+                                    class="block h-full w-auto aspect-3/2 object-cover"
+                                >
+
+                                {% if block.showTitles %}
+                                    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/80 via-black/30 to-transparent"></div>
+                                    <div class="absolute bottom-6 left-6 right-6 text-shadow-lg text-shadow-black/90 font-body text-brandTan text-2xl">
+                                        {{ image.title }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        {% else %}
+            {# ── NEW: one image at a time, used in columns AND when previews are off ── #}
+            {% set transform = inColumn
+                ? { width: 960, height: 640, mode: 'crop' }
+                : { width: 1920, height: 823, mode: 'crop' } %}
+            {% set aspect = inColumn ? 'aspect-3/2' : 'aspect-21/9' %}
+            {% set arrowClasses = 'bg-brandBrown/70 hover:bg-brandBrown p-3 shadow-md transition duration-200' %}
+
+            <div
+                class="swiper {{ inColumn ? 'shadow-md' : '' }}
+                [--swiper-theme-color:var(--color-brandTan)]
+                [--swiper-navigation-size:2.75rem]
+                [--swiper-navigation-sides-offset:0.75rem]
+                [--swiper-navigation-color:var(--color-brandOffWhite)]"
+                data-carousel="single"
+                {% if block.autoplay %}data-autoplay="true"{% endif %}
+            >
+                <div class="swiper-wrapper">
+                    {% for image in images %}
+                        <div class="swiper-slide relative">
                             <img
-                                src="{{ image.url({ width: 720, height: 480, mode: 'crop' }) }}"
+                                src="{{ image.url(transform) }}"
                                 alt="{{ image.alt }}"
-                                loading="lazy"
-                                class="block h-full w-auto aspect-3/2 object-cover"
+                                class="block w-full {{ aspect }} object-cover"
                             >
 
                             {% if block.showTitles %}
@@ -33,15 +78,13 @@
                                 </div>
                             {% endif %}
                         </div>
+                    {% endfor %}
+                </div>
 
-                    </div>
-                {% endfor %}
+                <div class="swiper-button-prev {{ arrowClasses }}"></div>
+                <div class="swiper-button-next {{ arrowClasses }}"></div>
+                <div class="swiper-pagination"></div>
             </div>
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-    {% endif %}
-</div>
-
+        {% endif %}
+    </div>
+{% endif %}

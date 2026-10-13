@@ -13,6 +13,23 @@ settings:
   defaultTransform: null
   defaultUploadLocationSubpath: null
   defaultUploadLocationVolume: null
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - b759ecb7-f2a4-472d-abc9-c88bdac0d9e3 # Single Image
+        -
+          - expanded
+          - false
+    -
+      __assoc__:
+        -
+          - uid
+          - df1f6de1-857d-4d4f-b072-dafac8d65604 # Video
+        -
+          - expanded
+          - false
   fullGraphqlData: true
   headingLevels:
     - '1'
@@ -21,12 +38,22 @@ settings:
     - '4'
     - '5'
     - '6'
-  imageEntryTypeUid: null
-  imageFieldUid: null
-  imageMode: img
+  imageEntryTypeUid: b759ecb7-f2a4-472d-abc9-c88bdac0d9e3 # Single Image
+  imageFieldUid: 492b3827-aab6-4590-a0fd-a6217270ed60
+  imageMode: entries
   js: null
   jsFile: null
-  options: null
+  options:
+    __assoc__:
+      -
+        - alignment
+        -
+          __assoc__:
+            -
+              - options
+              -
+                - left
+                - right
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -38,11 +65,14 @@ settings:
   toolbar:
     - heading
     - '|'
+    - alignment
     - bold
     - italic
     - link
     - bulletedList
+    - insertImage
     - createEntry
+    - fontColor
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none
