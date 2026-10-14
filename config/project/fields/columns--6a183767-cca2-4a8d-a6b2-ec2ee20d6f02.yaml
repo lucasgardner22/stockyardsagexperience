@@ -64,6 +64,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - e9865b51-531e-4b83-a6e9-483238799d5f # Map
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: 2
   minEntries: 2

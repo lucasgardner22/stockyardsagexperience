@@ -1,12 +1,14 @@
 {% set inColumn = inColumn ?? false %}
+{% set inProse = inProse ?? false %}
 
 {% if block.buttonLink.url %}
-    <div class="flex justify-center {{ inColumn ? 'md:justify-start mt-6 px-gutter' : 'mt-10 px-5' }}">
-        {{ include('_partials/button', {
+    {{ include('_partials/button', {
             text: block.buttonText ?: block.buttonLink.label,
             url: block.buttonLink.url,
             target: block.buttonLink.target,
-            variant: block.buttonStyle.value
+            variant: block.buttonStyle.value,
+            align: inProse or inColumn ? 'left' : 'center',
+            class: inProse ? 'not-prose my-6' : (inColumn ? 'mt-6 px-gutter' : 'mt-10 px-5')
         }, with_context = false) }}
     </div>
 {% endif %}

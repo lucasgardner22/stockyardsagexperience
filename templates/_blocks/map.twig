@@ -1,0 +1,26 @@
+{% set inColumn = inColumn ?? false %}
+{% set query = block.mapAddress|trim %}
+{% set zoom = block.mapZoom ?: 15 %}
+{% set key = craft.app.config.custom.googleMapsEmbed ?? null %}
+
+{% if query %}
+    {% set src = key ? 'https://www.google.com/maps/embed/v1/place?' ~ { key : key, q : query, zoom : zoom }|url_encode : 'https://www.google.com/maps?' ~ { q : query, z : zoom, output : 'embed' }|url_encode %}
+    {% set directionsUrl = 'https://www.google.com/maps/dir/?' ~ { api: 1, destination: query }|url_encode %}
+
+    <figure class="{{ inColumn ? '' : 'px-gutter mt-15' }}">
+        <iframe class="block w-full shadow-md {{ inColumn ? 'aspect-video' : 'aspect-video md:aspect-21/9' }}" src="{{ src }}" title="Map showing {{ query }}" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+
+        {% if block.showDirections %}
+            {{ include('_partials/button', {
+                text: 'Get Directions',
+                url: directionsUrl,
+                target: '_blank',
+                variant: 'green',
+                align: 'center',
+                class: 'mt-6'
+            }, with_context = false) }}
+        {% endif %}
+
+        {{ include('_partials/caption', { caption: block.caption, arrow: block.captionArrow }, with_context = false) }}
+    </figure>
+{% endif %}

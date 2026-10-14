@@ -30,6 +30,14 @@ settings:
         -
           - expanded
           - false
+    -
+      __assoc__:
+        -
+          - uid
+          - f564bf9c-6b63-4436-9e21-97d021fffd2c # Button
+        -
+          - expanded
+          - false
   fullGraphqlData: true
   headingLevels:
     - '1'
