@@ -104,6 +104,22 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 8e8cdeba-1d43-4ada-a27e-e78a739ca438 # Form
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 50f66cfa-e7aa-469d-89c1-dc3af6f11663 # Card Row
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

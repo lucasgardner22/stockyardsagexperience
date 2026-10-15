@@ -1,0 +1,15 @@
+{% set cards = block.cards.all() %}
+
+{% if cards|length %}
+    <section class="px-gutter pt-20 pb-12">
+        {% if block.title %}
+            <h2 class="font-header text-2xl text-center mb-10">{{ block.title }}</h2>
+        {% endif %}
+
+        <div class="grid gap-8 md:grid-cols-3 max-w-8xl mx-auto">
+            {% for card in cards %}
+                {{ include('_blocks/interactableCard', { block: card, inColumn: true }, with_context = false) }}
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}

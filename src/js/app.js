@@ -7,3 +7,7 @@ if (document.querySelector('[data-carousel]')) {
 if (document.querySelector('[data-review-cycle]')) {
     import('./review.js').then(({ initReviewCycles }) => initReviewCycles())
 }
+
+if (document.querySelector('[data-other-for]')) {
+    import('./otherOption.js').then(({ initOtherOptions }) => initOtherOptions())
+}

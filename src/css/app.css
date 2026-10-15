@@ -25,3 +25,35 @@
 
     --spacing-gutter: 6.0rem;
 }
+
+.fui-form {
+    --fui-font: var(--font-body);
+    --fui-primary-color: var(--color-brandBrownGreen);
+    --fui-primary-color-hover: var(--color-brandBrownGreenHover);
+    --fui-submit-btn-bg-color: var(--color-brandBrownGreen);
+    --fui-submit-btn-bg-color-hover: var(--color-brandBrownGreenHover);
+    --fui-submit-btn-border-color: var(--color-brandBrownGreen);
+    --fui-submit-btn-border-color-hover: var(--color-brandBrownGreenHover);
+}
+
+.fui-heading {
+    @apply font-display text-3xl leading-tight text-brandRed mb-5 text-center;
+}
+
+.fui-field-rows .fui-label {
+    @apply text-[0.8125rem] font-normal text-brandGray;
+}
+
+.fui-type-calculations .fui-input-wrapper {
+    @apply flex items-baseline gap-1 font-display text-3xl text-brandBrown;
+}
+
+.fui-type-calculations .fui-input-wrapper::before {
+    content: '$';
+}
+
+.fui-type-calculations .fui-input {
+    @apply border-0 bg-transparent p-0 shadow-none pointer-events-none;
+    font: inherit;
+    color: inherit;
+}

@@ -1,0 +1,29 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: c45e2198-7b9f-4034-bc40-3b0e46a37cfc # Insider Year
+  -
+    uid: 585b2010-5061-4b14-9114-8c10a2b583ce # Insider Family
+  -
+    uid: bbf516ed-8266-4d52-a1e3-83cd4a31435a # Insider Post
+handle: insiders
+maxAuthors: 1
+minAuthors: 1
+name: 'Ag Experience Insiders'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  54a86639-27bb-482c-9e0b-ed20b40500a5: # stockyardsremake
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/insiders/_entry
+    uriFormat: "{parent ? parent.uri ~ '/' : 'ag-experience-insiders/'}{slug}"
+structure:
+  maxLevels: 3
+  uid: d598d248-d27a-46cb-a99c-41f4244ce31d
+type: structure
