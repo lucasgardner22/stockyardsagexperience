@@ -1,0 +1,27 @@
+{% set families = entry.children.all() %}
+{% set otherYears = entry.siblings.all() %}
+
+<section class="max-w-5xl mx-auto px-5 py-15">
+    <h1 class="font-header text-4xl text-center">{{ entry.title }}</h1>
+
+    {% if entry.body %}
+        <div class="prose prose-lg mx-auto mt-6 text-center font-body">{{ entry.body }}</div>
+    {% endif %}
+
+    <div class="mt-10">
+        {% for family in families %}
+            {{ include('_partials/insiderFamily', { family: family }, with_context = false) }}
+        {% endfor %}
+    </div>
+
+    {% if otherYears|length %}
+        <aside class="mt-15 text-center">
+            <h2 class="font-display text-2xl">More Ag Experience Insiders</h2>
+            <ul class="mt-4 flex flex-wrap justify-center gap-6">
+                {% for year in otherYears %}
+                    <li><a href="{{ year.url }}" class="text-brandBrownGreen hover:underline">{{ year.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </aside>
+    {% endif %}
+</section>"

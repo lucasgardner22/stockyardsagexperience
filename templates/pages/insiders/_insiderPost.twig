@@ -1,0 +1,43 @@
+{% set family = entry.parent %}
+{% set year = family.parent %}
+{% set image = entry.image.one() %}
+
+<article>
+    <header class="max-w-3xl mx-auto px-5 pt-15">
+        <p class="text-sm uppercase tracking-widest text-brandBrownGreen">
+            <a href="{{ year.url }}" class="hover:underline">{{ year.title }}</a>
+            <a href="{{ family.url }}" class="hover:underline">{{ family.title }}</a>
+        </p>
+        <h1 class="font-header text-4xl mt-2 text-balance">{{ entry.title }}</h1>
+        <time datetime="{{ entry.postDate|atom }}" class="block mt-2 text-brandGray">
+            {{ entry.postDate|date('F j, Y') }}
+        </time>
+
+        {% if image %}
+            <img
+                src="{{ image.url({ width: 1536, height: 864, mode: 'crop' }) }}"
+                alt="{{ image.alt ?: '' }}"
+                class="mt-8 w-full aspect-video object-cover rounded-lg shadow-md"
+            >
+        {% endif %}
+    </header>
+
+    {% for block in entry.contentBuilder.all() %}
+        {{ include('_blocks/' ~ block.type.handle, { block: block }, with_context = false) }}
+    {% endfor %}
+</article>
+
+{% set otherPosts = fmilychildren.id(['not', entry.id]).orderBy('postDate asc').all() %}
+{% if otherPosts|length %}
+    <aside class="max-w-3xl mx-auto px-5 py-15">
+        <h2 class="font-display text-2xl">More from {{ family.title }}</h2>
+        <ul class="mt-4 space-y-2">
+            {% for post in otherPosts %}
+                <li>
+                    <a href="{{ post.url }}" class="text-brandBrownGreen hover:underline">{{ post.title }}</a>
+                    <span class="text-brandGray">{{ post.postDate|date('F j, Y') }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </aside>
+{% endif %}

@@ -1,0 +1,9 @@
+<section class="max-w-5xl mx-auto px-5 py-15">
+    <a href="{{ entry.parent.url }}" class="text-sm uppercase tracking-widest text-brandBrownGreen hover:underline">{{ entry.parent.title }}</a>
+
+    {{ include('_partials/insiderFamily', { family: entry }, with_context = false) }}
+
+    {% if entry.body %}
+        <div class="prose prose-lg font-body">{{ entry.body }}</div>
+    {% endif %}
+</section>
