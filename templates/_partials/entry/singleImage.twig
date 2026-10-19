@@ -1,1 +1,2 @@
-{{ include('_blocks/singleImage', { block: entry, inProse: true }, with_context = false) }}
+{% set inPost = (entry.owner.owner.type.handle ?? null) == 'insiderPost' %}
+{{ include('_blocks/singleImage', { block: entry, inProse: true, inPost: inPost }, with_context = false) }}

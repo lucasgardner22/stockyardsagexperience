@@ -120,6 +120,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 32a7955e-6414-4073-9fa3-95add8d81bdb # PhotoRow
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

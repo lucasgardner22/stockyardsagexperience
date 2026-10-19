@@ -12,9 +12,7 @@
     {% endif %}
 
     <div>
-        <h2 class="font-display text-3xl text-brandRed">
-            <a href="{{ family.url }}" class="hover:underline">{{ family.title }}</a>
-        </h2>
+        <h2 class="font-display text-3xl text-brandRed">{{ family.title }}</h2>
 
         <ul class="mt-4 space-y-2 font-body text-lg">
             {% for post in posts %}
@@ -22,7 +20,7 @@
                     <a href="{{ post.url }}" class="text-brandBrownGreen hover:underline">
                         {{ family.title }} {{ loop.first ? 'Introduction' : 'Update' }}
                     </a>
-                    <span class="text-brandGray">{{ post.postDate|date('F j, Y') }}</span>
+                    <span class="text-brandGray"> - {{ post.postDate|date('F j, Y') }}</span>
                 </li>
             {% else %}
                 <li class="italic text-brandGray">First post coming soon!</li>

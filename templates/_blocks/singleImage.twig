@@ -1,10 +1,20 @@
 {% set image = block.image.one() %}
+{% set inProse = inProse ?? false %}
+{% set inColumn = inColumn ?? false %}
 
 {% if image %}
-    <figure class="{{ inProse ?? false ? 'not-prose my-8' : '' }}">
-        {% set framed = (inColumn ?? false) or (inProse ?? false) %}
+    <figure class="{{ inProse ? 'not-prose my-8 mx-auto' : '' }}">
+        {% if inProse %}
+            <img
+                class="block w-full aspect-2/1 object-cover shadow-md"
+                src="{{ image.url({ width: 1280, height: 640, mode: 'crop' }) }}"
+                alt="{{ image.alt ?: image.title }}"
+                loading="lazy"
+            >
+        {% else %}
+            <img class="{{ inColumn ? 'block w-full aspect-video object-cover shadow-md' : 'mx-auto mt-15 max-h-175' }}" src="{{ image.url }}" alt="{{ image.title }}">
+        {% endif %}
 
-        <img class="{{ framed ? 'block w-full aspect-video object-cover shadow-md' : 'mx-auto mt-15 max-h-175' }}" src="{{ image.url }}" alt="{{ image.title }}">
         {{ include('_partials/caption', { caption: block.caption, arrow: block.captionArrow }, with_context = false) }}
     </figure>
 {% endif %}

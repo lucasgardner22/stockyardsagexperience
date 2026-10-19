@@ -1,14 +1,14 @@
 {% set families = entry.children.all() %}
 {% set otherYears = entry.siblings.all() %}
 
-<section class="max-w-5xl mx-auto px-5 py-15">
-    <h1 class="font-header text-4xl text-center">{{ entry.title }}</h1>
+{{ include('_blocks/imageBlock', { block: entry }, with_context = false) }}
 
+<section class="max-w-5xl mx-auto px-5 py-10">
     {% if entry.body %}
         <div class="prose prose-lg mx-auto mt-6 text-center font-body">{{ entry.body }}</div>
     {% endif %}
 
-    <div class="mt-10">
+    <div class="mt-10 flex flex-col items-center">
         {% for family in families %}
             {{ include('_partials/insiderFamily', { family: family }, with_context = false) }}
         {% endfor %}
@@ -24,4 +24,4 @@
             </ul>
         </aside>
     {% endif %}
-</section>"
+</section>

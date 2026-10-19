@@ -1,4 +1,4 @@
-dateModified: 1792177199
+dateModified: 1792437146
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
@@ -24,9 +24,11 @@ meta:
     5eeb5a24-083c-4c79-b19a-55c880fb9004: Zoom # Zoom
     6a183767-cca2-4a8d-a6b2-ec2ee20d6f02: Columns # Columns
     6e9c1b06-fb8c-49c3-bdfc-a3bf1d070aec: Card # Card
+    8ded658c-e353-4547-987e-2abd2314cf5f: Photos # Photos
     8e8cdeba-1d43-4ada-a27e-e78a739ca438: Form # Form
     9ba4c1d5-32c4-4a20-a6bb-b66cd12d9026: 'Hero Heading' # Hero Heading
     13c9d98c-b2f6-4e30-9a32-64d6a42527a0: 'Show Titles' # Show Titles
+    32a7955e-6414-4073-9fa3-95add8d81bdb: PhotoRow # PhotoRow
     32e37a8a-19b7-4e8f-bbca-a26d7d8fae46: Zoom # Zoom
     37dfec00-c78d-4059-9075-5701faad4b3a: 'Show Previews' # Show Previews
     48f10c0c-2832-43b4-899f-26e242a18496: 'Main Navigation' # Main Navigation
