@@ -3,14 +3,14 @@
 {% if photos|length %}
     <figure class="{{ inProse ?? false ? 'not-prose my-8' : 'px-gutter mt-15' }}">
         <div
-            class="grid grid-cols-2 gap-4 md:grid-cols-(--photo-cols) max-w-5xl mx-auto"
+            class="grid grid-cols-2 gap-4 md:grid-cols-(--photo-cols) max-w-3xl mx-auto"
             style="--photo-cols: repeat({{ photos|length }}, minmax(0, 1fr))"
         >
             {% for photo in photos %}
                 <img
                     src="{{ photo.url({ width: 600, height: 800, mode: 'crop' }) }}"
                     alt="{{ photo.alt ?: '' }}"
-                    class="block w-full aspect-3/4 object-cover rounded-lg shadow-md"
+                    class="block w-full aspect-3/4 object-cover shadow-md"
                     style="object-position: {{ photo.getFocalPoint(true) }}"
                     loading="lazy"
                 >
