@@ -6,7 +6,7 @@
 {% set centeredHeaderClass = block.centerHeader ? '[&>:first-child:is(h1,h2,h3,h4,h5,h6)]:text-center' : '' %}
 
 <div
-    class="prose-a:text-brandBrownGreen prose-a:underline font-body mt-10 prose prose-lg prose-headings:font-header prose-h1:text-balance {{ centeredHeaderClass }} {{ onDark ?? false ? 'prose-invert' : '' }} {{ listColumnClasses[block.listColumns.value] ?? '' }} 
+    class="prose-a:text-brandBrownGreen prose-a:underline font-body {{ inColumn ?? false ? '' : 'mt-10' }} prose prose-lg prose-headings:font-header prose-h1:text-balance {{ centeredHeaderClass }} {{ onDark ?? false ? 'prose-invert' : '' }} {{ listColumnClasses[block.listColumns.value] ?? '' }} 
     md:[&_ul]:gap-x-12 [&_li]:break-inside-avoid [&_li]:mt-0 [&_li]:mb-3 {{ inColumn ?? false ? 'max-w-none' : 'max-w-6xl mx-auto [&>:not(h1)]:max-w-3xl [&>:not(h1)]:mx-auto' }} {{ block.centerHeader ? 'prose-h1:mx-[calc(var(--prose-pad)*-1)]' : 'prose-h1:mr-[calc(var(--prose-pad)*-1)]' }}"
     style="--prose-pad: calc(var(--spacing) * {{ block.proseMargins }}); padding-inline: var(--prose-pad)"
 >

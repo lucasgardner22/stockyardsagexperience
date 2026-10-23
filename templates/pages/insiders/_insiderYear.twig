@@ -5,10 +5,10 @@
 
 <section class="max-w-5xl mx-auto px-5 py-10">
     {% if entry.body %}
-        <div class="prose-h1:text-center prose-h1:font-header prose prose-lg mx-auto mt-6 font-body">{{ entry.body }}</div>
+        <div class="prose-h1:text-center prose-h1:font-header prose prose-lg max-w-3xl mx-auto mt-6 font-body">{{ entry.body }}</div>
     {% endif %}
 
-    <div class="mt-10">
+    <div class="mt-10 max-w-3xl mx-auto">
         {% for family in families %}
             {{ include('_partials/insiderFamily', { family: family }, with_context = false) }}
         {% endfor %}

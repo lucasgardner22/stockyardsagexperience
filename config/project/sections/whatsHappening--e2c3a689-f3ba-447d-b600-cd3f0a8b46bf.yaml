@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 476d09be-e7d2-4df5-b86a-67fa4a81a967 # Homepage
+    uid: fdd3a105-7362-4784-8b9c-8bbf9e133508 # Pages
 handle: whatsHappening
 maxAuthors: 1
 minAuthors: 1
@@ -19,4 +19,7 @@ siteSettings:
     hasUrls: true
     template: pages/news/whats-happening.twig
     uriFormat: whats-happening
-type: single
+structure:
+  maxLevels: null
+  uid: b006b331-3e55-4344-88d6-3a425af3d602
+type: structure

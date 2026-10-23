@@ -1,8 +1,8 @@
 {% macro bg(value) %}
     {%- set backgrounds = {
-        red: 'bg-brandRed my-15 pb-10',
-        green: 'bg-brandBrownGreen my-15 pb-10',
-        tan: 'bg-brandTan my-15 pb-10'
+        red: 'bg-brandRed my-15',
+        green: 'bg-brandBrownGreen my-15',
+        tan: 'bg-brandTan my-15'
     } -%}
     {{- backgrounds[value] ?? '' -}}
 {% endmacro %}
