@@ -1,4 +1,4 @@
-dateModified: 1792780088
+dateModified: 1792782334
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
@@ -37,6 +37,7 @@ meta:
     54a86639-27bb-482c-9e0b-ed20b40500a5: stockyardsremake # stockyardsremake
     72c8efb2-3aee-4b32-94c9-75882986fae0: 'Review Array' # Review Array
     87bdd433-7de7-4724-b140-6094c0281cdf: Address # Address
+    96a8e2ad-f777-43bc-8a98-940fcf7691ea: HappeningLink # HappeningLink
     0105b6d2-3ef6-4998-b210-4cf6db9de4d7: Logos # Logos
     332d94f9-11d1-4d20-83ed-be23bff93732: Active # Active
     0465ea9c-3ad2-48c8-9e57-12d592e2a5e0: Website # Website
@@ -51,6 +52,7 @@ meta:
     38493bf3-5340-45dc-95f1-3c0cbd0a68c4: 'Call to Action' # Call to Action
     43618e1d-ad0f-4068-a382-933be9499cc2: Intro # Intro
     57484c33-f05e-4669-9687-d8a29768eab3: 'Image Block' # Image Block
+    83341e77-0798-4537-a4dd-cd14d247de9f: HappeningPage # HappeningPage
     0911572d-f1d3-4d77-9715-d3a87e7fcec2: 'Stockyards Images' # Stockyards Images
     67115135-8f90-424c-932f-050215bade37: 'Review Section' # Review Section
     71483785-9aee-4f86-8cd0-708f6fc2f383: 'Image Carousel' # Image Carousel

@@ -1,0 +1,54 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  1fdf8ac3-e5d4-4be0-9c67-1c9d3e204317:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-10-23T18:38:57+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 66907d1f-d818-43da-b2db-bfd0593e51ab
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c271143a-843a-4f78-bb11-87bcae90748c
+        userCondition: null
+    thumbFieldKey: null
+handle: happeningarticle
+hasTitleField: true
+icon: null
+name: HappeningLink
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'
