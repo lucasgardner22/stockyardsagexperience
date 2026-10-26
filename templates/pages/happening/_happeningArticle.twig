@@ -1,0 +1,32 @@
+{% extends '_layout/base' %}
+
+{% block content %}
+    {% set image = entry.image.one() ?? null %}
+
+    <article>
+        <header class="max-w-3xl mx-auto px-5 pt-15">
+            <a href="{{ url('whats-happening') }}" class="text-sm uppercase tracking-widest text-brandBrownGreen hover:underline">
+                ← What's Happening
+            </a>
+
+            <h1 class="font-header text-4xl mt-2 text-balance">{{ entry.title }}</h1>
+
+            <p class="mt-2 text-brandGray">
+                <time datetime="{{ entry.postDate|atom }}">{{ entry.postDate|date('F j, Y') }}</time>
+                {% if entry.author %} · {{ entry.author.fullName }}{% endif %}
+            </p>
+
+            {% if image %}
+                <img
+                    src="{{ image.url({ width: 1536, height: 864, mode: 'crop' }) }}"
+                    alt="{{ image.alt ?: '' }}"
+                    class="mt-8 w-full aspect-video object-cover rounded-lg shadow-md"
+                >
+            {% endif %}
+        </header>
+
+        {% for block in entry.contentBuilder.all() %}
+            {{ include('_blocks/' ~ block.type.handle, { block: block, inArticle: true }, with_context = false) }}
+        {% endfor %}
+    </article>
+{% endblock %}

@@ -1,7 +1,41 @@
 {% extends '_layout/base' %}
+
 {% block content %}
-    <p>Welcome to the what's happening page!</p>
-    <div>
-        {{ entry.intro|nl2br }}
-    </div>
+    {% set query = craft.entries.section('whatsHappening').orderBy('postDate desc').limit(10) %}
+
+    {% paginate query as pageInfo, articles %}
+
+    <section class="max-w-3xl mx-auto px-5 py-15">
+        <h1 class="font-header text-4xl text-center">What's Happening</h1>
+
+        {% for article in articles %}
+            <article class="py-10 border-b border-brandGray/30 last:border-0">
+                <h2 class="font-display text-3xl text-brandRed">
+                    <a href="{{ article.url }}" class="hover:underline">{{ article.title }}</a>
+                </h2>
+
+                <p class="mt-1 text-sm text-brandGray">
+                    <time datetime="{{ article.postDate|atom }}">{{ article.postDate|date('F j, Y') }}</time>
+                    {% if article.author %} · {{ article.author.fullName }}{% endif %}
+                </p>
+
+                {% if article.summary %}
+                    <p class="mt-4 font-body text-lg">{{ article.summary }}</p>
+                {% endif %}
+
+                <a href="{{ article.url }}" class="inline-block mt-4 text-sm uppercase tracking-widest text-brandBrownGreen hover:underline">
+                    Read more →
+                </a>
+            </article>
+        {% else %}
+            <p class="mt-10 text-center italic text-brandGray">Nothing here yet — check back soon!</p>
+        {% endfor %}
+
+        {% if pageInfo.totalPages > 1 %}
+            <nav class="mt-10 flex justify-between font-body">
+                {% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}" class="text-brandBrownGreen hover:underline">← Newer</a>{% else %}<span></span>{% endif %}
+                {% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}" class="text-brandBrownGreen hover:underline">Older →</a>{% endif %}
+            </nav>
+        {% endif %}
+    </section>
 {% endblock %}

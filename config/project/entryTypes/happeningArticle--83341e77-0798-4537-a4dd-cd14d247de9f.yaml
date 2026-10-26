@@ -37,6 +37,40 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-10-26T15:12:07+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: b9620c99-e318-422f-b903-3dd5c3cab804 # Image
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bbd4c71c-bcbb-4716-85f9-ef813b747f48
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-26T15:12:07+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c37aadb4-7143-475c-a6fe-6010b07016ac # Summary
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0b19bb21-376f-4a9b-ab46-fa259f1314dd
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-10-23T18:41:43+00:00'
             editCondition: null
             elementCondition: null
@@ -57,10 +91,10 @@ fieldLayouts:
         uid: 300ba7f9-d21a-4385-a271-c2d7739c7655
         userCondition: null
     thumbFieldKey: null
-handle: happeningpage
+handle: happeningArticle
 hasTitleField: true
 icon: null
-name: HappeningPage
+name: Article
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

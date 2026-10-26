@@ -2,9 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 96a8e2ad-f777-43bc-8a98-940fcf7691ea # HappeningLink
-  -
-    uid: 83341e77-0798-4537-a4dd-cd14d247de9f # HappeningPage
+    uid: 83341e77-0798-4537-a4dd-cd14d247de9f # Article
 handle: whatsHappening
 maxAuthors: 1
 minAuthors: 1
@@ -19,9 +17,6 @@ siteSettings:
   54a86639-27bb-482c-9e0b-ed20b40500a5: # stockyardsremake
     enabledByDefault: true
     hasUrls: true
-    template: null
-    uriFormat: "{ parent ? parent.uri ~ '/' : 'whats-happening/'}{slug}"
-structure:
-  maxLevels: 2
-  uid: b006b331-3e55-4344-88d6-3a425af3d602
-type: structure
+    template: pages/happening/_happeningArticle.twig
+    uriFormat: 'whats-happening/{slug}'
+type: channel
