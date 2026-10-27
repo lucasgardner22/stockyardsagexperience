@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: byline
+instructions: 'Who wrote this article, e.g. “Ellie Studer” or “Stockyards Ag Experience”.'
+name: Byline
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

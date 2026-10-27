@@ -161,7 +161,7 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: mainNavigation
-instructions: ''
+instructions: null
 maxNodes: null
 menuFieldLayouts:
   cf3e7142-8679-4f68-a29f-209a08a470d1:

@@ -4,7 +4,7 @@
     {% set image = entry.image.one() ?? null %}
 
     <article>
-        <header class="max-w-3xl mx-auto px-5 pt-15">
+        <header class="max-w-3xl mx-auto px-5 pt-30">
             <a href="{{ url('whats-happening') }}" class="text-sm uppercase tracking-widest text-brandBrownGreen hover:underline">
                 ← What's Happening
             </a>
@@ -13,7 +13,7 @@
 
             <p class="mt-2 text-brandGray">
                 <time datetime="{{ entry.postDate|atom }}">{{ entry.postDate|date('F j, Y') }}</time>
-                {% if entry.author %} · {{ entry.author.fullName }}{% endif %}
+                {% if entry.byline %} · {{ entry.byline }}{% endif %}
             </p>
 
             {% if image %}

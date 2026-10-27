@@ -1,3 +1,99 @@
+captchaProviders:
+  OopSpam:
+    enabled: 'false'
+    handle: OopSpam
+    settings:
+      apiKey: null
+      handle: OopSpam
+      spamThreshold: 3
+    type: verbb\formie\integrations\captchas\OopSpam
+  akismet:
+    enabled: 'false'
+    handle: akismet
+    settings:
+      apiKey: null
+      handle: akismet
+    type: verbb\formie\integrations\captchas\Akismet
+  captchaEu:
+    enabled: 'false'
+    handle: captchaEu
+    settings:
+      endPoint: null
+      handle: captchaEu
+      publicKey: null
+      restKey: null
+    type: verbb\formie\integrations\captchas\CaptchaEu
+  cleantalk:
+    enabled: 'false'
+    handle: cleantalk
+    settings:
+      apiKey: null
+      handle: cleantalk
+    type: verbb\formie\integrations\captchas\CleanTalk
+  friendlyCaptcha:
+    enabled: 'false'
+    handle: friendlyCaptcha
+    settings:
+      apiVersion: v1
+      handle: friendlyCaptcha
+      language: en
+      secretKey: null
+      siteKey: null
+      startMode: none
+      theme: auto
+    type: verbb\formie\integrations\captchas\FriendlyCaptcha
+  hcaptcha:
+    enabled: 'false'
+    handle: hcaptcha
+    settings:
+      handle: hcaptcha
+      language: en
+      minScore: 0.5
+      scriptLoadingMethod: asyncDefer
+      secretKey: null
+      siteKey: null
+      size: normal
+      theme: light
+    type: verbb\formie\integrations\captchas\Hcaptcha
+  question:
+    enabled: 'false'
+    handle: question
+    settings:
+      handle: question
+    type: verbb\formie\integrations\captchas\Question
+  recaptcha:
+    enabled: 'false'
+    handle: recaptcha
+    settings:
+      action: submit
+      badge: bottomright
+      enterpriseType: score
+      formAction: null
+      formMinScore: null
+      handle: recaptcha
+      language: en
+      minScore: 0.5
+      projectId: null
+      scriptLoadingMethod: asyncDefer
+      secretKey: null
+      siteKey: null
+      size: normal
+      theme: light
+      type: v3
+    type: verbb\formie\integrations\captchas\Recaptcha
+  turnstile:
+    enabled: 'false'
+    handle: turnstile
+    settings:
+      appearance: always
+      execution: ''
+      handle: turnstile
+      scriptLoadingMethod: asyncDefer
+      secretKey: null
+      siteKey: null
+      size: normal
+      theme: auto
+    type: verbb\formie\integrations\captchas\Turnstile
 fieldPalette:
   groups:
     -
@@ -172,3 +268,32 @@ fieldPalette:
       name: 'Custom Fields'
       uid: 934a4312-3f62-4f97-8688-4e2f371fde7f
   version: 1
+spamSettings:
+  allowedEmailDomains: ''
+  blockedEmailDomains: ''
+  enableAllowedEmailDomains: false
+  enableBlockFreeEmailDomains: false
+  enableBlockedEmailDomains: false
+  enableFormSubmitExpiration: false
+  enableGlobalSubmissionThrottling: false
+  enableHoneypot: true
+  enableIpSubmissionThrottling: false
+  enableMaximumLinks: false
+  enableMinimumSubmitTime: true
+  enableReplayProtection: true
+  enableSuspiciousTextDetection: false
+  formSubmitExpiration: 86400
+  globalSubmissionThrottleLimit: 50
+  globalSubmissionThrottleWindowSeconds: 60
+  honeypotFieldName: formieHoneypot
+  ipSubmissionThrottleMinutes: 5
+  maximumLinks: 10
+  minimumSubmitTime: 3
+  saveSpam: true
+  scope: project
+  spamBehaviour: showSuccess
+  spamBehaviourMessage: ''
+  spamEmailNotifications: false
+  spamKeywords: ''
+  spamLimit: 500
+  suspiciousTextAllowedTerms: ''

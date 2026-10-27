@@ -14,7 +14,7 @@ settings:
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
   maxRelations: 1
-  minRelations: 1
+  minRelations: null
   previewMode: full
   restrictFiles: false
   restrictLocation: false
