@@ -2,10 +2,14 @@
 
 {% block content %}
     {% set image = entry.image.one() ?? null %}
+    {% set perPage = 10 %}
+    {% set newerCount = craft.entries.section('whatsHappening').postDate('> ' ~ entry.postDate|atom).count() %}
+    {% set listPage = (newerCount // perPage) + 1 %}
+    {% set backUrl = listPage > 1 ? url('whats-happening/p' ~ listPage) : url('whatsHappening') %}
 
     <article>
         <header class="max-w-3xl mx-auto px-5 pt-30">
-            <a href="{{ url('whats-happening') }}" class="text-sm uppercase tracking-widest text-brandBrownGreen hover:underline">
+            <a href="{{ backUrl }}" class="text-sm uppercase tracking-widest text-brandBrownGreen hover:underline">
                 ← What's Happening
             </a>
 
