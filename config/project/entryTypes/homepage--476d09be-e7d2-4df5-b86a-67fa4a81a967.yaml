@@ -9,6 +9,23 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 093f9336-6399-464f-80ed-5bf05f735791 # Hero Slides
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: df754f8e-98bb-4bf8-8fef-b4628c103b4c
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-09-30T19:25:38+00:00'
             editCondition: null
             elementCondition: null

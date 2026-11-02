@@ -1,13 +1,14 @@
 {% set image = block.image.one() %}
 {% set inProse = inProse ?? false %}
 {% set inColumn = inColumn ?? false %}
+{% set inPost = inPost ?? false %}
 
 {% if image %}
     <figure class="{{ inProse ? 'not-prose my-8 mx-auto' : '' }}">
         {% if inProse %}
             <img
-                class="block w-full aspect-2/1 object-cover shadow-md"
-                src="{{ image.url({ width: 1280, height: 640, mode: 'crop' }) }}"
+                class="block w-full {{ inPost ? 'aspect-2/1' : 'aspect-video' }} object-cover shadow-md"
+                src="{{ image.url({ width : 1280, height : inPost ? 640 : 720, mode : 'crop' }) }}"
                 alt="{{ image.alt ?: image.title }}"
                 loading="lazy"
             >

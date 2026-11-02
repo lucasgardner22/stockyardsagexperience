@@ -1,5 +1,6 @@
 {% extends '_layout/base' %}
 {% block content %}
+    {% include '_partials/heroCarousel' %}
     {% for block in entry.contentBuilder.all() %}
         {% include "/_blocks/#{block.type.handle}.twig" with { block: block } only %}
     {% endfor %}

@@ -1,0 +1,162 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  2e200a6f-71b0-4f85-a12d-59058a9bd36e:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-11-02T21:32:03+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: b9620c99-e318-422f-b903-3dd5c3cab804 # Image
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ee077e8d-eeed-41eb-af2f-88af66a3014c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-02T21:32:03+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9ba4c1d5-32c4-4a20-a6bb-b66cd12d9026 # Hero Heading
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ed3b6bc3-a99e-48c9-b9af-e9cfd25bff30
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-02T21:32:03+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: ea7e86cd-ad7d-4bbd-9334-762ef2c51b3d # Slide Text
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d0c80aa-b2a4-43fe-bb4a-801335c016e5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-02T21:32:03+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: e3bb1369-f08a-4ab9-80b8-6dffe53662fc # Overlay Image
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a43b43ea-3f0c-406f-afa2-1476f2752b25
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-02T21:32:03+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a9e89f31-0201-458d-8459-9f04c3af2129 # Text Position
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c02f3e2-77cf-4d1e-9b20-8ef4ea6134fd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-02T21:32:03+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f39dc199-3b6a-49b7-a5a9-c30a927763f4 # Button Link
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3b8e6ad1-33b3-423e-9452-1130c47a014c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-02T21:32:03+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 5e0575e8-61bc-49fc-b2e4-284d4b9a65b5 # Button Text
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9092640c-bd17-424c-b0f2-d26dad97ef86
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-02T21:32:03+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7408e40a-a569-489e-a94e-801568414fc1 # Button Style
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4254029f-f01d-4945-b8ee-a82e6fff22f4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ed10542d-dc79-4082-bf3c-dac2bb0f201d
+        userCondition: null
+    thumbFieldKey: 'layoutElement:ee077e8d-eeed-41eb-af2f-88af66a3014c'
+handle: heroSlide
+hasTitleField: false
+icon: null
+name: 'Hero Slide'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

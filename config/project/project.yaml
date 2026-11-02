@@ -1,4 +1,4 @@
-dateModified: 1793114748
+dateModified: 1793655783
 email:
   fromEmail: lucas.gardner@paulsenmarketing.com
   fromName: stockyardsremake
@@ -16,6 +16,7 @@ meta:
     1ba3212c-b8c7-47cb-9783-dc8dfc5f4104: Cards # Cards
     1d955b9b-1178-4537-8e17-57faa9ae702f: Username # Username
     2a7acaa3-ed4b-4e8f-8e2c-8212438f3f1b: 'Text Block' # Text Block
+    4c12c891-a3e7-4f9d-9dff-d2484e0173ab: 'News Row' # News Row
     4d6a4f0a-a370-402d-a389-89a9f627d2d9: Archived # Archived
     4d67aa73-39ea-403e-b947-c557855f2fe2: 'Public Schema' # Public Schema
     4f74e384-08d4-4018-ac62-30f76a0e665c: 'Overlay Color' # Overlay Color
@@ -37,6 +38,7 @@ meta:
     54a86639-27bb-482c-9e0b-ed20b40500a5: stockyardsremake # stockyardsremake
     72c8efb2-3aee-4b32-94c9-75882986fae0: 'Review Array' # Review Array
     87bdd433-7de7-4724-b140-6094c0281cdf: Address # Address
+    093f9336-6399-464f-80ed-5bf05f735791: 'Hero Slides' # Hero Slides
     99ea4473-cda8-42fe-8ae8-0c1956e069bc: 'Contact Form' # Contact Form
     0105b6d2-3ef6-4998-b210-4cf6db9de4d7: Logos # Logos
     332d94f9-11d1-4d20-83ed-be23bff93732: Active # Active
@@ -56,6 +58,7 @@ meta:
     0911572d-f1d3-4d77-9715-d3a87e7fcec2: 'Stockyards Images' # Stockyards Images
     67115135-8f90-424c-932f-050215bade37: 'Review Section' # Review Section
     71483785-9aee-4f86-8cd0-708f6fc2f383: 'Image Carousel' # Image Carousel
+    a9e89f31-0201-458d-8459-9f04c3af2129: 'Text Position' # Text Position
     a1088304-2354-4895-8634-7db7341adf67: Pages # Pages
     b522dd4f-5b63-459f-8d45-c4c8b7e617b1: 'Site Settings' # Site Settings
     b759ecb7-f2a4-472d-abc9-c88bdac0d9e3: 'Single Image' # Single Image
@@ -75,8 +78,10 @@ meta:
     e0d3c7ed-385e-428b-a9de-b5298a2cbc6c: Draft # Draft
     e0206047-ceb9-43d6-a1bc-f4349a823096: Autoplay # Autoplay
     e2c3a689-f3ba-447d-b600-cd3f0a8b46bf: "What's Happening" # What's Happening
+    e3bb1369-f08a-4ab9-80b8-6dffe53662fc: 'Overlay Image' # Overlay Image
     e4db7f7e-3a47-4b3b-a270-718b341bb4b1: 'Two Column' # Two Column
     e9865b51-531e-4b83-a6e9-483238799d5f: Map # Map
+    ea7e86cd-ad7d-4bbd-9334-762ef2c51b3d: 'Slide Text' # Slide Text
     f0b7c753-cd82-46b4-a198-69bd91ad1b26: Caption # Caption
     f39dc199-3b6a-49b7-a5a9-c30a927763f4: 'Button Link' # Button Link
     f77d5da6-6ae9-499b-957d-2c9dbb9f978f: 'Ag Experience Insiders' # Ag Experience Insiders
@@ -85,6 +90,7 @@ meta:
     f501a50b-fa6c-4bfa-9c2a-3c884416082a: Homepage # Homepage
     f564bf9c-6b63-4436-9e21-97d021fffd2c: Button # Button
     f2907d1e-9690-45ca-86e5-43b9f58807a8: 'Video URL' # Video URL
+    fb6ae5bb-0ee7-44b9-9b48-82948d24cb80: 'Hero Slide' # Hero Slide
     fb6e5a70-9abd-4c56-bc89-a020e01464be: Events # Events
     fb47bc78-f6d4-418d-858a-09cad811e20d: 'Caption Arrow' # Caption Arrow
     fdd3a105-7362-4784-8b9c-8bbf9e133508: Pages # Pages

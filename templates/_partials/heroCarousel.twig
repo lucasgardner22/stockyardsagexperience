@@ -1,0 +1,92 @@
+{% set slides = entry.heroSlides.with (['image', 'overlayImage']).all() %}
+{% set multiple = slides|length > 1 %}
+
+{% set positions = {
+    left: 'items-start justify-center text-left px-gutter md:pl-25 md:pr-[40%]',
+    center: 'items-center justify-center text-center px-gutter',
+    bottomLeft: 'items-start justify-end text-left px-gutter md:px-25 pb-16'
+} %}
+
+{% set shades = {
+    left: 'bg-linear-to-r from-black/75 via-black/35 to-transparent',
+    center: 'bg-black/45',
+    bottomLeft: 'bg-linear-to-t from-black/80 via-black/30 to-transparent'
+} %}
+
+{% set arrowClasses = 'bg-brandBrown/70 hover:bg-brandBrown p-3 shadow-md transition duration-200' %}
+
+{% if slides|length %}
+    <section
+        aria-label="Featured"
+        class="swiper
+        [--swiper-theme-color:var(--color-brandTan)]
+        [--swiper-navigation-size:2.75rem]
+        [--swiper-navigation-sides-offset:0.75rem]
+        [--swiper-navigation-color:var(--color-brandOffWhite)]"
+        {% if multiple %}data-carousel="single"{% endif %}
+        {% if multiple and entry.autoplay %}data-autoplay="true"{% endif %}
+    >
+        <div class="swiper-wrapper">
+            {% for slide in slides %}
+                {% set image = slide.image|first %}
+                {% set logo = slide.overlayImage|first %}
+                {% set position = slide.textPosition.value ?: 'left' %}
+
+                <div class="swiper-slide group relative h-[70vh] min-h-110 max-h-200 bg-brandBrownGreen">
+                    {% if image %}
+                        <img
+                            src="{{ image.url({ width: 2400 }) }}"
+                            alt="{{ image.alt }}"
+                            class="absolute inset-0 h-full w-full object-cover"
+                            style="object-position: {{ image.getFocalPoint(true) }}"
+                            {{ loop.first ? 'fetchpriority="high"' : 'loading="lazy"' }}
+                        >
+                    {% endif %}
+
+                    <div class="absolute inset-0 {{ shades[position] }}"></div>
+
+                    <div class="absolute inset-0 flex flex-col {{ positions[position] }}">
+                        <div
+                            class="opacity-0 translate-y-4 transition duration-700 delay-200 motion-reduce:transition-none
+                            group-[.swiper-slide-active]:opacity-100 group-[.swiper-slide-active]:translate-y-0"
+                        >
+
+                            {% if logo %}
+                                <img src="{{ logo.url }}" alt="{{ logo.alt }}" class="mb-6 max-h-20 md:max-h-28 w-auto {{ position == 'center' ? 'mx-auto' : '' }}">
+                            {% endif %}
+
+                            {% if slide.heroHeading %}
+                                <h2 class="font-header text-5xl md:text-7xl text-brandTan text-balance drop-shadow-lg/75 drop-shadow-brandBlack">
+                                    {{ slide.heroHeading }}
+                                </h2>
+                            {% endif %}
+
+                            {% if slide.slideText %}
+                                <p class="mt-4 font-body text-xl md:text-2xl text-white text-shadow-lg text-shadow-black/80">
+                                    {{ slide.slideText }}
+                                </p>
+                            {% endif %}
+
+                            {% if slide.buttonLink.url ?? false %}
+                                {{ include('_partials/button', {
+                                    text: slide.buttonText ?: slide.buttonLink.label,
+                                    url: slide.buttonLink.url,
+                                    target: slide.buttonLink.target,
+                                    variant: slide.buttonStyle.value,
+                                    align: position == 'center' ? 'center' : 'left',
+                                    class: 'mt-8'
+                                }, with_context = false) }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if multiple %}
+            <div class="swiper-button-prev {{ arrowClasses }}"></div>
+            <div class="swiper-button-next {{ arrowClasses }}"></div>
+            <div class="swiper-pagination"></div>
+        {% endif %}
+    </section>
+{% endif %}

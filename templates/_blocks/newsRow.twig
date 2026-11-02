@@ -1,0 +1,57 @@
+{% set articles = craft.entries
+    .section('whatsHappening')
+    .orderBy('postDate desc')
+    .with(['image'])
+    .limit(3)
+    .all() %}
+
+{% if articles|length %}
+    <section class="px-gutter pt-15">
+        {% if block.title %}
+            <h2 class="font-header font-bold text-3xl text-center mb-10">{{ block.title }}</h2>
+        {% endif %}
+
+        <div class="grid gap-8 md:grid-cols-3 max-w-8xl mx-auto">
+            {% for article in articles %}
+                {% set image = article.image|first %}
+
+                <a href="{{ article.url }}" class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-md transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl">
+                    {% if image %}
+                        <img
+                            src="{{ image.url({ width: 800, height: 450, mode: 'crop' }) }}"
+                            alt="{{ image.alt ?: '' }}"
+                            class="aspect-video w-full object-cover"
+                            loading="lazy"
+                        >
+                    {% else %}
+                        <div class="aspect-video w-full bg-brandBrownGreen/15"></div>
+                    {% endif %}
+
+                    <div class="flex flex-1 flex-col p-6 m-5">
+                        <time datetime="{{ article.postDate|atom }}" class="text-sm text-brandGray">
+                            {{ article.postDate|date('F j, Y') }}
+                        </time>
+
+                        <h3 class="mt-3 font-display text-2xl text-brandRed group-hover:underline">
+                            {{ article.title }}
+                        </h3>
+
+                        {% if article.summary %}
+                            <p class="mt-3 font-body line-clamp-3">{{ article.summary }}</p>
+                        {% endif %}
+
+                        <span class="mt-auto pt-4 text-sm uppercase tracking-widest text-brandBrownGreen">
+                            Read more →
+                        </span>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+
+        <div class="mt-10 text-center">
+            <a href="{{ url('whats-happening') }}" class="text-sm uppercase tracking-widest text-brandBrownGreen hover:underline">
+                See all news →
+            </a>
+        </div>
+    </section>
+{% endif %}

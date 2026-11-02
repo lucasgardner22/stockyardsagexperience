@@ -5,7 +5,7 @@
     {% set perPage = 10 %}
     {% set newerCount = craft.entries.section('whatsHappening').postDate('> ' ~ entry.postDate|atom).count() %}
     {% set listPage = (newerCount // perPage) + 1 %}
-    {% set backUrl = listPage > 1 ? url('whats-happening/p' ~ listPage) : url('whatsHappening') %}
+    {% set backUrl = listPage > 1 ? url('whats-happening/p' ~ listPage) : url('whats-happening') %}
 
     <article>
         <header class="max-w-3xl mx-auto px-5 pt-30">

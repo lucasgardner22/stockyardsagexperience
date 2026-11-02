@@ -12,15 +12,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 2a7acaa3-ed4b-4e8f-8e2c-8212438f3f1b # Text Block
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
-          - 57484c33-f05e-4669-9687-d8a29768eab3 # Image Block
+          - f564bf9c-6b63-4436-9e21-97d021fffd2c # Button
         -
           - group
           - General
@@ -36,30 +28,6 @@ settings:
       __assoc__:
         -
           - uid
-          - b759ecb7-f2a4-472d-abc9-c88bdac0d9e3 # Single Image
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
-          - e4db7f7e-3a47-4b3b-a270-718b341bb4b1 # Two Column
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
-          - 71483785-9aee-4f86-8cd0-708f6fc2f383 # Image Carousel
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
           - 6e9c1b06-fb8c-49c3-bdfc-a3bf1d070aec # Card
         -
           - group
@@ -68,7 +36,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 67115135-8f90-424c-932f-050215bade37 # Review Section
+          - 50f66cfa-e7aa-469d-89c1-dc3af6f11663 # Card Row
         -
           - group
           - General
@@ -76,7 +44,7 @@ settings:
       __assoc__:
         -
           - uid
-          - f564bf9c-6b63-4436-9e21-97d021fffd2c # Button
+          - 8e8cdeba-1d43-4ada-a27e-e78a739ca438 # Form
         -
           - group
           - General
@@ -84,7 +52,15 @@ settings:
       __assoc__:
         -
           - uid
-          - df1f6de1-857d-4d4f-b072-dafac8d65604 # Video
+          - 57484c33-f05e-4669-9687-d8a29768eab3 # Image Block
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 71483785-9aee-4f86-8cd0-708f6fc2f383 # Image Carousel
         -
           - group
           - General
@@ -108,15 +84,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 8e8cdeba-1d43-4ada-a27e-e78a739ca438 # Form
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
-          - 50f66cfa-e7aa-469d-89c1-dc3af6f11663 # Card Row
+          - 4c12c891-a3e7-4f9d-9dff-d2484e0173ab # News Row
         -
           - group
           - General
@@ -125,6 +93,46 @@ settings:
         -
           - uid
           - 32a7955e-6414-4073-9fa3-95add8d81bdb # PhotoRow
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 67115135-8f90-424c-932f-050215bade37 # Review Section
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - b759ecb7-f2a4-472d-abc9-c88bdac0d9e3 # Single Image
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 2a7acaa3-ed4b-4e8f-8e2c-8212438f3f1b # Text Block
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - e4db7f7e-3a47-4b3b-a270-718b341bb4b1 # Two Column
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - df1f6de1-857d-4d4f-b072-dafac8d65604 # Video
         -
           - group
           - General
