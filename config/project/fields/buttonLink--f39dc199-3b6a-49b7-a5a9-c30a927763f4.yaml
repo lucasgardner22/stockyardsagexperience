@@ -31,7 +31,7 @@ settings:
               - ''
             -
               - allowAnchors
-              - ''
+              - '1'
             -
               - allowCustomSchemes
               - ''

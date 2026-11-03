@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: overlayTitle
+instructions: "Overlay this card's title on the card."
+name: 'Overlay Title'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

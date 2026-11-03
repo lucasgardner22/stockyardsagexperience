@@ -9,7 +9,7 @@
 
 {% set shades = {
     left: 'bg-linear-to-r from-black/75 via-black/35 to-transparent',
-    center: 'bg-black/45',
+    center: 'bg-black/10',
     bottomLeft: 'bg-linear-to-t from-black/80 via-black/30 to-transparent'
 } %}
 
@@ -56,15 +56,19 @@
                             {% endif %}
 
                             {% if slide.heroHeading %}
-                                <h2 class="font-header text-5xl md:text-7xl text-brandTan text-balance drop-shadow-lg/75 drop-shadow-brandBlack">
+                                <h2
+                                    class="font-header text-5xl md:text-7xl text-brandTan text-balance text-shadow-lg text-shadow-black/80 drop-shadow-brandBlack before:flex-1 before:h-px before:bg-white/60 after:flex-1 after:h-px after:bg-white/60"
+                                >
                                     {{ slide.heroHeading }}
                                 </h2>
                             {% endif %}
 
                             {% if slide.slideText %}
-                                <p class="mt-4 font-body text-xl md:text-2xl text-white text-shadow-lg text-shadow-black/80">
-                                    {{ slide.slideText }}
-                                </p>
+                                <div class="flex mt-4 items-center before:content-[''] before:flex-grow before:border-t before:border-gray-300 before:mx-3 after:content-[''] after:flex-grow after:border-t after:border-gray-300 after:mx-3">
+                                    <p class="font-body text-xl md:text-2xl text-white text-shadow-lg text-shadow-black/80">
+                                        {{ slide.slideText }}
+                                    </p>
+                                </div>
                             {% endif %}
 
                             {% if slide.buttonLink.url ?? false %}

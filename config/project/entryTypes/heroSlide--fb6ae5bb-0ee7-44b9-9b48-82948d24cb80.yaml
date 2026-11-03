@@ -64,23 +64,6 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: e3bb1369-f08a-4ab9-80b8-6dffe53662fc # Overlay Image
-            handle: null
-            instructions: null
-            label: null
-            oldFieldUid: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a43b43ea-3f0c-406f-afa2-1476f2752b25
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2026-11-02T21:32:03+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
             fieldUid: a9e89f31-0201-458d-8459-9f04c3af2129 # Text Position
             handle: null
             instructions: null

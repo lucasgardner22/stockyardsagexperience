@@ -11,7 +11,6 @@
         {% endif %}
 
         {% if showPreviews %}
-            {# ── KEPT: your current full-width showcase, copied as-is ── #}
             <div class="swiper bg-brandBrownGreen [--swiper-theme-color:var(--color-brandTan)]" data-carousel {% if block.autoplay %}data-autoplay="true"{% endif %}>
                 <div class="swiper-wrapper">
                     {% for image in images %}
@@ -46,7 +45,6 @@
             </div>
 
         {% else %}
-            {# ── NEW: one image at a time, used in columns AND when previews are off ── #}
             {% set transform = inColumn
                 ? { width: 960, height: 640, mode: 'crop' }
                 : { width: 1920, height: 823, mode: 'crop' } %}
