@@ -2,7 +2,7 @@
     .section('whatsHappening')
     .orderBy('postDate desc')
     .with(['image'])
-    .limit(3)
+    .limit(4)
     .all() %}
 
 {% if articles|length %}
@@ -11,7 +11,7 @@
             <h2 class="font-header font-bold text-3xl text-center mb-10">{{ block.title }}</h2>
         {% endif %}
 
-        <div class="grid gap-8 md:grid-cols-3 max-w-8xl mx-auto">
+        <div class="grid gap-8 md:grid-cols-4 max-w-8xl mx-auto">
             {% for article in articles %}
                 {% set image = article.image|first %}
 

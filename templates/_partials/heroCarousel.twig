@@ -23,8 +23,8 @@
         [--swiper-navigation-size:2.75rem]
         [--swiper-navigation-sides-offset:0.75rem]
         [--swiper-navigation-color:var(--color-brandOffWhite)]"
-        {% if multiple %}data-carousel="single"{% endif %}
-        {% if multiple and entry.autoplay %}data-autoplay="true"{% endif %}
+        {% if multiple %}data-carousel="single"
+        data-autoplay="true"{% endif %}
     >
         <div class="swiper-wrapper">
             {% for slide in slides %}
@@ -32,7 +32,7 @@
                 {% set logo = slide.overlayImage|first %}
                 {% set position = slide.textPosition.value ?: 'left' %}
 
-                <div class="swiper-slide group relative h-[70vh] min-h-110 max-h-200 bg-brandBrownGreen">
+                <div class="swiper-slide group relative h-[70vh] min-h-150 max-h-200 bg-brandBrownGreen">
                     {% if image %}
                         <img
                             src="{{ image.url({ width: 2400 }) }}"

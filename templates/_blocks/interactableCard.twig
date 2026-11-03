@@ -1,19 +1,17 @@
 {% set image = block.image.one() %}
+{% set keepRatio = keepRatio ?? false %}
 
 {% if image %}
-    <div class="flex justify-center {{ inColumn ? '' : 'my-10 px-5' }}">
-        {% if block.imageUrl %}
-            <a href="{{ block.imageUrl }}"><img class="w-full aspect-4/3 object-cover rounded-lg shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl" src="{{ image.getUrl }}" alt="{{ image.title }}"></a>
-        {% else %}
-            <img class="w-full aspect-4/3 object-cover rounded-lg shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl" src="{{ image.getUrl }}" alt="{{ image.title }}">
-        {% endif %}
+    {% set tag = block.imageUrl ? 'a' : 'div' %}
+    <{{ tag }} {% if block.imageUrl %}href="{{ block.imageUrl }}"{% endif %} class="group relative block overflow-hidden rounded-lg shadow-md transition duration-300 hover:shadow-2xl ease-in-out hover:scale-105 {{ keepRatio ? 'self-start' }} {{ inColumn ? '' : 'my-10 mx-5' }}">
+    <img class="w-full {{ keepRatio ? 'h-auto' : 'aspect-4/3 object-cover' }}" src="{{ image.getUrl }}" alt="{{ image.title }}">
 
-        {% if block.overlayTitle %}
-            <div class="absolute inset-0 bg-brandBlack/30"></div>
-
-            <h2 class="text-7xl text-brandTan font-header drop-shadow-lg/75 drop-shadow-brandBlack">
-                {{ block.overlayTitle }}
+    {% if block.overlayTitle %}
+        <div class="absolute inset-0 flex items-center justify-center p-6 bg-brandBlack/30 pointer-events-none">
+            <h2 class="text-4xl md:text-5xl text-center text-brandTan font-header drop-shadow-lg/75 drop-shadow-brandBlack">
+                {{ block.title }}
             </h2>
-        {% endif %}
-    </div>
+        </div>
+    {% endif %}
+    </{{ tag }}>
 {% endif %}

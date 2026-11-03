@@ -9,9 +9,22 @@
             <h2 class="font-header font-bold text-3xl text-center mb-10">{{ block.title }}</h2>
         {% endif %}
 
-        <div class="grid gap-8 md:grid-cols-3 max-w-8xl mx-auto">
+        {# Size columns to the card count (max 3 per row) and center any partial row #}
+        {% set count = cards|length %}
+        {% set itemWidth = {
+            1: 'md:basis-full',
+            2: 'md:basis-[calc((100%-2rem)/2)]',
+        }[count] ?? 'md:basis-[calc((100%-4rem)/3)]' %}
+        {% set rowWidth = {
+            1: 'max-w-3xl',
+            2: 'max-w-6xl',
+        }[count] ?? 'max-w-8xl' %}
+
+        <div class="flex flex-wrap justify-center gap-8 mx-auto {{ rowWidth }}">
             {% for card in cards %}
-                {{ include('_blocks/interactableCard', { block: card, inColumn: true }, with_context = false) }}
+                <div class="w-full {{ itemWidth }}">
+                    {{ include('_blocks/interactableCard', { block: card, inColumn: true, keepRatio: block.keepAspectRatio }, with_context = false) }}
+                </div>
             {% endfor %}
         </div>
     </section>

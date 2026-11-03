@@ -54,6 +54,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-11-03T20:38:42+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c2bf2c6a-30ea-4aa9-a62c-296fa6415ceb # Keep Aspect Ratio
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fb2c4a1a-aea0-477a-b1d0-5cf5fd025025
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-11-03T15:56:12+00:00'
             editCondition: null
             elementCondition: null
