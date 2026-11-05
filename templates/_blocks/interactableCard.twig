@@ -1,17 +1,36 @@
 {% set image = block.image.one() %}
 {% set keepRatio = keepRatio ?? false %}
+{% set isIcon = block.isIcon ?? false %}
 
 {% if image %}
     {% set tag = block.imageUrl ? 'a' : 'div' %}
-    <{{ tag }} {% if block.imageUrl %}href="{{ block.imageUrl }}"{% endif %} class="group relative block overflow-hidden rounded-lg shadow-md transition duration-300 hover:shadow-2xl ease-in-out hover:scale-105 {{ keepRatio ? 'self-start' }} {{ inColumn ? '' : 'my-10 mx-5' }}">
-    <img class="w-full {{ keepRatio ? 'h-auto' : 'aspect-4/3 object-cover' }}" src="{{ image.getUrl }}" alt="{{ image.title }}">
 
-    {% if block.overlayTitle %}
-        <div class="absolute inset-0 flex items-center justify-center p-6 bg-brandBlack/30 pointer-events-none">
-            <h2 class="text-4xl md:text-5xl text-center text-brandTan font-header drop-shadow-lg/75 drop-shadow-brandBlack">
-                {{ block.title }}
-            </h2>
-        </div>
+    {% if isIcon %}
+        {# Icon card: no crop, shadow, or dark overlay; title sits under the icon.
+           The image is used as a mask so the icon is tinted brandBrownGreen and fades lighter on hover. #}
+        {% set compact = compact ?? false %}
+        <{{ tag }} {% if block.imageUrl %}href="{{ block.imageUrl }}"{% endif %} class="group flex flex-col items-center text-center text-brandBrownGreen transition duration-300 ease-in-out hover:scale-105 hover:text-brandBrownGreenLight {{ inColumn ? '' : 'my-10 mx-5' }}">
+            <span role="img" aria-label="{{ image.title }}"
+                  class="block max-w-full bg-current {{ compact ? 'h-20 md:h-24' : 'h-32' }}"
+                  style="aspect-ratio: {{ image.width ?: 1 }} / {{ image.height ?: 1 }}; mask: url('{{ image.getUrl }}') center / contain no-repeat; -webkit-mask: url('{{ image.getUrl }}') center / contain no-repeat;"></span>
+
+            {% if block.overlayTitle %}
+                <h2 class="font-header {{ compact ? 'mt-3 text-xl md:text-2xl' : 'mt-4 text-3xl md:text-4xl' }}">
+                    {{ block.title }}
+                </h2>
+            {% endif %}
+        </{{ tag }}>
+    {% else %}
+        <{{ tag }} {% if block.imageUrl %}href="{{ block.imageUrl }}"{% endif %} class="group relative block overflow-hidden rounded-lg shadow-md transition duration-300 hover:shadow-2xl ease-in-out hover:scale-105 {{ keepRatio ? 'self-start' }} {{ inColumn ? '' : 'my-10 mx-5' }}">
+            <img class="w-full {{ keepRatio ? 'h-auto' : 'aspect-4/3 object-cover' }}" src="{{ image.getUrl }}" alt="{{ image.title }}">
+
+            {% if block.overlayTitle %}
+                <div class="absolute inset-0 flex items-center justify-center p-6 bg-brandBlack/30 pointer-events-none">
+                    <h2 class="text-4xl md:text-5xl text-center text-brandTan font-header drop-shadow-lg/75 drop-shadow-brandBlack">
+                        {{ block.title }}
+                    </h2>
+                </div>
+            {% endif %}
+        </{{ tag }}>
     {% endif %}
-    </{{ tag }}>
 {% endif %}

@@ -13,7 +13,7 @@
         {% set leftNodes = navNodes|slice(0, half) %}
         {% set rightNodes = navNodes|slice(half) %}
 
-        <header class="relative z-20 font-display bg-brandRed shadow-xl/55 px-15 py-5">
+        <header class="relative z-20 font-display bg-brandRed shadow-xl/55 shadow-[#3b2d2d] px-15 py-5">
             <nav aria-label="Main" class="grid grid-cols-[1fr_auto_1fr] items-center gap-15">
                 <ul class="flex justify-end gap-10">
                     {% for node in leftNodes %}

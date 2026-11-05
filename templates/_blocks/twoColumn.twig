@@ -12,7 +12,7 @@
             {% set isText = column.type.handle == 'textBlock' %}
 
             <div class="{{ isText and not doubleText ? 'px-gutter' : '' }}">
-                {{ include('_blocks/' ~ column.type.handle, { block: column, inColumn: true, fillHeight: true, onDark: onDark }, with_context = false) }}
+                {{ include('_blocks/' ~ column.type.handle, { block: column, inColumn: true, fillHeight: true, onDark: onDark, noShadow: noShadow ?? false }, with_context = false) }}
             </div>
         {% endfor %}
     </div>

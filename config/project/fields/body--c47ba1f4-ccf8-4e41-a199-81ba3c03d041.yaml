@@ -2,7 +2,7 @@ columnSuffix: null
 handle: body
 instructions: null
 name: Body
-searchable: false
+searchable: true
 settings:
   advancedLinkFields: null
   availableTransforms: ''
@@ -18,6 +18,22 @@ settings:
       __assoc__:
         -
           - uid
+          - f564bf9c-6b63-4436-9e21-97d021fffd2c # Button
+        -
+          - expanded
+          - false
+    -
+      __assoc__:
+        -
+          - uid
+          - 09f2c8c1-2682-4fce-810b-b3c4c6123334 # Search Bar
+        -
+          - expanded
+          - false
+    -
+      __assoc__:
+        -
+          - uid
           - b759ecb7-f2a4-472d-abc9-c88bdac0d9e3 # Single Image
         -
           - expanded
@@ -27,14 +43,6 @@ settings:
         -
           - uid
           - df1f6de1-857d-4d4f-b072-dafac8d65604 # Video
-        -
-          - expanded
-          - false
-    -
-      __assoc__:
-        -
-          - uid
-          - f564bf9c-6b63-4436-9e21-97d021fffd2c # Button
         -
           - expanded
           - false

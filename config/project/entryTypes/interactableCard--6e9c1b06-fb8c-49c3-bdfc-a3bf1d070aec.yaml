@@ -54,6 +54,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-11-04T12:00:00+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 94c6bb13-94b5-41e0-aaf8-f5cc5aadd7f1
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ee0c93c8-939f-472b-8e2f-6539d3827e0b
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-10-07T21:51:54+00:00'
             editCondition: null
             elementCondition: null

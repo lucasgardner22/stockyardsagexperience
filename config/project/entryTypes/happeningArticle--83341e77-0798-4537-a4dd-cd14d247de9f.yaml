@@ -46,7 +46,7 @@ fieldLayouts:
             instructions: null
             label: null
             oldFieldUid: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: bbd4c71c-bcbb-4716-85f9-ef813b747f48

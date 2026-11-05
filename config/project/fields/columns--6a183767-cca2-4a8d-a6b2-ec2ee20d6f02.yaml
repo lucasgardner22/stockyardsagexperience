@@ -2,7 +2,7 @@ columnSuffix: null
 handle: columns
 instructions: null
 name: Columns
-searchable: false
+searchable: true
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
@@ -12,15 +12,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 2a7acaa3-ed4b-4e8f-8e2c-8212438f3f1b # Text Block
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
-          - b759ecb7-f2a4-472d-abc9-c88bdac0d9e3 # Single Image
+          - f564bf9c-6b63-4436-9e21-97d021fffd2c # Button
         -
           - group
           - General
@@ -36,22 +28,6 @@ settings:
       __assoc__:
         -
           - uid
-          - e4db7f7e-3a47-4b3b-a270-718b341bb4b1 # Two Column
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
-          - f564bf9c-6b63-4436-9e21-97d021fffd2c # Button
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
           - 71483785-9aee-4f86-8cd0-708f6fc2f383 # Image Carousel
         -
           - group
@@ -60,7 +36,7 @@ settings:
       __assoc__:
         -
           - uid
-          - df1f6de1-857d-4d4f-b072-dafac8d65604 # Video
+          - e9865b51-531e-4b83-a6e9-483238799d5f # Map
         -
           - group
           - General
@@ -68,7 +44,39 @@ settings:
       __assoc__:
         -
           - uid
-          - e9865b51-531e-4b83-a6e9-483238799d5f # Map
+          - 09f2c8c1-2682-4fce-810b-b3c4c6123334 # Search Bar
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - b759ecb7-f2a4-472d-abc9-c88bdac0d9e3 # Single Image
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 2a7acaa3-ed4b-4e8f-8e2c-8212438f3f1b # Text Block
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - e4db7f7e-3a47-4b3b-a270-718b341bb4b1 # Two Column
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - df1f6de1-857d-4d4f-b072-dafac8d65604 # Video
         -
           - group
           - General

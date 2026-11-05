@@ -20,12 +20,25 @@
             2: 'max-w-6xl',
         }[count] ?? 'max-w-8xl' %}
 
-        <div class="flex flex-wrap justify-center gap-8 mx-auto {{ rowWidth }}">
-            {% for card in cards %}
-                <div class="w-full {{ itemWidth }}">
-                    {{ include('_blocks/interactableCard', { block: card, inColumn: true, keepRatio: block.keepAspectRatio }, with_context = false) }}
-                </div>
-            {% endfor %}
-        </div>
+        {# A row made entirely of icons sits tighter: natural-width items, smaller icons #}
+        {% set allIcons = cards|filter(c => c.isIcon ?? false)|length == count %}
+
+        {% if allIcons %}
+            <div class="flex flex-wrap justify-center items-start gap-x-12 gap-y-8 mx-auto max-w-5xl">
+                {% for card in cards %}
+                    <div class="w-40 md:w-48">
+                        {{ include('_blocks/interactableCard', { block: card, inColumn: true, compact: true }, with_context = false) }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="flex flex-wrap justify-center gap-8 mx-auto {{ rowWidth }}">
+                {% for card in cards %}
+                    <div class="w-full {{ itemWidth }}">
+                        {{ include('_blocks/interactableCard', { block: card, inColumn: true, keepRatio: block.keepAspectRatio }, with_context = false) }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
     </section>
 {% endif %}

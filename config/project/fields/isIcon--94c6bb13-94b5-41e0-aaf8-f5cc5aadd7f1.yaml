@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: isIcon
+instructions: 'Show the image as an icon: no crop, shadow, or dark overlay.'
+name: 'Is Icon'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

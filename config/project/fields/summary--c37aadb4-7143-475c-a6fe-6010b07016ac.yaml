@@ -2,7 +2,7 @@ columnSuffix: null
 handle: summary
 instructions: null
 name: Summary
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: null

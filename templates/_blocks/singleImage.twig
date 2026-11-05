@@ -2,18 +2,19 @@
 {% set inProse = inProse ?? false %}
 {% set inColumn = inColumn ?? false %}
 {% set inPost = inPost ?? false %}
+{% set shadow = (noShadow ?? false) ? '' : 'shadow-md' %}
 
 {% if image %}
     <figure class="{{ inProse ? 'not-prose my-8 mx-auto' : '' }}">
         {% if inProse %}
             <img
-                class="block w-full {{ inPost ? 'aspect-2/1' : 'aspect-video' }} object-cover shadow-md"
+                class="block w-full {{ inPost ? 'aspect-2/1' : 'aspect-video' }} object-cover {{ shadow }}"
                 src="{{ image.url({ width : 1280, height : inPost ? 640 : 720, mode : 'crop' }) }}"
                 alt="{{ image.alt ?: image.title }}"
                 loading="lazy"
             >
         {% else %}
-            <img class="{{ inColumn ? 'block w-full aspect-video object-cover shadow-md' : 'mx-auto mt-15 max-h-175' }}" src="{{ image.url }}" alt="{{ image.title }}">
+            <img class="{{ inColumn ? 'block w-full aspect-video object-cover ' ~ shadow : 'mx-auto mt-15 max-h-175' }}" src="{{ image.url }}" alt="{{ image.title }}">
         {% endif %}
 
         {{ include('_partials/caption', { caption: block.caption, arrow: block.captionArrow }, with_context = false) }}

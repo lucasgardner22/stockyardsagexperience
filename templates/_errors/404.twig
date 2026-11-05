@@ -1,0 +1,8 @@
+{% extends '_layout/base' %}
+{% set page = craft.entries.section('pageNotFound').one() %}
+
+{% block content %}
+    {% for block in page.contentBuilder.all() ?? [] %}
+        {{ include('_blocks/' ~ block.type.handle, { block: block, noShadow: true }, with_context = false) }}
+    {% endfor %}
+{% endblock %}

@@ -7,4 +7,5 @@ return GeneralConfig::create()
     ->devMode(App::env('CRAFT_DEV_MODE') ?? false)
     ->allowAdminChanges(App::env('CRAFT_ALLOW_ADMIN_CHANGES') ?? false)
     ->omitScriptNameInUrls()
+    ->errorTemplatePrefix('_errors/')
     ->aliases(['@web' => App::env('PRIMARY_SITE_URL'), '@webroot' => dirname(__DIR__) . '/web']);

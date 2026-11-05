@@ -2,7 +2,7 @@ columnSuffix: null
 handle: contentBuilder
 instructions: null
 name: 'Content Builder'
-searchable: false
+searchable: true
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
@@ -101,6 +101,14 @@ settings:
         -
           - uid
           - 67115135-8f90-424c-932f-050215bade37 # Review Section
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 09f2c8c1-2682-4fce-810b-b3c4c6123334 # Search Bar
         -
           - group
           - General
