@@ -1,14 +1,14 @@
-{% if page %}
-    {% extends '_layout/base' %}
-    {% set page = craft.entries.section('internalServerError').one() %}
+{% extends '_layout/base' %}
+{% set page = craft.entries.section('internalServerError').one() %}
 
-    {% block content %}
-        <div class="pt-15">
-            {% for block in page.contentBuilder.all() ?? [] %}
+{% block content %}
+    <div class="pt-15">
+        {% if page %}
+            {% for block in page.contentBuilder.all() %}
                 {{ include('_blocks/' ~ block.type.handle, { block: block, noShadow: true }, with_context = false) }}
             {% endfor %}
-        </div>
-    {% endblock %}
-{% else %}
-    <p>An internal server error has occurred!</p>
-{% endif %}
+        {% else %}
+            <p class="text-center font-body text-lg py-10">An internal server error has occurred!</p>
+        {% endif %}
+    </div>
+{% endblock %}
