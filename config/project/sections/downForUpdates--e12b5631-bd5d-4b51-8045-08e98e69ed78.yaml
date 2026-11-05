@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 7be19601-a134-4452-b680-21f30facbf3b # Error
+handle: downForUpdates
+maxAuthors: 1
+minAuthors: 1
+name: '503 down for updates!'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  54a86639-27bb-482c-9e0b-ed20b40500a5: # stockyardsremake
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

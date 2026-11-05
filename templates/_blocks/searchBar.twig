@@ -1,0 +1,25 @@
+{% set inColumn = inColumn ?? false %}
+{% set inProse = inProse ?? false %}
+
+<section class="{{ inProse ? 'not-prose my-8' : (inColumn ? '' : 'px-gutter mt-15') }}">
+    <div class="{{ inColumn or inProse ? '' : 'max-w-3xl mx-auto' }}">
+        {% if block.title %}
+            <h2 class="font-header font-bold text-3xl text-center mb-6">{{ block.title }}</h2>
+        {% endif %}
+
+        <form action="{{ url('search') }}" method="get" role="search" class="flex gap-2">
+            <label for="search-{{ block.id }}" class="sr-only">Search the site</label>
+            <input
+                id="search-{{ block.id }}"
+                type="search"
+                name="q"
+                required
+                placeholder="{{ block.placeholder ?: 'Search the site…' }}"
+                class="flex-1 rounded border border-brandGray/40 px-4 py-3 font-body"
+            >
+            <button type="submit" class="rounded bg-brandBrownGreen px-6 py-3 font-body uppercase tracking-widest text-sm text-white hover:opacity-90">
+                Search
+            </button>
+        </form>
+    </div>
+</section>

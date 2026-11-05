@@ -2,12 +2,12 @@
     "name": "lucas/stockyard-ag",
     "type": "project",
     "require": {
-        "craftcms/cms": "^5.11.5.1",
+        "craftcms/cms": "^5.12.0.1",
         "vlucas/phpdotenv": "^5.7",
         "nystudio107/craft-vite": "^5.0",
-        "verbb/navigation": "^4.0.9",
+        "verbb/navigation": "^4.1.0",
         "craftcms/ckeditor": "^5.9.0",
-        "verbb/formie": "^4.0.1"
+        "verbb/formie": "^4.0.7"
     },
     "config": {
         "allow-plugins": {

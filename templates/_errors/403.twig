@@ -1,0 +1,10 @@
+{% extends '_layout/base' %}
+{% set page = craft.entries.section('accessIsForbidden').one() %}
+
+{% block content %}
+    <div class="pt-15">
+        {% for block in page.contentBuilder.all() ?? [] %}
+            {{ include('_blocks/' ~ block.type.handle, { block: block, noShadow: true }, with_context = false) }}
+        {% endfor %}
+    </div>
+{% endblock %}

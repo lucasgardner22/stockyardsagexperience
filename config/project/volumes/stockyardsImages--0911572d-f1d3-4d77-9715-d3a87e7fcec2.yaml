@@ -59,6 +59,7 @@ fieldLayouts:
 fs: images
 handle: stockyardsImages
 name: 'Stockyards Images'
+propagationMethod: custom
 sortOrder: 1
 subpath: ''
 titleTranslationKeyFormat: null
