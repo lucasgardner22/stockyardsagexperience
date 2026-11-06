@@ -1,7 +1,101 @@
 {% extends '_layout/base' %}
+
+{% set view = craft.app.request.getQueryParam('view') == 'calendar' ? 'calendar' : 'list' %}
+{% set today = now|date('Y-m-d') %}
+
 {% block content %}
-    <p>Welcome to the events page!</p>
-    <div>
-        {{ entry.intro|nl2br }}
+    <div class="pt-30 pb-10 px-gutter max-w-5xl mx-auto">
+        <h1 class="font-header text-4xl text-center">Events</h1>
+
+        <div class="flex justify-center gap-2 my-8">
+            {% for key, label in { list: 'List', calendar: 'Calendar' } %}
+                <a
+                    href="{{ key == 'list' ? url('events') : url('events', { view : 'calendar' }) }}"
+                    class="px-4 py-1.5 rounded-full text-sm {{ view == key ? 'bg-brandBrownGreen text-brandOffWhite' : 'bg-brandTan text-brandBrown hover:bg-brandTanHover' }}"
+                >{{ label }}</a>
+            {% endfor %}
+        </div>
+
+        {% if view == 'list' %}
+            {% set recent = craft.entries.section('events')
+            .eventStart('>= ' ~ now|date_modify('-1 year')|date('Y-m-d'))
+            .orderBy('eventStart asc')
+            .with(['image'])
+            .all() %}
+            {% set upcoming = recent|filter(e => (e.eventEnd ?? e.eventStart)|date('Y-m-d') >= today) %}
+            {% set past = recent|filter(e => (e.eventEnd ?? e.eventStart)|date('Y-m-d') < today)|reverse %}
+
+            {% if upcoming|length %}
+                <div class="grid gap-4">
+                    {% for event in upcoming %}
+                        {{ include('_partials/eventRow', { event: event }, with_context = false) }}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="text-center font-body text-lg py-10">New events are coming soon. Check back later!</p>
+            {% endif %}
+
+            {% if past|length %}
+                <details class="mt-12">
+                    <summary class="text-center cursor-pointer text-brandBrownGreen">Past events</summary>
+                    <div class="grid gap-4 mt-6 opacity-80">
+                        {% for event in past %}
+                            {{ include('_partials/eventRow', { event: event }, with_context = false) }}
+                        {% endfor %}
+                    </div>
+                </details>
+            {% endif %}
+
+        {% else %}
+            {% set month = craft.app.request.getQueryParam('month') %}
+            {% set month = month matches '/^\\d{4}-\\d{2}$/' ? month : now|date('Y-m') %}
+            {% set first = date(month ~ '-01') %}
+            {% set nextFirst = first|date_modify('+1 month') %}
+            {% set offset = first|date('w') %}
+
+            {% set monthEvents = craft.entries.section('events')
+            .eventStart(['and', '>= ' ~ first|date_modify('-2 months')|date('Y-m-d'), '< ' ~ nextFirst|date('Y-m-d')])
+            .orderBy('eventStart asc')
+            .with(['image'])
+            .all()
+            |filter(e => (e.eventEnd ?? e.eventStart)|date('Y-m-d') >= first|date('Y-m-d')) %}
+
+            <div class="flex items-center justify-between mb-4">
+                <a href="{{ url('events', { view: 'calendar', month: first|date_modify('-1 month')|date('Y-m') }) }}" class="text-2xl text-brandBrownGreen" aria-label="Previous month">←</a>
+                <h2 class="font-display text-3xl text-brandRed">{{ first|date('F Y') }}</h2>
+                <a href="{{ url('events', { view: 'calendar', month: nextFirst|date('Y-m') }) }}" class="text-2xl text-brandBrownGreen" aria-label="Next month">→</a>
+            </div>
+
+            <div class="hidden md:grid grid-cols-7 gap-1 text-sm">
+                {% for d in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] %}
+                    <div class="text-center text-brandBrownGreen pb-1">{{ d }}</div>
+                {% endfor %}
+                {% if offset %}{% for i in 1..offset %}<div></div>{% endfor %}{% endif %}
+                {% for d in 1..(first|date('t')) %}
+                    {% set day = month ~ '-' ~ ('%02d'|format(d)) %}
+                    {% set dayEvents = monthEvents|filter(e => e.eventStart|date('Y-m-d') <= day and (e.eventEnd ?? e.eventStart)|date('Y-m-d') >= day) %}
+                    <div class="min-h-24 bg-white rounded p-1.5 {{ day == today ? 'ring-2 ring-brandBrownGreen' }}">
+                        <div class="text-brandGray">{{ d }}</div>
+                        {% for e in dayEvents %}
+                            <a href="{{ e.url }}" class="block mt-1 truncate rounded bg-brandBrownGreen text-brandOffWhite px-1.5 py-0.5 text-xs hover:bg-brandBrownGreenHover" title="{{ e.title }}">{{ e.title }}</a>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="md:hidden grid gap-4">
+                {% for event in monthEvents %}
+                    {{ include('_partials/eventRow', { event: event }, with_context = false) }}
+                {% endfor %}
+            </div>
+
+            {% if not monthEvents|length %}
+                {% set nextUp = craft.entries.section('events').eventStart('>= ' ~ nextFirst|date('Y-m-d')).orderBy('eventStart asc').one() %}
+                <p class="text-center font-body mt-6">
+                    No events this month.
+                    {% if nextUp %}Next up: <a href="{{ nextUp.url }}" class="text-brandRed underline">{{ nextUp.title }}</a>, {{ nextUp.eventStart|date('M j') }}.{% endif %}
+                </p>
+            {% endif %}
+        {% endif %}
     </div>
 {% endblock %}

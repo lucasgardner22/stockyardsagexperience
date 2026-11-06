@@ -1,0 +1,18 @@
+columnSuffix: null
+handle: locationAddress
+instructions: null
+name: 'Location Address'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: '123 Main St., Sioux Falls, SD'
+  uiMode: normal
+tip: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
+warning: null

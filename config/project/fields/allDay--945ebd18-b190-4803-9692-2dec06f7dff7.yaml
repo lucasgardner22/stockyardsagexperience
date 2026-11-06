@@ -1,0 +1,15 @@
+columnSuffix: null
+handle: allDay
+instructions: null
+name: 'All Day'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+  showLabelsInCards: false
+tip: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch
+warning: null

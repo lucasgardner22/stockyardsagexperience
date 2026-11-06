@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: fdd3a105-7362-4784-8b9c-8bbf9e133508 # Pages
+handle: agricultureTermGlossary
+maxAuthors: 1
+minAuthors: 1
+name: 'Agriculture Term Glossary'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  54a86639-27bb-482c-9e0b-ed20b40500a5: # stockyardsremake
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_entry.twig
+    uriFormat: agriculture-term-glossary
+type: single

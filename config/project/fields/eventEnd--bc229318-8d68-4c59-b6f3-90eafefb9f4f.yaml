@@ -1,0 +1,17 @@
+columnSuffix: null
+handle: eventEnd
+instructions: null
+name: Ends
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: 15
+  showDate: true
+  showTime: true
+  showTimeZone: false
+tip: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date
+warning: null

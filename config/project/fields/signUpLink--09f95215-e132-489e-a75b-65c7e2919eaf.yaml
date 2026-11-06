@@ -1,0 +1,31 @@
+columnSuffix: null
+handle: signUpLink
+instructions: null
+name: 'Sign-Up Link'
+searchable: false
+settings:
+  fullGraphqlData: true
+  maxLength: 255
+  showLabelField: false
+  typeSettings:
+    __assoc__:
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
+              - ''
+            -
+              - allowCustomSchemes
+              - ''
+  types:
+    - url
+tip: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link
+warning: null

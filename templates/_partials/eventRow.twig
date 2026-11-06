@@ -1,0 +1,40 @@
+{% set start = event.eventStart %}
+{% set end = event.eventEnd ?? start %}
+{% set multiDay = end|date('Y-m-d') != start|date('Y-m-d') %}
+{% set image = event.image.one() %}
+{% set places = {
+    stockyards: 'Stockyards Ag Experience',
+    farmersMarket: 'Falls Park Farmers Market',
+    stateFair: 'South Dakota State Fair',
+} %}
+{% set loc = event.eventLocation.value %}
+{% set place = loc == 'custom' ? event.locationName : (places[loc] ?? '') %}
+
+<a href="{{ event.url }}" class="group grid grid-cols-[4rem_1fr] md:grid-cols-[4rem_9rem_1fr_auto] gap-4 items-center bg-white rounded-lg p-3 shadow-md transition hover:-translate-y-0.5 hover:shadow-xl">
+    <div class="bg-brandBrownGreen text-brandOffWhite rounded-md text-center py-2">
+        <div class="text-xs uppercase tracking-wide">{{ start|date('M') }}</div>
+        <div class="text-2xl font-bold leading-none">{{ start|date('j') }}</div>
+    </div>
+
+    {% if image %}
+        <img src="{{ image.url({ width: 360, height: 203, mode: 'crop' }) }}" alt="{{ image.alt ?: '' }}" class="hidden md:block w-full aspect-video object-cover rounded" loading="lazy">
+    {% endif %}
+
+    <div>
+        <h3 class="font-display text-xl text-brandRed group-hover:underline">{{ event.title }}</h3>
+        <p class="text-sm text-brandGray mt-1">
+            {{ multiDay ? start|date('M j') ~ ' – ' ~ end|date('M j') : start|date('l') }}
+            {%- if not event.allDay %} · {{ start|date('g:i A') }}{% if event.eventEnd and not multiDay %}–{{ end|date('g:i A') }}{% endif %}{% endif %}
+            {%- if place %} · {{ place }}{% endif %}
+        </p>
+        {% if event.eventCategories|length %}
+            <div class="mt-2 flex flex-wrap gap-1">
+                {% for cat in event.eventCategories %}
+                    <span class="text-xs px-2 py-0.5 rounded-full bg-brandTan text-brandBrown">{{ cat.label }}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
+    <span class="hidden md:inline text-sm text-brandBrownGreen">Details →</span>
+</a>

@@ -90,6 +90,8 @@ settings:
     - createEntry
     - fontColor
   wordLimit: null
+tip: null
 translationKeyFormat: null
 translationMethod: none
 type: craft\ckeditor\Field
+warning: null

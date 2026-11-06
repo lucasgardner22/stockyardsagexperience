@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 476d09be-e7d2-4df5-b86a-67fa4a81a967 # Homepage
+    uid: 9901b96b-9625-4ad6-84ce-174bc7e88d47 # Event
 handle: events
 maxAuthors: 1
 minAuthors: 1
@@ -17,6 +17,6 @@ siteSettings:
   54a86639-27bb-482c-9e0b-ed20b40500a5: # stockyardsremake
     enabledByDefault: true
     hasUrls: true
-    template: pages/visit/events.twig
-    uriFormat: events
-type: single
+    template: pages/visit/_event
+    uriFormat: 'events/{slug}'
+type: channel
