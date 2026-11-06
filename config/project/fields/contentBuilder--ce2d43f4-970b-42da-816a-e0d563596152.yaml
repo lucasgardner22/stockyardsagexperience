@@ -140,6 +140,14 @@ settings:
       __assoc__:
         -
           - uid
+          - b8227679-e311-4e7c-a0f9-0d5c27390c36 # Upcoming Events
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
           - df1f6de1-857d-4d4f-b072-dafac8d65604 # Video
         -
           - group
@@ -152,6 +160,8 @@ settings:
   propagationMethod: all
   showCardsInGrid: false
   viewMode: blocks
+tip: null
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix
+warning: null

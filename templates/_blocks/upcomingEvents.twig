@@ -1,0 +1,17 @@
+{% set events = craft.entries.section('events')
+    .eventStart('>= ' ~ now|date_modify('-1 month')|date('Y-m-d'))
+    .orderBy('eventStart asc').with(['image']).all()
+    |filter(e => (e.eventEnd ?? e.eventStart)|date('Y-m-d') >= now|date('Y-m-d'))
+    |slice(0, 3) %}
+
+{% if events|length %}
+    <section class="px-gutter max-w-5xl mx-auto">
+        {% if block.title %}<h2 class="font-header font-bold text-3xl text-center mb-8">{{ block.title }}</h2>{% endif %}
+        <div class="grid gap-4">
+            {% for event in events %}
+                {{ include('_partials/eventRow', { event: event }, with_context = false) }}
+            {% endfor %}
+        </div>
+        <p class="text-center mt-6"><a href="{{ url('events') }}" class="text-brandBrownGreen hover:underline">See all events →</a></p>
+    </section>
+{% endif %}

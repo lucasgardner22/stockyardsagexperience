@@ -1,4 +1,4 @@
-dateModified: 1793979782
+dateModified: 1793982301
 elementSources:
   craft\elements\Entry:
     -
@@ -134,6 +134,7 @@ meta:
     b522dd4f-5b63-459f-8d45-c4c8b7e617b1: 'Site Settings' # Site Settings
     b759ecb7-f2a4-472d-abc9-c88bdac0d9e3: 'Single Image' # Single Image
     b9620c99-e318-422f-b903-3dd5c3cab804: Image # Image
+    b8227679-e311-4e7c-a0f9-0d5c27390c36: 'Upcoming Events' # Upcoming Events
     ba253be7-c63c-4881-acdd-6f92d3374815: 'Logo Row' # Logo Row
     baf86928-267d-433c-b5f7-9e5a08bd0b28: 'Center Header' # Center Header
     bbf516ed-8266-4d52-a1e3-83cd4a31435a: 'Insider Post' # Insider Post

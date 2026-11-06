@@ -1,0 +1,57 @@
+{% extends '_layout/base' %}
+
+{% block content %}
+    {% set image = entry.image.one() %}
+    {% set start = entry.eventStart %}
+    {% set end = entry.eventEnd ?? start %}
+    {% set multiDay = end|date('Y-m-d') != start|date('Y-m-d') %}
+    {% set places = {
+        stockyards: { name: 'Stockyards Ag Experience', address: '301 E Falls Park Dr, Sioux Falls, SD' },
+        farmersMarket: { name: 'Falls Park Farmers Market', address: '260 E Falls Park Dr, Sioux Falls, SD' },
+        stateFair: { name: 'South Dakota State Fair', address: '1060 3rd St SW, Huron, SD' },
+    } %}
+    {% set loc = entry.eventLocation.value %}
+    {% set place = loc == 'custom'
+        ? { name: entry.locationName, address: entry.locationAddress }
+        : (places[loc] ?? null) %}
+
+    <article>
+        <header class="max-w-3xl mx-auto px-5 pt-30">
+            <a href="{{ url('events') }}" class="text-sm uppercase tracking-widest text-brandBrownGreen hover:underline">← Events</a>
+            <h1 class="font-header text-4xl mt-2 text-balance">{{ entry.title }}</h1>
+
+            <p class="mt-3 text-brandBrown font-body text-lg">
+                {{ multiDay ? start|date('F j') ~ ' – ' ~ end|date('F j, Y') : start|date('l, F j, Y') }}
+                {%- if not entry.allDay %} · {{ start|date('g:i A') }}{% if entry.eventEnd and not multiDay %} – {{ end|date('g:i A') }}{% endif %}{% endif %}
+            </p>
+
+            {% if place and place.name %}
+                <p class="text-brandGray">
+                    {{ place.name }}
+                    {% if place.address %}
+                        · <a href="https://www.google.com/maps/search/?api=1&query={{ place.address|url_encode }}" class="underline" target="_blank" rel="noopener">Get directions</a>
+                    {% endif %}
+                </p>
+            {% endif %}
+
+            {% if entry.signUpLink %}
+                <a
+                    href="{{ entry.signUpLink.url }}"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-block mt-5 px-6 py-2 rounded bg-brandBrownGreen text-brandOffWhite hover:bg-brandBrownGreenHover"
+                >
+                    {{ entry.signUpText ?: 'Register' }}
+                </a>
+            {% endif %}
+
+            {% if image %}
+                <img src="{{ image.url({ width: 1536, height: 864, mode: 'crop' }) }}" alt="{{ image.alt ?: '' }}" class="mt-8 w-full aspect-video object-cover rounded-lg shadow-md">
+            {% endif %}
+        </header>
+
+        <div class="prose max-w-3xl mx-auto px-5 py-10">
+            {{ entry.body }}
+        </div>
+    </article>
+{% endblock %}
