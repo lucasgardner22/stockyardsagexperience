@@ -7,11 +7,12 @@
     <div class="pt-30 pb-10 px-gutter max-w-5xl mx-auto">
         <h1 class="font-header font-bold text-5xl text-center">Events</h1>
 
-        <div class="flex justify-center gap-2 my-8">
+        <div class="flex justify-center gap-8 my-8 font-body">
             {% for key, label in { list: 'List', calendar: 'Calendar' } %}
                 <a
                     href="{{ key == 'list' ? url('events') : url('events', { view : 'calendar' }) }}"
-                    class="px-4 py-1.5 rounded-full text-sm {{ view == key ? 'bg-brandBrownGreen text-brandOffWhite' : 'bg-brandTan text-brandBrown hover:bg-brandTanHover' }}"
+                    class="pb-1 text-sm uppercase tracking-widest border-b-2 transition duration-300 {{ view == key ? 'text-brandRed border-brandRed' : 'text-brandBrownGreen border-transparent hover:border-brandBrownGreen' }}"
+                    {% if view == key %}aria-current="page"{% endif %}
                 >{{ label }}</a>
             {% endfor %}
         </div>
@@ -32,18 +33,49 @@
                     {% endfor %}
                 </div>
             {% else %}
-                <p class="text-center font-body text-lg py-10">New events are coming soon. Check back later!</p>
+                <p class="text-center font-body text-lg italic text-brandGray py-10">New events are coming soon. Check back later!</p>
             {% endif %}
 
             {% if past|length %}
-                <details class="mt-12">
-                    <summary class="text-center cursor-pointer text-brandBrownGreen">Past Events</summary>
-                    <div class="grid gap-4 mt-6 opacity-80">
+                <details id="past-events" class="group/past mt-15">
+                    <summary class="flex items-center gap-6 list-none [&::-webkit-details-marker]:hidden cursor-pointer font-header text-3xl text-brandBrown
+                                    before:flex-1 before:h-px before:bg-brandBrownGreen/40 after:flex-1 after:h-px after:bg-brandBrownGreen/40
+                                    data-locked:cursor-default data-locked:pointer-events-none">
+                        <span class="flex items-center gap-3">
+                            Past Events
+                            <span class="text-base text-brandBrownGreen transition duration-300 group-open/past:rotate-180 in-data-locked:hidden" aria-hidden="true">▾</span>
+                        </span>
+                    </summary>
+                    <div class="grid gap-4 mt-8">
                         {% for event in past %}
-                            {{ include('_partials/eventRow', { event: event }, with_context = false) }}
+                            {{ include('_partials/eventRow', { event: event, past: true }, with_context = false) }}
                         {% endfor %}
                     </div>
                 </details>
+
+                {# If the page is too short to scroll with Past Events collapsed, open it for good #}
+                <script>
+                    (() => {
+                        const past = document.getElementById('past-events');
+                        const summary = past.querySelector('summary');
+
+                        const lockOpen = () => {
+                            past.open = true;
+                            summary.dataset.locked = '';
+                            summary.tabIndex = -1;
+                            past.addEventListener('toggle', () => { past.open = true; });
+                        };
+
+                        const check = () => {
+                            if (summary.hasAttribute('data-locked')) return;
+                            if (document.documentElement.scrollHeight <= window.innerHeight + 1) lockOpen();
+                        };
+
+                        document.addEventListener('DOMContentLoaded', check);
+                        window.addEventListener('load', check);
+                        window.addEventListener('resize', check);
+                    })();
+                </script>
             {% endif %}
 
         {% else %}
@@ -61,19 +93,19 @@
             |filter(e => (e.eventEnd ?? e.eventStart)|date('Y-m-d') >= first|date('Y-m-d')) %}
 
             <div class="flex items-center justify-between mb-4">
-                <a href="{{ url('events', { view: 'calendar', month: first|date_modify('-1 month')|date('Y-m') }) }}" class="text-2xl text-brandBrownGreen" aria-label="Previous month">←</a>
-                <h2 class="font-display text-3xl text-brandRed">{{ first|date('F Y') }}</h2>
-                <a href="{{ url('events', { view: 'calendar', month: nextFirst|date('Y-m') }) }}" class="text-2xl text-brandBrownGreen" aria-label="Next month">→</a>
+                <a href="{{ url('events', { view: 'calendar', month: first|date_modify('-1 month')|date('Y-m') }) }}" class="text-sm uppercase tracking-widest font-body text-brandBrownGreen hover:underline" aria-label="Previous month">← {{ first|date_modify('-1 month')|date('M') }}</a>
+                <h2 class="font-header text-3xl text-brandBrown">{{ first|date('F Y') }}</h2>
+                <a href="{{ url('events', { view: 'calendar', month: nextFirst|date('Y-m') }) }}" class="text-sm uppercase tracking-widest font-body text-brandBrownGreen hover:underline" aria-label="Next month">{{ nextFirst|date('M') }} →</a>
             </div>
 
             {% set monthStart = first|date('Y-m-d') %}
             {% set monthEnd = nextFirst|date_modify('-1 day')|date('Y-m-d') %}
             {% set weeks = ((offset + first|date('t')) / 7)|round(0, 'ceil') %}
 
-            <div class="hidden md:block text-sm">
+            <div class="hidden md:block text-sm font-body rounded-lg border-2 border-brandBlack p-3">
                 <div class="grid grid-cols-7 gap-1">
                     {% for d in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] %}
-                        <div class="text-center text-brandBrownGreen pb-1">{{ d }}</div>
+                        <div class="text-center text-xs uppercase tracking-widest text-brandBrownGreen pb-2">{{ d }}</div>
                     {% endfor %}
                 </div>
 
@@ -89,8 +121,8 @@
                                 {% for i in 0..6 %}
                                     {% set day = weekStart|date_modify(i ~ ' days')|date('Y-m-d') %}
                                     {% if day >= monthStart and day <= monthEnd %}
-                                        <div class="bg-white rounded p-1.5 {{ day == today ? 'ring-2 ring-brandBrownGreen' }}">
-                                            <div class="text-brandGray">{{ day|date('j') }}</div>
+                                        <div class="rounded p-1.5 {{ day == today ? 'bg-brandTan' : 'bg-white' }}">
+                                            <div class="{{ day == today ? 'text-brandBrown font-bold' : 'text-brandGray' }}">{{ day|date('j') }}</div>
                                         </div>
                                     {% else %}
                                         <div></div>
@@ -132,9 +164,9 @@
 
             {% if not monthEvents|length %}
                 {% set nextUp = craft.entries.section('events').eventStart('>= ' ~ nextFirst|date('Y-m-d')).orderBy('eventStart asc').one() %}
-                <p class="text-center font-body mt-6">
+                <p class="text-center font-body text-lg mt-6">
                     No events this month.
-                    {% if nextUp %}Next up: <a href="{{ nextUp.url }}" class="text-brandRed underline">{{ nextUp.title }}</a>, {{ nextUp.eventStart|date('M j') }}.{% endif %}
+                    {% if nextUp %}Next up: <a href="{{ nextUp.url }}" class="text-brandBrownGreen underline">{{ nextUp.title }}</a>, {{ nextUp.eventStart|date('M j') }}.{% endif %}
                 </p>
             {% endif %}
         {% endif %}
