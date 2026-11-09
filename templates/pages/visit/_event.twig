@@ -15,42 +15,95 @@
         ? { name: entry.locationName, address: entry.locationAddress }
         : (places[loc] ?? null) %}
 
+    {# Add-to-calendar links. Timed events without an end time get one hour; all-day end dates are exclusive. #}
+    {% set calEnd = entry.eventEnd ?? (entry.allDay ? start : start|date_modify('+1 hour')) %}
+    {% set calLocation = place ? [place.name, place.address]|filter|join(', ') : '' %}
+    {% set utc = 'Ymd\\THis\\Z' %}
+    {% set googleUrl = 'https://calendar.google.com/calendar/render?' ~ {
+        action: 'TEMPLATE',
+        text: entry.title,
+        dates: entry.allDay
+            ? start|date('Ymd') ~ '/' ~ calEnd|date_modify('+1 day')|date('Ymd')
+            : start|date(utc, 'UTC') ~ '/' ~ calEnd|date(utc, 'UTC'),
+        location: calLocation,
+        details: entry.url,
+    }|url_encode %}
+    {% set outlookUrl = 'https://outlook.live.com/calendar/0/action/compose?' ~ {
+        rru: 'addevent',
+        subject: entry.title,
+        startdt: entry.allDay ? start|date('Y-m-d') : start|date('c'),
+        enddt: entry.allDay ? calEnd|date_modify('+1 day')|date('Y-m-d') : calEnd|date('c'),
+        allday: entry.allDay ? 'true' : 'false',
+        location: calLocation,
+        body: entry.url,
+    }|url_encode %}
+
     <article>
         <header class="max-w-3xl mx-auto px-5 pt-30">
             <a href="{{ url('events') }}" class="text-sm uppercase tracking-widest text-brandBrownGreen hover:underline">← Events</a>
             <h1 class="font-header text-4xl mt-2 text-balance">{{ entry.title }}</h1>
 
-            <p class="mt-3 text-brandBrown font-body text-lg">
-                {{ multiDay ? start|date('F j') ~ ' – ' ~ end|date('F j, Y') : start|date('l, F j, Y') }}
-                {%- if not entry.allDay %} · {{ start|date('g:i A') }}{% if entry.eventEnd and not multiDay %} – {{ end|date('g:i A') }}{% endif %}{% endif %}
-            </p>
+            <div class="mt-8 rounded-lg shadow-md">
+                {% if image %}
+                    <img src="{{ image.url({ width: 1536, height: 864, mode: 'crop' }) }}" alt="{{ image.alt ?: '' }}" class="block w-full aspect-video object-cover rounded-t-lg">
+                {% endif %}
 
-            {% if place and place.name %}
-                <p class="text-brandGray">
-                    {{ place.name }}
-                    {% if place.address %}
-                        · <a href="https://www.google.com/maps/search/?api=1&query={{ place.address|url_encode }}" class="underline" target="_blank" rel="noopener">Get directions</a>
-                    {% endif %}
-                </p>
-            {% endif %}
+                <div class="bg-brandBrownGreen text-brandOffWhite font-body px-6 py-5 {{ image ? 'rounded-b-lg' : 'rounded-lg' }} flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <p class="sm:text-lg">
+                            <span class="whitespace-nowrap sm:hidden">{{ multiDay ? start|date('M j') ~ ' – ' ~ end|date('M j, Y') : start|date('M j, Y') }}</span>
+                            <span class="whitespace-nowrap hidden sm:inline">{{ multiDay ? start|date('F j') ~ ' – ' ~ end|date('F j, Y') : start|date('F j, Y') }}</span>
+                            {%- if not entry.allDay %} · <span class="whitespace-nowrap">{{ start|date('g:i a')|replace({ am: 'a.m.', pm: 'p.m.' }) }}{% if entry.eventEnd and not multiDay %} – {{ end|date('g:i a')|replace({ am: 'a.m.', pm: 'p.m.' }) }}{% endif %}</span>{% endif %}
+                        </p>
 
-            {% if entry.signUpLink %}
-                <a
-                    href="{{ entry.signUpLink.url }}"
-                    target="_blank"
-                    rel="noopener"
-                    class="inline-block mt-5 px-6 py-2 rounded bg-brandBrownGreen text-brandOffWhite hover:bg-brandBrownGreenHover"
-                >
-                    {{ entry.signUpText ?: 'Register' }}
-                </a>
-            {% endif %}
+                        {% if place and place.name %}
+                            <p class="mt-0.5 text-brandTan">
+                                {% if place.address %}
+                                    <a href="https://www.google.com/maps/search/?api=1&query={{ place.address|url_encode }}" target="_blank" rel="noopener" title="Get directions" class="underline decoration-brandTan/50 underline-offset-4 hover:decoration-brandTan">{{ place.name }}</a>
+                                {% else %}
+                                    {{ place.name }}
+                                {% endif %}
+                            </p>
+                        {% endif %}
+                    </div>
 
-            {% if image %}
-                <img src="{{ image.url({ width: 1536, height: 864, mode: 'crop' }) }}" alt="{{ image.alt ?: '' }}" class="mt-8 w-full aspect-video object-cover rounded-lg shadow-md">
-            {% endif %}
+                    <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+                        <details id="add-to-calendar" class="relative">
+                            <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer select-none text-center font-body text-lg px-6 py-2.5 rounded-lg border-2 border-brandOffWhite/70 transition duration-300 hover:bg-brandOffWhite hover:text-brandBrownGreen">
+                                Add to Calendar
+                            </summary>
+                            <ul class="absolute right-0 z-20 mt-2 w-full sm:w-60 rounded-lg bg-white py-2 text-brandBlack shadow-xl">
+                                <li><a href="{{ googleUrl }}" target="_blank" rel="noopener" class="block px-4 py-2 hover:bg-brandTan">Google Calendar</a></li>
+                                <li><a href="{{ url('events/' ~ entry.slug ~ '.ics') }}" class="block px-4 py-2 hover:bg-brandTan">Apple Calendar</a></li>
+                                <li><a href="{{ outlookUrl }}" target="_blank" rel="noopener" class="block px-4 py-2 hover:bg-brandTan">Outlook.com</a></li>
+                                <li><a href="{{ url('events/' ~ entry.slug ~ '.ics') }}" class="block px-4 py-2 hover:bg-brandTan">Other (.ics file)</a></li>
+                            </ul>
+                        </details>
+
+                        {% if entry.signUpLink %}
+                            {{ include('_partials/button', {
+                                text: entry.signUpText ?: 'Register',
+                                url: entry.signUpLink.url,
+                                target: '_blank',
+                                variant: 'red',
+                                align: 'left',
+                            }, with_context = false) }}
+                        {% endif %}
+                    </div>
+
+                    {# Close the calendar menu when clicking elsewhere or pressing Escape #}
+                    <script>
+                        (() => {
+                            const menu = document.getElementById('add-to-calendar');
+                            document.addEventListener('click', (e) => { if (!menu.contains(e.target)) menu.open = false; });
+                            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') menu.open = false; });
+                        })();
+                    </script>
+                </div>
+            </div>
         </header>
 
-        <div class="prose max-w-3xl mx-auto px-5 py-10">
+        <div class="prose prose-lg font-body prose-headings:font-header prose-a:text-brandBrownGreen max-w-3xl mx-auto px-5 py-10">
             {{ entry.body }}
         </div>
     </article>

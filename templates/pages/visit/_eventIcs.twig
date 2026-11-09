@@ -1,0 +1,46 @@
+{#- Downloadable .ics file for a single event (route: events/<slug>.ics) -#}
+{%- set entry = craft.entries.section('events').slug(slug).one() -%}
+{%- if not entry %}{% exit 404 %}{% endif -%}
+
+{%- set start = entry.eventStart -%}
+{%- set end = entry.eventEnd ?? (entry.allDay ? start : start|date_modify('+1 hour')) -%}
+{%- set places = {
+    stockyards: { name: 'Stockyards Ag Experience', address: '301 E Falls Park Dr, Sioux Falls, SD' },
+    farmersMarket: { name: 'Falls Park Farmers Market', address: '260 E Falls Park Dr, Sioux Falls, SD' },
+    stateFair: { name: 'South Dakota State Fair', address: '1060 3rd St SW, Huron, SD' },
+} -%}
+{%- set loc = entry.eventLocation.value -%}
+{%- set place = loc == 'custom'
+    ? { name: entry.locationName, address: entry.locationAddress }
+    : (places[loc] ?? null) %}
+{%- set location = place ? [place.name, place.address]|filter|join(', ') : '' -%}
+
+{#- iCalendar text values must escape backslashes, commas, semicolons and newlines -#}
+{%- set esc = { '\\': '\\\\', ',': '\\,', ';': '\\;', "\n": '\\n', "\r": '' } -%}
+
+{%- set lines = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Stockyards Ag Experience//Events//EN',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    'UID:event-' ~ entry.id ~ '@' ~ craft.app.request.hostName,
+    'DTSTAMP:' ~ now|date('Ymd\\THis\\Z', 'UTC'),
+    entry.allDay
+        ? 'DTSTART;VALUE=DATE:' ~ start|date('Ymd')
+        : 'DTSTART:' ~ start|date('Ymd\\THis\\Z', 'UTC'),
+    entry.allDay
+        ? 'DTEND;VALUE=DATE:' ~ end|date_modify('+1 day')|date('Ymd')
+        : 'DTEND:' ~ end|date('Ymd\\THis\\Z', 'UTC'),
+    'SUMMARY:' ~ entry.title|replace(esc),
+    location ? 'LOCATION:' ~ location|replace(esc),
+    'DESCRIPTION:' ~ entry.url|replace(esc),
+    'URL:' ~ entry.url,
+    'END:VEVENT',
+    'END:VCALENDAR',
+]|filter -%}
+
+{%- header "Content-Type: text/calendar; charset=utf-8" -%}
+{%- header "Content-Disposition: attachment; filename=\"" ~ entry.slug ~ ".ics\"" -%}
+{{- lines|join("\r\n")|raw }}{{ "\r\n"|raw -}}
