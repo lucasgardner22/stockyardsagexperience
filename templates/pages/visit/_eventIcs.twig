@@ -1,4 +1,3 @@
-{#- Downloadable .ics file for a single event (route: events/<slug>.ics) -#}
 {%- set entry = craft.entries.section('events').slug(slug).one() -%}
 {%- if not entry %}{% exit 404 %}{% endif -%}
 
@@ -15,7 +14,6 @@
     : (places[loc] ?? null) %}
 {%- set location = place ? [place.name, place.address]|filter|join(', ') : '' -%}
 
-{#- iCalendar text values must escape backslashes, commas, semicolons and newlines -#}
 {%- set esc = { '\\': '\\\\', ',': '\\,', ';': '\\;', "\n": '\\n', "\r": '' } -%}
 
 {%- set lines = [

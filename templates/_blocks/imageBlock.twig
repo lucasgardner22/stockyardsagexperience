@@ -10,9 +10,9 @@
 
             {% if block.overlayText %}
                 <div class="absolute inset-0 bg-brandBlack/30"></div>
-                <div class="absolute inset-0 bg-linear-to-r {#to-t instead of to-r#} from-brandRed/75 to-transparent"></div>
+                <div class="absolute inset-0 bg-linear-to-r from-brandRed/75 to-transparent"></div>
 
-                <div class="absolute inset-0 flex {#items-center instead of flex-col#} flex-col justify-center pl-25 {#or no pl-25#}">
+                <div class="absolute inset-0 flex flex-col justify-center pl-25">
                     <h2 class="text-7xl text-brandTan font-header drop-shadow-lg/75 drop-shadow-brandBlack">
                         {{ block.overlayText }}
                     </h2>

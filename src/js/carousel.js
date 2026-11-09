@@ -31,13 +31,7 @@ export function initCarousels() {
             },
             autoplay: el.dataset.autoplay === 'true'
                 ? { delay: 5000, pauseOnMouseEnter: true }
-                : false,
-            /*
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            spaceBetween: 24,
-            slideToClickedSlide: true
-            */
+                : false
         })
     })
 }

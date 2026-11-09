@@ -1,19 +1,1 @@
-{#
-
-{% set form = block.form.one() %}
-
-{% if form %}
-    <div class="{{ inColumn ?? false ? '' : 'max-w-2xl mx-auto px-5 mt-15' }} font-body border border-brandGray/40 rounded-lg p-8">
-        {{ craft.formie.renderForm(form, {
-            themeConfig: {
-                fieldInput: {
-                    attributes: { class: 'rounded-lg border-brandGray focus:border-brandBrownGreen' },
-                },
-            },
-        }) }}
-    </div>
-{% endif %}
-
-#}
-
 <script type="text/javascript" src="https://secure.lglforms.com/form_engine/s/UDcQzTly8T4XJ_H448drlg.js"></script>

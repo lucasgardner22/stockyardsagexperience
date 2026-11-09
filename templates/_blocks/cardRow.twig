@@ -9,7 +9,6 @@
             <h2 class="font-header font-bold text-3xl text-center mb-10">{{ block.title }}</h2>
         {% endif %}
 
-        {# Size columns to the card count (max 3 per row) and center any partial row #}
         {% set count = cards|length %}
         {% set itemWidth = {
             1: 'md:basis-full',
@@ -20,7 +19,6 @@
             2: 'max-w-6xl',
         }[count] ?? 'max-w-8xl' %}
 
-        {# A row made entirely of icons sits tighter: natural-width items, smaller icons #}
         {% set allIcons = cards|filter(c => c.isIcon ?? false)|length == count %}
 
         {% if allIcons %}

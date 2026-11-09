@@ -15,7 +15,6 @@
         ? { name: entry.locationName, address: entry.locationAddress }
         : (places[loc] ?? null) %}
 
-    {# Add-to-calendar links. Timed events without an end time get one hour; all-day end dates are exclusive. #}
     {% set calEnd = entry.eventEnd ?? (entry.allDay ? start : start|date_modify('+1 hour')) %}
     {% set calLocation = place ? [place.name, place.address]|filter|join(', ') : '' %}
     {% set utc = 'Ymd\\THis\\Z' %}
@@ -91,12 +90,15 @@
                         {% endif %}
                     </div>
 
-                    {# Close the calendar menu when clicking elsewhere or pressing Escape #}
                     <script>
                         (() => {
-                            const menu = document.getElementById('add-to-calendar');
-                            document.addEventListener('click', (e) => { if (!menu.contains(e.target)) menu.open = false; });
-                            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') menu.open = false; });
+                            const menu = document.getElementById("add-to-calendar");
+                            document.addEventListener("click", (e) => {
+                                if (!menu.contains(e.target)) menu.open = false;
+                            });
+                            document.addEventListener("keydown", (e) => {
+                                if (e.key === "Escape") menu.open = false;
+                            });
                         })();
                     </script>
                 </div>

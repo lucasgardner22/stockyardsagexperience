@@ -38,9 +38,11 @@
 
             {% if past|length %}
                 <details id="past-events" class="group/past mt-15">
-                    <summary class="flex items-center gap-6 list-none [&::-webkit-details-marker]:hidden cursor-pointer font-header text-3xl text-brandBrown
+                    <summary
+                        class="flex items-center gap-6 list-none [&::-webkit-details-marker]:hidden cursor-pointer font-header text-3xl text-brandBrown
                                     before:flex-1 before:h-px before:bg-brandBrownGreen/40 after:flex-1 after:h-px after:bg-brandBrownGreen/40
-                                    data-locked:cursor-default data-locked:pointer-events-none">
+                                    data-locked:cursor-default data-locked:pointer-events-none"
+                    >
                         <span class="flex items-center gap-3">
                             Past Events
                             <span class="text-base text-brandBrownGreen transition duration-300 group-open/past:rotate-180 in-data-locked:hidden" aria-hidden="true">▾</span>
@@ -53,27 +55,29 @@
                     </div>
                 </details>
 
-                {# If the page is too short to scroll with Past Events collapsed, open it for good #}
                 <script>
                     (() => {
-                        const past = document.getElementById('past-events');
-                        const summary = past.querySelector('summary');
+                        const past = document.getElementById("past-events");
+                        const summary = past.querySelector("summary");
 
                         const lockOpen = () => {
                             past.open = true;
-                            summary.dataset.locked = '';
+                            summary.dataset.locked = "";
                             summary.tabIndex = -1;
-                            past.addEventListener('toggle', () => { past.open = true; });
+                            past.addEventListener("toggle", () => {
+                                past.open = true;
+                            });
                         };
 
                         const check = () => {
-                            if (summary.hasAttribute('data-locked')) return;
-                            if (document.documentElement.scrollHeight <= window.innerHeight + 1) lockOpen();
+                            if (summary.hasAttribute("data-locked")) return;
+                            if (document.documentElement.scrollHeight <= window.innerHeight + 1)
+                                lockOpen();
                         };
 
-                        document.addEventListener('DOMContentLoaded', check);
-                        window.addEventListener('load', check);
-                        window.addEventListener('resize', check);
+                        document.addEventListener("DOMContentLoaded", check);
+                        window.addEventListener("load", check);
+                        window.addEventListener("resize", check);
                     })();
                 </script>
             {% endif %}

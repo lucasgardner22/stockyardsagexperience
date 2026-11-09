@@ -6,8 +6,6 @@
     {% set tag = block.imageUrl ? 'a' : 'div' %}
 
     {% if isIcon %}
-        {# Icon card: no crop, shadow, or dark overlay; title sits under the icon.
-           The image is used as a mask so the icon is tinted brandBrownGreen and fades lighter on hover. #}
         {% set compact = compact ?? false %}
         <{{ tag }} {% if block.imageUrl %}href="{{ block.imageUrl }}"{% endif %} class="group flex flex-col items-center text-center text-brandBrownGreen transition duration-300 ease-in-out hover:scale-105 hover:text-brandBrownGreenLight {{ inColumn ? '' : 'my-10 mx-5' }}">
             <span role="img" aria-label="{{ image.title }}"
