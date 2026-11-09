@@ -37,7 +37,7 @@
 
             {% if past|length %}
                 <details class="mt-12">
-                    <summary class="text-center cursor-pointer text-brandBrownGreen">Past events</summary>
+                    <summary class="text-center cursor-pointer text-brandBrownGreen">Past Events</summary>
                     <div class="grid gap-4 mt-6 opacity-80">
                         {% for event in past %}
                             {{ include('_partials/eventRow', { event: event }, with_context = false) }}
@@ -66,21 +66,65 @@
                 <a href="{{ url('events', { view: 'calendar', month: nextFirst|date('Y-m') }) }}" class="text-2xl text-brandBrownGreen" aria-label="Next month">→</a>
             </div>
 
-            <div class="hidden md:grid grid-cols-7 gap-1 text-sm">
-                {% for d in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] %}
-                    <div class="text-center text-brandBrownGreen pb-1">{{ d }}</div>
-                {% endfor %}
-                {% if offset %}{% for i in 1..offset %}<div></div>{% endfor %}{% endif %}
-                {% for d in 1..(first|date('t')) %}
-                    {% set day = month ~ '-' ~ ('%02d'|format(d)) %}
-                    {% set dayEvents = monthEvents|filter(e => e.eventStart|date('Y-m-d') <= day and (e.eventEnd ?? e.eventStart)|date('Y-m-d') >= day) %}
-                    <div class="min-h-24 bg-white rounded p-1.5 {{ day == today ? 'ring-2 ring-brandBrownGreen' }}">
-                        <div class="text-brandGray">{{ d }}</div>
-                        {% for e in dayEvents %}
-                            <a href="{{ e.url }}" class="block mt-1 truncate rounded bg-brandBrownGreen text-brandOffWhite px-1.5 py-0.5 text-xs hover:bg-brandBrownGreenHover" title="{{ e.title }}">{{ e.title }}</a>
-                        {% endfor %}
-                    </div>
-                {% endfor %}
+            {# Desktop month grid: one row per week, multi-day events drawn as one bar #}
+            {% set monthStart = first|date('Y-m-d') %}
+            {% set monthEnd = nextFirst|date_modify('-1 day')|date('Y-m-d') %}
+            {% set weeks = ((offset + first|date('t')) / 7)|round(0, 'ceil') %}
+
+            <div class="hidden md:block text-sm">
+                <div class="grid grid-cols-7 gap-1">
+                    {% for d in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] %}
+                        <div class="text-center text-brandBrownGreen pb-1">{{ d }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="grid gap-1">
+                    {% for w in 0..(weeks - 1) %}
+                        {% set weekStart = first|date_modify((w * 7 - offset) ~ ' days') %}
+                        {% set ws = weekStart|date('Y-m-d') %}
+                        {% set we = weekStart|date_modify('+6 days')|date('Y-m-d') %}
+                        {% set weekEvents = monthEvents|filter(e => e.eventStart|date('Y-m-d') <= we and (e.eventEnd ?? e.eventStart)|date('Y-m-d') >= ws) %}
+
+                        <div class="relative">
+                            {# Day boxes (back layer) #}
+                            <div class="absolute inset-0 grid grid-cols-7 gap-1">
+                                {% for i in 0..6 %}
+                                    {% set day = weekStart|date_modify(i ~ ' days')|date('Y-m-d') %}
+                                    {% if day >= monthStart and day <= monthEnd %}
+                                        <div class="bg-white rounded p-1.5 {{ day == today ? 'ring-2 ring-brandBrownGreen' }}">
+                                            <div class="text-brandGray">{{ day|date('j') }}</div>
+                                        </div>
+                                    {% else %}
+                                        <div></div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+
+                            {# Event bars (front layer); dense flow stacks overlapping events #}
+                            <div class="relative grid grid-cols-7 grid-flow-row-dense gap-x-1 gap-y-1 min-h-24 pt-7 pb-1.5 content-start">
+                                {% for e in weekEvents %}
+                                    {% set es = e.eventStart|date('Y-m-d') %}
+                                    {% set ee = (e.eventEnd ?? e.eventStart)|date('Y-m-d') %}
+                                    {% set segStart = max(es, ws, monthStart) %}
+                                    {% set segEnd = min(ee, we, monthEnd) %}
+                                    {% set col = date(segStart).diff(date(ws)).days + 1 %}
+                                    {% set span = date(segEnd).diff(date(segStart)).days + 1 %}
+                                    {% set contLeft = es < segStart %}
+                                    {% set contRight = ee > segEnd %}
+                                    <a
+                                        href="{{ e.url }}"
+                                        title="{{ e.title }}"
+                                        style="grid-column: {{ col }} / span {{ span }}"
+                                        class="truncate bg-brandBrownGreen text-brandOffWhite px-1.5 py-0.5 text-xs hover:bg-brandBrownGreenHover
+                                              {{ contLeft ? 'rounded-l-none' : 'rounded-l ml-1.5' }} {{ contRight ? 'rounded-r-none' : 'rounded-r mr-1.5' }}"
+                                    >
+                                        {%- if contLeft %}← {% endif %}{{ e.title }}{% if contRight %} →{% endif -%}
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
 
             <div class="md:hidden grid gap-4">
